@@ -1,0 +1,17 @@
+
+> @userappstore/maxmind-geoip@1.0.0 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> NODE_ENV=testing mocha src --recursive --timeout 5000
+
+
+
+  server/bind-country
+    BindCountry#GET
+      ✓ should bind country data to req
+
+  /api/maxmind/country
+    Country#GET
+      ✓ should return country data
+
+
+  2 passing (139ms)
+

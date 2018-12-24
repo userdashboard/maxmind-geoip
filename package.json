@@ -1,0 +1,29 @@
+{
+  "name": "@userappstore/maxmind-geoip",
+  "version": "1.0.0",
+  "description": "MaxMind GeoIP module for Dashboard",
+  "engine": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://gitlab.com/userappstore/maxmind-geoip.git"
+  },
+  "main": "index.js",
+  "license": "SPDX(MIT OR Unlicense)",
+  "scripts": {
+    "test": "NODE_ENV=testing mocha src --recursive --timeout 5000"
+  },
+  "dependencies": {
+    "maxmind": "^2.11.1"
+  },
+  "devDependencies": {
+    "@userappstore/dashboard": "git+https://github.com/userappstore/dashboard.git"
+  },
+  "dashboard": {
+    "server": [
+      "/src/server/bind-country.js"
+    ]
+  }
+}

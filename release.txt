@@ -1,0 +1,41 @@
+# 2018.9.5-1
+- updated Dashboard to 2018.9.5-1
+
+# 2018.9.4-1
+- updated Dashboard to 2018.9.4-1
+
+# 2018.8.23-2
+- updated Dashboard to 2018.8.23-2
+
+# 2018.8.23-1
+- updated Dashboard to 2018.8.23-1
+
+# 2018.8.22-1
+- updated Dashboard to 2018.8.22-1
+
+# 1.4.7
+- updated Dashboard to 1.4.15
+
+# 1.4.6
+- updated Dashboard to 1.4.13
+
+# 1.4.5
+- updated Dashboard to 1.4.12
+
+# 1.4.4
+- updated Dashboard to 1.4.11
+
+# 1.4.3
+- updated Dashboard to 1.4.10
+
+# 1.4.2
+- updated Dashboard to 1.4.9
+
+# 1.4.1
+- updated Dashboard to 1.4.5
+
+# 1.4.0
+- updated Dashboard to 1.4.0
+
+# 1.3.0
+- updated Dashboard to 1.3.0
