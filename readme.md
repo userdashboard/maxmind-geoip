@@ -33,7 +33,7 @@ This is free and unencumbered software released into the public domain.  The MIT
 
 ## Installation 
 
-You must install [Redis](https://redis.io) and [NodeJS](https://nodejs.org) 8.1.4+ prior to these steps.
+You must install [NodeJS](https://nodejs.org) 8.12.0+ prior to these steps.
 
     $ mkdir project
     $ cd project
@@ -62,49 +62,108 @@ Your sitemap will output the server address, by default you can access it at:
 
 The first account to register will be the owner and an administrator.
 
-### Example country object
+## Access country information in your application
 
-    {
-      continent: {
-        code: 'NA',
-        geoname_id: 6255149,
-        names: {
-          de: 'Nordamerika',
-          en: 'North America',
-          es: 'Norteamérica',
-          fr: 'Amérique du Nord',
-          ja: '北アメリカ',
-          'pt-BR': 'América do Norte',
-          ru: 'Северная Америка',
-          'zh-CN': '北美洲'
+When Dashboard requests something from your application server it passes the user account and session information to you.  You can use that information to access the API and retrieve geoip information for a user.  This example uses NodeJS but the API is HTTP and can be accessed using any language.
+
+        // your application
+        const Proxy = require('./proxy.js)
+        const util = require('util')
+        const pass = util.promisify(Proxy.pass)
+        const country = await pass('GET', `/api/user/maxmind/country`, accountid, sessionid)
+        const example = {
+          continent: {
+            code: 'NA',
+            geoname_id: 6255149,
+            names: {
+              de: 'Nordamerika',
+              en: 'North America',
+              es: 'Norteamérica',
+              fr: 'Amérique du Nord',
+              ja: '北アメリカ',
+              'pt-BR': 'América do Norte',
+              ru: 'Северная Америка',
+              'zh-CN': '北美洲'
+            }
+          },
+          country: {
+            geoname_id: 6252001,
+            iso_code: 'US',
+            names: {
+              de: 'USA',
+              en: 'United States',
+              es: 'Estados Unidos',
+              fr: 'États-Unis',
+              ja: 'アメリカ合衆国',
+              'pt-BR': 'Estados Unidos',
+              ru: 'США',
+              'zh-CN': '美国'
+            }
+          },
+          registered_country: {
+            geoname_id: 6252001,
+            iso_code: 'US',
+            names: {
+              de: 'USA',
+              en: 'United States',
+              es: 'Estados Unidos',
+              fr: 'États-Unis',
+              ja: 'アメリカ合衆国',
+              'pt-BR': 'Estados Unidos',
+              ru: 'США',
+              'zh-CN': '美国'
+            }
+          }
         }
-      },
-      country: {
-        geoname_id: 6252001,
-        iso_code: 'US',
-        names: {
-          de: 'USA',
-          en: 'United States',
-          es: 'Estados Unidos',
-          fr: 'États-Unis',
-          ja: 'アメリカ合衆国',
-          'pt-BR': 'Estados Unidos',
-          ru: 'США',
-          'zh-CN': '美国'
+
+        // proxy.js file
+        const http = require('http')
+        const https = require('https')
+        const util = require('util')
+
+        module.exports = {
+            dashboard: util.promisify(pass)
         }
-      },
-      registered_country: {
-        geoname_id: 6252001,
-        iso_code: 'US',
-        names: {
-          de: 'USA',
-          en: 'United States',
-          es: 'Estados Unidos',
-          fr: 'États-Unis',
-          ja: 'アメリカ合衆国',
-          'pt-BR': 'Estados Unidos',
-          ru: 'США',
-          'zh-CN': '美国'
+
+        function pass (method, path, accountid, sessionid, callback) {
+            let baseURL = process.env.DASHBOARD_SERVER.split('://')[1]
+            const baseSlash = baseURL.indexOf('/')
+            if (baseSlash > -1) {
+                baseURL = baseURL.substring(0, baseSlash)
+            }
+            let port = 80
+            const colon = baseURL.indexOf(':')
+            if (colon > -1) {
+                port = baseURL.substring(colon + 1)
+                baseURL = baseURL.substring(0, colon)
+            }
+            const requestOptions = {
+                host: baseURL,
+                path: path,
+                method: method,
+                headers: {
+                    'x-application-server-token': process.env.APPLICATION_SERVER_TOKEN,
+                    'x-accountid': accountid,
+                    'x-sessionid': sessionid,
+                    'referer': process.env.APPLICATION_SERVER
+                }
+            }
+            const protocol = process.env.DASHBOARD_SERVER.startsWith('https') ? https : http
+            if (protocol === https) {
+                requestOptions.port = 443
+            } else {
+                requestOptions.port = port
+            }
+            return protocol.request(requestOptions, (proxyResponse) => {
+                let body = ''
+                proxyResponse.on('data', (chunk) => {
+                    body += chunk
+                })
+                proxyResponse.on('end', () => {
+                    return callback(null, JSON.parse(body))
+                })
+                proxyResponse.on('error', (error) => {
+                    return callback(error)
+                })
+            })
         }
-      }
-    }
