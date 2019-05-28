@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://gitlab.com/userappstore/maxmind-geoip.git"
+    "url": "git://github.com/userappstore/maxmind-geoip.git"
   },
   "main": "index.js",
   "license": "SPDX(MIT OR Unlicense)",
