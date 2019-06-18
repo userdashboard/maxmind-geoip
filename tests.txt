@@ -13,5 +13,5 @@
       ✓ should return country data
 
 
-  2 passing (151ms)
+  2 passing (150ms)
 

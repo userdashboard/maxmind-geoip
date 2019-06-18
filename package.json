@@ -16,7 +16,7 @@
     "test": "NODE_ENV=testing mocha src --recursive --timeout 5000"
   },
   "dependencies": {
-    "maxmind": "^2.11.1"
+    "maxmind": "^2.12.0"
   },
   "devDependencies": {
     "@userappstore/dashboard": "git+https://github.com/userappstore/dashboard.git"
