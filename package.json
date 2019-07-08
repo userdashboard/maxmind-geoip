@@ -19,7 +19,7 @@
     "maxmind": "^2.12.0"
   },
   "devDependencies": {
-    "@userdashboard/dashboard": "git+https://github.com/userdashboard/dashboard.git"
+    "@userdashboard/dashboard": "^1.0.0"
   },
   "dashboard": {
     "server": [
