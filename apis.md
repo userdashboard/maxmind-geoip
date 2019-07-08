@@ -12,7 +12,7 @@ The `Private API` returns JSON if you pass a HTTP request (or similar) object fo
     process.env.ALLOW_PUBLIC_API = true
 
     // retrieve an account 
-    const API = require('@userappstore/dashboard-maxmind-geoip')
+    const API = require('@userdashboard/dashboard-maxmind-geoip')
     const country = await API.maxmind.GeoIP.get(req)
 
 | Method | HTTP VERBS | DESCRIPTION |

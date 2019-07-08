@@ -1,5 +1,5 @@
 
-> @userappstore/maxmind-geoip@1.0.0 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.0 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > NODE_ENV=testing mocha src --recursive --timeout 5000
 
 

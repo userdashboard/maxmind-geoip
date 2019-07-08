@@ -1,5 +1,5 @@
 {
-  "name": "@userappstore/maxmind-geoip",
+  "name": "@userdashboard/maxmind-geoip",
   "version": "1.0.0",
   "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/userappstore/maxmind-geoip.git"
+    "url": "git://github.com/userdashboard/maxmind-geoip.git"
   },
   "main": "index.js",
   "license": "SPDX(MIT OR Unlicense)",
@@ -19,7 +19,7 @@
     "maxmind": "^2.12.0"
   },
   "devDependencies": {
-    "@userappstore/dashboard": "git+https://github.com/userappstore/dashboard.git"
+    "@userdashboard/dashboard": "git+https://github.com/userdashboard/dashboard.git"
   },
   "dashboard": {
     "server": [
