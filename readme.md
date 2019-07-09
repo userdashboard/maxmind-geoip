@@ -11,24 +11,12 @@ Dashboard proxies your application server to create a single website where pages
 - [Dashboard code structure](https://github.com/userdashboard/dashboard/wiki/Dashboard-code-structure)
 - [Server request lifecycle](https://github.com/userdashboard/dashboard/wiki/Server-Request-Lifecycle)
 
-### Demonstrations
+### Case studies 
 
-- [Dashboard](https://dashboard-demo-2344.herokuapp.com)
-- [Dashboard + Organizations module](https://organizations-demo-7933.herokuapp.com)
-- [Dashboard + Stripe Subscriptions module](https://stripe-subscriptions-5701.herokuapp.com)
-- [Dashboard + Stripe Connect module](https://stripe-connect-8509.herokuapp.com)
+`Hastebin` is an open source pastebin web application.  It started as a service for anonymous guests only, and was transformed with Dashboard and modules into a web application for registered users, with support for sharing posts with organizations and paid subscriptions.
 
-## Access geoip information from your application server
-
-| URL                                  | Method | Querystring  | POST data  |
-|--------------------------------------|--------|--------------|------------|
-|/api/user/maxmind/country             | GET    |              |            |
-
-## Access geoip information from the dashboard server
-
-| Method                                             | Querystring  | POST data  |
-|----------------------------------------------------|--------------|------------|
-|global.api.user.maxmind.Country.get(req)            |              |            |
+- [Hastebin - free web application](https://github.com/userdashboard/integration-examples/blob/master/hastebin/hastebin-saas-free.md)
+- [Hastebin - subscription web application](https://github.com/userdashboard/integration-examples/blob/master/hastebin/hastebin-saas-subscription.md)
 
 ## Dashboard modules
 
