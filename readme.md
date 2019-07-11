@@ -2,6 +2,26 @@
 
 [Dashboard](https://github.com/userdashboard/dashboard) is a NodeJS project that provides a reusable account management system for web applications.  This module adds [MaxMind GeoIP](https://maxmind.com) lookup and binds a Country object to each HttpRequest.
 
+## Import this module
+
+Edit your `package.json` to activate the module:
+
+    "dashboard": {
+      "modules": [
+        "@userdashboard/maxmind-geoip
+      ]
+    }
+
+Install the module with NPM:
+
+    $ npm install @userdashboard/maxmind-geoip
+
+## Startup configuration variables
+
+Check `start-dev.sh` to see the rest of the `env` variables that configure Dashboard:
+
+    $ node main.js
+
 # Dashboard
 
 Dashboard proxies your application server to create a single website where pages like signing in or changing your password are provided by Dashboard.  Your application server can be anything you want, and use Dashboard's API to access data as required.  Using modules you can expand Dashboard to include organizations, subscriptions powered by Stripe, or a Stripe Connect platform.
