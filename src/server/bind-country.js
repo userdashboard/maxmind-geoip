@@ -1,7 +1,7 @@
 module.exports = {
   before: async (req) => {
     req.ip = req.ip || requestIPAddress(req)
-    req.country = await global.api.user.maxmind.Country._get(req)
+    req.country = await global.api.user.maxmind.Country.get(req)
   }
 }
 
