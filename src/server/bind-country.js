@@ -5,7 +5,7 @@ module.exports = {
   }
 }
 
-function requestIPAddress(req) {
+function requestIPAddress (req) {
   let xForwardFor = req.headers['x-forwarded-for']
   if (xForwardFor) {
     const comma = xForwardFor.indexOf(',')
@@ -25,4 +25,3 @@ function requestIPAddress(req) {
     return req.socket.remoteAddress
   }
 }
-
