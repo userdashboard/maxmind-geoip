@@ -14,7 +14,7 @@ Special HTML files:
 @userdashboard/dashboard/src/redirect.html
 
 Dashboard modules:
-@userdashboard/maxmind-geoip (1.0.11)
+@userdashboard/maxmind-geoip (1.0.12)
 
 Server handlers:
 /src/server/bind-country.js
