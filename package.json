@@ -19,7 +19,7 @@
     "maxmind": "^2.12.0"
   },
   "devDependencies": {
-    "@userdashboard/dashboard": "^1.0.26"
+    "@userdashboard/dashboard": "^1.0.27"
   },
   "dashboard": {
     "modules": [
