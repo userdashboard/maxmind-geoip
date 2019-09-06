@@ -1,7 +1,11 @@
 module.exports = {
   before: async (req) => {
-    req.ip = req.ip || requestIPAddress(req)
+    const queryWas = req.query
+    req.query = {
+      ip: req.ip || requestIPAddress(req)
+    }
     req.country = await global.api.user.maxmind.Country.get(req)
+    req.query = queryWas
   }
 }
 
