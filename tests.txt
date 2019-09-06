@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.22 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.23 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > NODE_ENV=testing mocha src --recursive --timeout 5000
 
 
@@ -10,8 +10,9 @@
 
   /api/maxmind/country
     Country#GET
+      ✓ should require ip address
       ✓ should return country data
 
 
-  2 passing (182ms)
+  3 passing (324ms)
 
