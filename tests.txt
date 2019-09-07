@@ -1,6 +1,6 @@
 
-> @userdashboard/maxmind-geoip@1.0.26 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
-> NODE_ENV=testing mocha src --recursive --timeout 5000
+> @userdashboard/maxmind-geoip@1.0.27 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> mocha src --recursive --no-colors --retries 3 --timeout 120000 --slow 120000
 
 
 
@@ -14,5 +14,5 @@
       ✓ should return country data
 
 
-  3 passing (421ms)
+  3 passing (835ms)
 
