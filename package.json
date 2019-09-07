@@ -13,13 +13,13 @@
   "main": "index.js",
   "license": "SPDX(MIT OR Unlicense)",
   "scripts": {
-    "test": "NODE_ENV=testing mocha src --recursive --timeout 5000"
+    "test": "mocha src --recursive --no-colors --retries 3 --timeout 120000 --slow 120000"
   },
   "dependencies": {
     "maxmind": "^2.12.0"
   },
   "devDependencies": {
-    "@userdashboard/dashboard": "^1.0.33",
+    "@userdashboard/dashboard": "^1.0.35",
     "puppeteer": "^1.19.0"
   },
   "dashboard": {
