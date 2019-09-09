@@ -1,6 +1,5 @@
 const maxmind = require('maxmind')
 const path = require('path')
-let defaultCountry
 let db
 
 module.exports = {
@@ -10,7 +9,13 @@ module.exports = {
       throw new Error('invalid-ip')
     }
     db = db || maxmind.openSync(path.join(__dirname, '../../../../GeoLite2-Country.mmdb'))
-    defaultCountry = defaultCountry || db.get('8.8.8.8')
-    return db.get(req.query.ip) || defaultCountry
+    if (process.env.NODE_ENV === 'testing' && req.query.ip === '127.0.0.1') {
+      req.query.ip = '8.8.8.8'
+    }
+    const country = db.get(req.query.ip)
+    if (country === null) {
+      throw new Error('invalid-ip')
+    }
+    return country
   }
 }

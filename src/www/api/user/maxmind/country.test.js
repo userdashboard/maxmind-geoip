@@ -3,21 +3,47 @@ const assert = require('assert')
 const TestHelper = require('../../../../../test-helper.js')
 
 describe('/api/maxmind/country', () => {
-  describe('Country#GET', () => {
-    it('should require ip address', async () => {
-      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=', 'GET')
+  describe('exceptions', () => {
+    it('missing querystring ip', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country', 'GET')
       let errorMesage
       try {
-        await req.route.api.get(req)
+        await req.get()
       } catch (error) {
         errorMesage = error.message
       }
       assert.strictEqual(errorMesage, 'invalid-ip')
     })
 
-    it('should return country data', async () => {
+    it('invalid querystring ip', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=invalid', 'GET')
+      let errorMesage
+      try {
+        await req.get()
+      } catch (error) {
+        errorMesage = error.message
+      }
+      assert.strictEqual(errorMesage, 'invalid-ip')
+    })
+  })
+
+  describe('receives', () => {
+    it('required querystring ip', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=', 'GET')
+      let errorMesage
+      try {
+        await req.get()
+      } catch (error) {
+        errorMesage = error.message
+      }
+      assert.strictEqual(errorMesage, 'invalid-ip')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
       const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8', 'GET')
-      const country = await req.get(req)
+      const country = await req.get()
       assert.strictEqual(country.country.iso_code, 'US')
     })
   })
