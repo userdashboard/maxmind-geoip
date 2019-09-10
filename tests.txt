@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.31 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.32 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > mocha src --recursive --no-colors --retries 3 --timeout 120000 --slow 120000
 
 
@@ -12,11 +12,9 @@
     exceptions
       ✓ missing querystring ip
       ✓ invalid querystring ip
-    receives
-      ✓ required querystring ip
     returns
       ✓ object
 
 
-  5 passing (446ms)
+  4 passing (640ms)
 
