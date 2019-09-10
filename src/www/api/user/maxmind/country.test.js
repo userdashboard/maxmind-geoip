@@ -27,19 +27,6 @@ describe('/api/maxmind/country', () => {
     })
   })
 
-  describe('receives', () => {
-    it('required querystring ip', async () => {
-      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=', 'GET')
-      let errorMesage
-      try {
-        await req.get()
-      } catch (error) {
-        errorMesage = error.message
-      }
-      assert.strictEqual(errorMesage, 'invalid-ip')
-    })
-  })
-
   describe('returns', () => {
     it('object', async () => {
       const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8', 'GET')
