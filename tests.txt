@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.32 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.33 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > mocha src --recursive --no-colors --retries 3 --timeout 120000 --slow 120000
 
 
@@ -8,13 +8,14 @@
     BindCountry#GET
       ✓ should bind country data to req
 
-  /api/maxmind/country
+  /api/user/maxmind/country
     exceptions
-      ✓ missing querystring ip
-      ✓ invalid querystring ip
+      invalid-ip
+        ✓ missing querystring ip
+        ✓ invalid querystring ip
     returns
       ✓ object
 
 
-  4 passing (640ms)
+  4 passing (981ms)
 
