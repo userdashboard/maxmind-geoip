@@ -19,7 +19,7 @@
     "maxmind": "^2.12.0"
   },
   "devDependencies": {
-    "@userdashboard/dashboard": "^1.0.44",
+    "@userdashboard/dashboard": "^1.0.45",
     "puppeteer": "^1.20.0"
   },
   "dashboard": {
