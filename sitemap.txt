@@ -1,4 +1,4 @@
-@userdashboard/dashboard 1.0.44
+@userdashboard/dashboard 1.0.45
 
 
 Administrator menu:
@@ -14,7 +14,7 @@ Special HTML files:
 @userdashboard/dashboard/src/redirect.html
 
 Dashboard modules:
-@userdashboard/maxmind-geoip (1.0.34)
+@userdashboard/maxmind-geoip (1.0.35)
 
 Server handlers:
 /src/server/bind-country.js
