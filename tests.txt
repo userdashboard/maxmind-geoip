@@ -1,5 +1,23 @@
 
-> @userdashboard/maxmind-geoip@1.0.37 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> puppeteer@1.20.0 install /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/puppeteer
+> node install.js
+
+Chromium downloaded to /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/puppeteer/.local-chromium/linux-686378
++ puppeteer@1.20.0
+added 43 packages from 22 contributors and audited 3 packages in 45.27s
+found 0 vulnerabilities
+
+
+> puppeteer@1.20.0 install /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/@userdashboard/dashboard/node_modules/puppeteer
+> node install.js
+
+Chromium downloaded to /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/@userdashboard/dashboard/node_modules/puppeteer/.local-chromium/linux-686378
++ @userdashboard/dashboard@1.0.47
+added 73 packages from 91 contributors, removed 43 packages and audited 3 packages in 38.637s
+found 0 vulnerabilities
+
+
+> @userdashboard/maxmind-geoip@1.0.38 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > mocha src --recursive --no-colors --timeout 120000 --slow 120000
 
 
@@ -17,5 +35,5 @@
       ✓ object
 
 
-  4 passing (382ms)
+  4 passing (301ms)
 
