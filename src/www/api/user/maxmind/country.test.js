@@ -6,7 +6,7 @@ describe('/api/user/maxmind/country', () => {
   describe('exceptions', () => {
     describe('invalid-ip', () => {
       it('missing querystring ip', async () => {
-        const req = TestHelper.createRequest('/api/user/maxmind/country', 'GET')
+        const req = TestHelper.createRequest('/api/user/maxmind/country')
         let errorMesage
         try {
           await req.get()
@@ -17,7 +17,7 @@ describe('/api/user/maxmind/country', () => {
       })
 
       it('invalid querystring ip', async () => {
-        const req = TestHelper.createRequest('/api/user/maxmind/country?ip=invalid', 'GET')
+        const req = TestHelper.createRequest('/api/user/maxmind/country?ip=invalid')
         let errorMesage
         try {
           await req.get()
@@ -31,7 +31,7 @@ describe('/api/user/maxmind/country', () => {
 
   describe('returns', () => {
     it('object', async () => {
-      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8', 'GET')
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8')
       const country = await req.get()
       assert.strictEqual(country.country.iso_code, 'US')
     })
