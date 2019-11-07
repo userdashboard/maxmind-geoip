@@ -1,15 +1,5 @@
 
-> puppeteer@2.0.0 install /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/puppeteer
-> node install.js
-
-Chromium downloaded to /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip/node_modules/puppeteer/.local-chromium/linux-706915
-+ puppeteer@2.0.0
-+ @userdashboard/dashboard@1.0.61
-added 79 packages from 97 contributors and audited 3 packages in 52.489s
-found 0 vulnerabilities
-
-
-> @userdashboard/maxmind-geoip@1.0.40 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.41 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > mocha src --recursive --no-colors --timeout 120000 --slow 120000
 
 
@@ -27,5 +17,5 @@ found 0 vulnerabilities
       ✓ object
 
 
-  4 passing (329ms)
+  4 passing (413ms)
 
