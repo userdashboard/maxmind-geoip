@@ -2,6 +2,12 @@
 
 [Dashboard](https://github.com/userdashboard/dashboard) is a NodeJS project that provides a reusable account management system for web applications.  This module adds [MaxMind GeoIP](https://maxmind.com) lookup and binds a Country object to each HttpRequest.
 
+## Development status
+
+MaxMind GeoIP module is ready to use.  The following work remains:
+
+- add routes to expose more of MaxMind's functionality, please help
+
 ## Import this module
 
 Edit your `package.json` to activate the module:
