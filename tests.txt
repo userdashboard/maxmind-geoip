@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.41 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.42 test /root/workspaces/maxmind-geoip
 > mocha src --recursive --no-colors --timeout 120000 --slow 120000
 
 
@@ -17,5 +17,5 @@
       ✓ object
 
 
-  4 passing (413ms)
+  4 passing (135ms)
 
