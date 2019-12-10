@@ -3,8 +3,8 @@
   "version": "1.0.42",
   "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
-    "node": "8.12.0",
-    "npm": "6.4.1"
+    "node": "12.13.1",
+    "npm": "6.12.1"
   },
   "repository": {
     "type": "git",
