@@ -1,4 +1,5 @@
 # MaxMind GeoIP for Dashboard
+![StandardJS](https://github.com/userdashboard/maxmind-geoip/workflows/standardjs/badge.svg) ![Test suite](https://github.com/userdashboard/maxmind-geoip/workflows/test-user-api/badge.svg)
 
 [Dashboard](https://github.com/userdashboard/dashboard) is a NodeJS project that provides a reusable account management system for web applications.  This module adds [MaxMind GeoIP](https://maxmind.com) lookup and binds a Country object to each HttpRequest.
 
