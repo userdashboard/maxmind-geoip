@@ -1,5 +1,15 @@
 
-> @userdashboard/maxmind-geoip@1.0.43 test /root/workspaces/maxmind-geoip
+> puppeteer@2.0.0 install /root/workspaces/maxmind-geoip/node_modules/puppeteer
+> node install.js
+
+Chromium downloaded to /root/workspaces/maxmind-geoip/node_modules/puppeteer/.local-chromium/linux-706915
++ @userdashboard/dashboard@1.0.84
++ puppeteer@2.0.0
+added 79 packages from 97 contributors and audited 3 packages in 9.99s
+found 0 vulnerabilities
+
+
+> @userdashboard/maxmind-geoip@1.0.44 test /root/workspaces/maxmind-geoip
 > mocha src --recursive --no-colors --timeout 120000 --slow 120000
 
 
@@ -19,5 +29,5 @@
       ✓ object
 
 
-  5 passing (240ms)
+  5 passing (159ms)
 

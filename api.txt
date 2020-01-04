@@ -1,10 +1,7 @@
-@userdashboard/dashboard 1.0.71
+@userdashboard/dashboard 1.0.84
 
 
-|------------------------------------------------------------------|
-| /api/user/maxmind/country                                        |
-| RECEIVES-----------------| RETURNS--| EXCEPTIONS-----------------|
-| required querystring ip  | object   | invalid-ip                 |
-| required querystring ip  |          |  * missing querystring ip  |
-|                          |          |  * invalid querystring ip  |
-|--------------------------|----------|----------------------------|
+|
+|
+|
+|
