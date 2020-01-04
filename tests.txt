@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.42 test /root/workspaces/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.43 test /root/workspaces/maxmind-geoip
 > mocha src --recursive --no-colors --timeout 120000 --slow 120000
 
 
@@ -13,9 +13,11 @@
       invalid-ip
         ✓ missing querystring ip
         ✓ invalid querystring ip
+    receives
+      ✓ required querystring ip
     returns
       ✓ object
 
 
-  4 passing (135ms)
+  5 passing (240ms)
 
