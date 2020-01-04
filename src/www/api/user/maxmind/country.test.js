@@ -29,9 +29,21 @@ describe('/api/user/maxmind/country', () => {
     })
   })
 
+  describe('receives', () => {
+    it('required querystring ip', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8')
+      req.filename = __filename
+      req.saveResponse = true
+      const country = await req.get()
+      assert.strictEqual(country.country.iso_code, 'US')
+    })
+  })
+
   describe('returns', () => {
     it('object', async () => {
       const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8')
+      req.filename = __filename
+      req.saveResponse = true
       const country = await req.get()
       assert.strictEqual(country.country.iso_code, 'US')
     })
