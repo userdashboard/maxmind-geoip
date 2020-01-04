@@ -1,6 +1,6 @@
 
-> @userdashboard/maxmind-geoip@1.0.46 test /root/workspaces/maxmind-geoip
-> mocha src --recursive --no-colors --timeout 120000 --slow 120000
+> @userdashboard/maxmind-geoip@1.0.47 test /root/workspaces/maxmind-geoip
+> mocha src --recursive --no-colors --timeout 600000 --slow 600000
 
 
 
@@ -19,5 +19,5 @@
       ✓ object
 
 
-  5 passing (175ms)
+  5 passing (210ms)
 
