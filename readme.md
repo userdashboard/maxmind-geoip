@@ -1,90 +1,71 @@
-# MaxMind GeoIP for Dashboard
+# MaxMind GeoIP module for Dashboard
 ![StandardJS](https://github.com/userdashboard/maxmind-geoip/workflows/standardjs/badge.svg) ![Test suite](https://github.com/userdashboard/maxmind-geoip/workflows/test-user-api/badge.svg)
 
-[Dashboard](https://github.com/userdashboard/dashboard) is a NodeJS project that provides a reusable account management system for web applications.  This module adds [MaxMind GeoIP](https://maxmind.com) lookup and binds a Country object to each HttpRequest.
+Dashboard bundles everything a web app needs, all the "boilerplate" like signing in and changing passwords, into a parallel server so you can write a much smaller web app.
 
-## Development status
+[MaxMind](https://www.maxmind.com/en/home) provide a database that converts IP addresses to countries or other information.  This module for [Dashboard](https://github.com/userdashboard/dashboard) adds API routes for identifying the country by IP and a server handler that will binds a Country object to each HttpRequest.
 
-MaxMind GeoIP module is ready to use.  The following work remains:
+There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it.  
 
-- add routes to expose more of MaxMind's functionality, please help
+Environment configuration variables are documented in `start-dev.sh`.  You can view API documentation in `api.txt`, or in more detail on the [documentation site](https://userdashboard.github.io/).  Join the freenode IRC #dashboard chatroom for support - [Web IRC client](https://kiwiirc.com/nextclient/).
 
 ## Import this module
-
-Edit your `package.json` to activate the module:
-
-    "dashboard": {
-      "modules": [
-        "@userdashboard/maxmind-geoip
-      ]
-    }
 
 Install the module with NPM:
 
     $ npm install @userdashboard/maxmind-geoip
 
-## Startup configuration variables
-
-Check `start-dev.sh` to see the rest of the `env` variables that configure Dashboard:
-
-    $ node main.js
-
-# Dashboard
-
-Dashboard proxies your application server to create a single website where pages like signing in or changing your password are provided by Dashboard.  Your application server can be anything you want, and use Dashboard's API to access data as required.  Using modules you can expand Dashboard to include organizations, subscriptions powered by Stripe, or a Stripe Connect platform.
-
-## Support and documentation
-
-Join the freenode IRC #dashboard chatroom for support.  [Web IRC client](https://kiwiirc.com/nextclient/)
-
-- [Developer documentation home](https://userdashboard.github.io/home)
-- [Administrator documentation home](https://userdashboard.github.io/administrators/home)
-- [User documentation home](https://userdashboard.github.io/users/home)
-
-### Case studies 
-
-`Hastebin` is an open source pastebin web application.  It started as a service for anonymous guests only, and was transformed with Dashboard and modules into a web application for registered users, with support for sharing posts with organizations and paid subscriptions.
-
-- [Hastebin - free web application](https://userdashboard.github.io/integrations/converting-hastebin-free-saas.html)
-- [Hastebin - subscription web application](https://userdashboard.github.io/integrations/converting-hastebin-subscription-saas.html)
-
-## Screenshots of Dashboard with Maxmind GeoIP
-
-The user and administration documentation contain screenshots demonstrating Dashboard and its modules in use. 
-
-| ![Guest landing page](https://userdashboard.github.io/outline.png?raw=true) | 
-|:---------------------------------------------------------------------------------------------------------------:|
-| How content is separated between dashboard and application servers |
-
-| ![Administration page](https://userdashboard.github.io/integrations/convert-hastebin-subscription-saas/12-owner-views-customers-subscriptions.png?raw=true) |
-|:---------------------------------------------------------------------------------------------------------------:|
-| Administration page provided by Dashboard |
-
-| ![Example app integrating Dashboard ](https://userdashboard.github.io/integrations/convert-hastebin-subscription-saas/9-second-customer-creating-post-shared-with-organization.png?raw=true) |
-|:---------------------------------------------------------------------------------------------------------------:|
-| Dashboard's header with content served by application server |
-
-## Dashboard modules
-
-Additional APIs, content and functionality can be added by `npm install` and nominating Dashboard modules in your `package.json`.  You can read more about this on the [Dashboard package.json documentation](https://userdashboard.github.io/dashboard-package-json.html)
+Edit your `package.json` to activate the module:
 
     "dashboard": {
-      "modules": [ "package", "package2" ]
+      "modules": [
+        "@userdashboard/maxmind-geoip"
+      ]
     }
 
-Modules can supplement the global.sitemap with additional routes which automatically maps them into the `Private API` shared as global.api.
+## Access the API
 
-| Name | Description | Package   | Repository |
-|------|-------------|-----------|------------|
-| MaxMind GeoIP | IP address-based geolocation | [@userdashboard/maxmind-geoip](https://npmjs.com/package/userdashboard/maxmind-geoip)| [github](https://github.com/userdashboard/maxmind-geoip) |
-| Organizations | User created groups | [@userdashboard/organizations](https://npmjs.com/package/userdashboard/organizations) | [github](https://github.com/userdashboard/organizations) |
-| Stripe Subscriptions | SaaS functionality | [@userdashboard/stripe-subscriptions](https://npmjs.com/package/userdashboard/stripe-subscriptions) | [github](https://github.com/userdashboard/stripe-subscriptions) |
-| Stripe Connect | Marketplace functionality | [@userdashboard/stripe-connect](https://npmjs.com/package/userdashboard/stripe-connect) | [github](https://github.com/userdashboard/stripe-connect)
+Use the API to identify which country a user is from, proxying your Dashboard server API from your application server:
 
-#### Development
+    const country = await proxy(`/api/user/maxmind/country?ip=1.2.3.4`, accountid, sessionid)
 
-Development takes place on [Github](https://github.com/userdashboard/maxmind-geoip) with releases on [NPM](https://www.npmjs.com/package/@userdashboard/maxmind-geoip).
+    const proxy = util.promisify((path, accountid, sessionid, callback) => {
+        let hashText
+        if (accountid) {
+            hashText = `${process.env.APPLICATION_SERVER_TOKEN}/${accountid}/${sessionid}`
+        } else {
+            hashText = process.env.APPLICATION_SERVER_TOKEN
+        }
+        const salt = bcrypt.genSaltSync(4)
+        const token = bcrypt.hashSync(hashText, salt)
+        const requestOptions = {
+            'dashboard.example.com',
+            path,
+            '443',
+            'GET',
+            headers: {
+                'x-application-server': 'application.example.com',
+                'x-dashboard-token': token
+            }
+        }
+        if (accountid) {
+            requestOptions.headers['x-accountid'] = accountid
+            requestOptions.headers['x-sessionid'] = sessionid
+        }
+        const proxyRequest = require('https').request(requestOptions, (proxyResponse) => {
+            let body = ''
+            proxyResponse.on('data', (chunk) => {
+                body += chunk
+            })
+            return proxyResponse.on('end', () => {
+                return callback(null, JSON.parse(body))
+            })
+        })
+        proxyRequest.on('error', (error) => {
+            return callback(error)
+        })
+        return proxyRequest.end()
+      })
+    }
 
-#### License
 
-This software is distributed under the MIT license.
