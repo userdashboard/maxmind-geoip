@@ -39,10 +39,10 @@ Use the API to identify which country a user is from, proxying your Dashboard se
         const salt = bcrypt.genSaltSync(4)
         const token = bcrypt.hashSync(hashText, salt)
         const requestOptions = {
-            'dashboard.example.com',
-            path,
-            '443',
-            'GET',
+            host: 'dashboard.example.com',
+            path: path,
+            port: '443',
+            method: 'GET',
             headers: {
                 'x-application-server': 'application.example.com',
                 'x-dashboard-token': token
