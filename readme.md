@@ -7,7 +7,7 @@ Dashboard bundles everything a web app needs, all the "boilerplate" like signing
 
 There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it.  
 
-Environment configuration variables are documented in `start-dev.sh`.  You can view API documentation in `api.txt`, or in more detail on the [documentation site](https://userdashboard.github.io/).  Join the freenode IRC #dashboard chatroom for support - [Web IRC client](https://kiwiirc.com/nextclient/).
+Environment configuration variables are documented in `start-dev.sh`.  You can view API documentation in `api.txt`, or in more detail on the [documentation site](https://userdashboard.github.io/).  Join the freenode IRC #userdashboard chatroom for support - [Web IRC client](https://kiwiirc.com/nextclient/).
 
 ## Import this module
 
