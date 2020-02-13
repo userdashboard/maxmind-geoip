@@ -13,7 +13,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha src --recursive --no-colors --timeout 600000 --slow 600000"
+    "test": "mocha --inline-diffs --full-trace --bail --async-only --recursive --timeout 120000 --slow 120000 src"
   },
   "dependencies": {
     "maxmind": "^2.12.0"
