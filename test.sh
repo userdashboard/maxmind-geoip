@@ -4,7 +4,7 @@
 # Additionally there is an issue with [puppeteer 3.0.0](https://github.com/puppeteer/puppeteer/issues/5662) so the version is currently fixed at 2.1.1
 # Dashboard is installed here without saving to package.json to avoid modules nesting redundant copies of Dashboard
 if [ ! -d node_modules/puppeteer ] || [ ! -d node_modules/@userdashboard/dashboard ]; then
-  npm install @userdashboard/dashboardpuppeteer@2.1.1 --no-save
+  npm install @userdashboard/dashboard puppeteer@2.1.1 --no-save
 fi
 PARAMS=""
 if [ ! -z "$1" ]; then
