@@ -1,5 +1,5 @@
 
-> @userdashboard/maxmind-geoip@1.0.51 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.52 test /home/benlowry/SynologyDrive/workspaces/dashboard/maxmind-geoip
 > mocha --exit --inline-diffs --full-trace --bail --async-only --recursive --timeout 600000 --slow 600000 './src{,!(public)/**}/*.test.js'
 
 
@@ -19,5 +19,5 @@
       ✓ object
 
 
-  5 passing (549ms)
+  5 passing (436ms)
 
