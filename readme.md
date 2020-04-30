@@ -1,5 +1,5 @@
 # MaxMind GeoIP module for Dashboard
-![StandardJS](https://github.com/userdashboard/maxmind-geoip/workflows/standardjs/badge.svg) ![Test suite](https://github.com/userdashboard/maxmind-geoip/workflows/test-user-api/badge.svg)
+![Test suite status](https://github.com/userdashboard/maxmind-geoip/workflows/test-and-publish/badge.svg?branch=master)
 
 Dashboard bundles everything a web app needs, all the "boilerplate" like signing in and changing passwords, into a parallel server so you can write a much smaller web app.
 
