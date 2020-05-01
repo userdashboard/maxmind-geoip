@@ -1,4 +1,4 @@
-@userdashboard/dashboard 1.0.172
+@userdashboard/dashboard 1.0.175
 http://localhost:9000
 
 Administrator menu:
@@ -14,7 +14,7 @@ Special HTML files:
 @userdashboard/dashboard/src/redirect.html
 
 Dashboard modules:
-@userdashboard/maxmind-geoip (1.0.53)
+@userdashboard/maxmind-geoip (1.0.54)
 
 URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS - NODEJS --------------------- HTML -----------------------
 /                                               GUEST  FULLSCREEN GET                                          /src/www                    
