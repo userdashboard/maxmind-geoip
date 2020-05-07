@@ -4,8 +4,8 @@ const assert = require('assert')
 const Country = require('./bind-country.js')
 
 describe('server/bind-country', () => {
-  describe('BindCountry#GET', () => {
-    it('should bind country data to req', async () => {
+  describe('before', () => {
+    it('should bind data to req', async () => {
       const req = {}
       req.ip = '8.8.8.8'
       await Country.before(req)
