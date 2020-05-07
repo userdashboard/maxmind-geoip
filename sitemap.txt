@@ -1,4 +1,4 @@
-@userdashboard/dashboard 1.0.175
+@userdashboard/dashboard 1.0.179
 http://localhost:9000
 
 Administrator menu:
@@ -14,7 +14,7 @@ Special HTML files:
 @userdashboard/dashboard/src/redirect.html
 
 Dashboard modules:
-@userdashboard/maxmind-geoip (1.0.54)
+@userdashboard/maxmind-geoip (1.0.55)
 
 URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS - NODEJS --------------------- HTML -----------------------
 /                                               GUEST  FULLSCREEN GET                                          /src/www                    
@@ -66,12 +66,6 @@ URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS 
 /administrator/sessions                                           GET             @userdashboard/dashboard     @userdashboard/dashboard    
 /administrator/transfer-ownership                                 GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
 /api/administrator/account                                        GET             @userdashboard/dashboard                                 
-/api/administrator/account-profiles                               GET             @userdashboard/dashboard                                 
-/api/administrator/account-profiles-count                         GET             @userdashboard/dashboard                                 
-/api/administrator/account-reset-codes                            GET             @userdashboard/dashboard                                 
-/api/administrator/account-reset-codes-count                      GET             @userdashboard/dashboard                                 
-/api/administrator/account-sessions                               GET             @userdashboard/dashboard                                 
-/api/administrator/account-sessions-count                         GET             @userdashboard/dashboard                                 
 /api/administrator/accounts                                       GET             @userdashboard/dashboard                                 
 /api/administrator/accounts-count                                 GET             @userdashboard/dashboard                                 
 /api/administrator/administrator-accounts                         GET             @userdashboard/dashboard                                 

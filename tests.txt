@@ -1,12 +1,12 @@
 
-> @userdashboard/maxmind-geoip@1.0.54 test /home/runner/work/maxmind-geoip/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.55 test /home/runner/work/maxmind-geoip/maxmind-geoip
 > mocha --exit --inline-diffs --full-trace --bail --async-only --recursive --timeout 600000 --slow 600000 './src{,!(public)/**}/*.test.js'
 
 
 
   server/bind-country
-    BindCountry#GET
-      ✓ should bind country data to req
+    before
+      ✓ should bind data to req
 
   /api/user/maxmind/country
     exceptions
@@ -19,5 +19,5 @@
       ✓ object
 
 
-  5 passing (451ms)
+  5 passing (405ms)
 
