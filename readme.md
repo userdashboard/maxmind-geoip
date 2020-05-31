@@ -45,7 +45,7 @@ Use the API to identify which country a user is from, proxying your Dashboard se
             method: 'GET',
             headers: {
                 'x-application-server': 'application.example.com',
-                'x-dashboard-token': token
+                'x-application-server-token': token
             }
         }
         if (accountid) {
