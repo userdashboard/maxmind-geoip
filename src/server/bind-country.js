@@ -4,7 +4,9 @@ module.exports = {
     req.query = {
       ip: req.ip || requestIPAddress(req)
     }
-    req.country = await global.api.user.maxmind.Country.get(req)
+    if (req.query.ip) {
+      req.country = await global.api.user.maxmind.Country.get(req)
+    }
     req.query = queryWas
   }
 }
