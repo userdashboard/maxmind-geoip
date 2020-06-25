@@ -1,10 +1,9 @@
 
-> @userdashboard/maxmind-geoip@1.0.61 test /home/runner/work/maxmind-geoip/maxmind-geoip
+> @userdashboard/maxmind-geoip@1.0.62 test /home/runner/work/maxmind-geoip/maxmind-geoip
 > mocha --exit --inline-diffs --full-trace --bail --async-only --recursive --timeout 600000 --slow 600000 './src{,!(public)/**}/*.test.js'
 
 
 
-Setting up with Dashboard as module
   server/bind-country
     before
       ✓ should bind data to req
@@ -20,5 +19,5 @@ Setting up with Dashboard as module
       ✓ object
 
 
-  5 passing (464ms)
+  5 passing (385ms)
 
