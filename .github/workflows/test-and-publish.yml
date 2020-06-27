@@ -24,7 +24,7 @@ jobs:
     - name: Lint (standard.js)
       run: standard src
     - name: Test (fs)
-      run: npm test > tests.txt
+      run: npm test | tee tests.txt ; test ${PIPESTATUS[0]} -eq 0
       env:
         NODE_ENV: testing
         FAST_START: true
