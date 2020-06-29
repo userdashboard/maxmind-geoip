@@ -20,6 +20,7 @@ jobs:
         npm install
         npm install @userdashboard/dashboard --no-save
         npm version patch
+        sudo apt-get install -y redis-server
         mkdir /tmp/project
         cd /tmp/project
         npm init -y
