@@ -54,6 +54,7 @@ jobs:
         GENERATE_SITEMAP_TXT: false
         GENERATE_API_TXT: false
     - name: Generate supporting texts
+      working-directory: '/home/runner/work/maxmind-geoip/maxmind-geoip/'
       run: node main.js
       env:
         NODE_ENV: sitemap
