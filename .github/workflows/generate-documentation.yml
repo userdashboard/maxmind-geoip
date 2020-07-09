@@ -23,7 +23,7 @@ jobs:
         path: documentation
         persist-credentials: "true"
         token: ${{ secrets.DOCUMENTATION_PAT }}
-        fetch-depth: 1
+        fetc-depth: 1
     - name: Set up as module
       run: |
         git config --global user.name "${{ secrets.NAME }}"
@@ -66,4 +66,3 @@ jobs:
         github_token: ${{ secrets.DOCUMENTATION_PAT }}
         publish_dir: ./documentation
         keep_files: true
-        publish_branch: master
