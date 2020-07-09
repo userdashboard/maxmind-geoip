@@ -64,6 +64,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         external_repository: 'userdashboard/userdashboard.github.io'
-        github_token: ${{ secrets.DOCUMENTATION_PAT }}
+        personal_token: ${{ secrets.DOCUMENTATION_PAT }}
         publish_dir: ./documentation
         keep_files: true
