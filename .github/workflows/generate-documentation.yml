@@ -34,10 +34,10 @@ jobs:
         npm init -y
         npm install faker puppeteer@2.1.1 @userdashboard/dashboard @userdashboard/maxmind-geoip @userdashboard/storage-redis
         npm install -g mocha
-        rm node_modules/@userdashboard/dashboard/*.js
-        rm -rf node_modules/@userdashboard/dashboard/src
-        cp /home/runner/work/maxmind-geoip/maxmind-geoip/*.js node_modules/@userdashboard/dashboard
-        cp -R /home/runner/work/maxmind-geoip/maxmind-geoip/src/ node_modules/@userdashboard/dashboard/src/
+        rm node_modules/@userdashboard/maxmind-geoip/*.js
+        rm -rf node_modules/@userdashboard/maxmind-geoip/src
+        cp /home/runner/work/maxmind-geoip/maxmind-geoip/*.js node_modules/@userdashboard/maxmind-geoip
+        cp -R /home/runner/work/maxmind-geoip/maxmind-geoip/src/ node_modules/@userdashboard/maxmind-geoip/src/
         echo "global.applicationPath = __dirname" > main.js
         PACKAGE=`cat package.json`
         PACKAGE=${PACKAGE/\"description\"\: \"\"/\"dashboard\": \{ \"modules\"\: \[\"@userdashboard/maxmind-geoip\"\] \}}
