@@ -39,7 +39,7 @@ jobs:
         echo $PACKAGE > package.json
     - name: Generate documentation
       run: |
-        mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/maxmind-geoip/*.test.js"
+        mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/maxmind-geoip/**/*.test.js"
         find /home/runner/work/maxmind-geoip/maxmind-geoip/documentation
         find /home/runner/work/maxmind-geoip/maxmind-geoip
       working-directory: "/tmp/project"
