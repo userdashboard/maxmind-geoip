@@ -1,0 +1,17 @@
+{
+  "name": "userdashboard.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-beautify": "^1.11.0",
+    "remarkable": "^2.0.0",
+    "server-html": "^9.0.0",
+    "uglify-js": "^3.9.3"
+  }
+}

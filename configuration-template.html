@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-navbar="navbar.html">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/public/style.css">
+  <script async src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Reusable boilerplate for web apps</p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full">
+        <a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title"></h1>
+          <h2>Environment variables</h2>
+          <table id="variables-table" class="api">
+            <tr>
+              <th>Variable</th>
+              <th>Default</th>
+              <th>Values</th>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+  <template id="variable-row-template">
+    <table>
+      <tr>
+        <td>${variable.name}</td>
+        <td>${variable.default}</td>
+        <td>${variable.value}</td>
+      </tr>
+    </table>
+  </template>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<html>
+
+<head>
+  <title>/api/user/connect/set-stripe-account-submitted#PATCH (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/set-stripe-account-submitted (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.user.connect.SetStripeAccountSubmitted.patch(req)</span><span class="returns">Returns <span id="returns">object (individual),object (company)</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-stripe-account</td>
+                  <td>ineligible stripe account is submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="1">invalid-payment-details</td>
+                  <td>ineligible Stripe account missing payment details</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-registration</td>
+                  <td>ineligible Stripe account missing information</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="1">invalid-person</td>
+                  <td>ineligible company person missing information</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response"></code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/set-stripe-account-submitted.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('@userdashboard/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (stripeAccount.metadata.submitted ||
+      stripeAccount.metadata.accountid !== req.account.accountid) {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!stripeAccount.external_accounts.data.length) {
+      throw new Error('invalid-payment-details')
+    }
+    if (stripeAccount.business_type === 'company') {
+      if (stripeAccount.metadata.requiresOwners === 'true' && !stripeAccount.company.owners_provided) {
+        throw new Error('invalid-beneficial-owner')
+      }
+      if (stripeAccount.metadata.requiresDirectors === 'true' && !stripeAccount.company.directors_provided) {
+        throw new Error('invalid-company-director')
+      }
+      req.query.all = true
+      const persons = await global.api.user.connect.Persons.get(req)
+      if (persons && persons.length) {
+        for (const person of persons) {
+          if (person.requirements.currently_due.length) {
+            throw new Error('invalid-person')
+          }
+        }
+      }
+    }
+    if (stripeAccount.requirements.currently_due.length) {
+      for (const field of stripeAccount.requirements.currently_due) {
+        if (field !== 'tos_acceptance.date' &&
+            field !== 'tos_acceptance.ip') {
+          throw new Error('invalid-registration')
+        }
+      }
+    }
+    const accountInfo = {
+      metadata: {
+        submitted: dashboard.Timestamp.now
+      },
+      tos_acceptance: {
+        ip: req.ip,
+        user_agent: req.headers['user-agent'] || 'None',
+        date: dashboard.Timestamp.now
+      }
+    }
+    const stripeAccountNow = await stripeCache.execute('accounts', 'update', req.query.stripeid, accountInfo, req.stripeKey)
+    await stripeCache.delete(req.query.stripeid)
+    return stripeAccountNow
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/set-stripe-account-submitted.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const connect = require('../../../../../index.js')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+
+describe('/api/user/connect/set-stripe-account-submitted', function () {
+  after(TestHelper.deleteOldWebhooks)
+  before(TestHelper.setupWebhook)
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-stripe-account-submitted')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-stripe-account-submitted?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible stripe account is submitted', async () => {
+        // const user = await TestStripeAccounts.createSubmittedIndividual('NZ')
+        // TODO: swap with individual account
+        // the Stripe test api has an error creating fully-activated accounts
+        // so when that gets fixed this code can be changed to speed it up
+        const user = await TestStripeAccounts.createSubmittedCompany('NZ')
+        const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'DE',
+          type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-payment-details', () => {
+      it('ineligible Stripe account missing payment details', async () => {
+        const user = await TestStripeAccounts.createCompanyMissingPaymentDetails('US')
+        const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-payment-details')
+      })
+    })
+
+    describe('invalid-registration', () => {
+      it('ineligible Stripe account missing information', async () => {
+        const user = await TestStripeAccounts.createIndividualMissingIndividualDetails('US')
+        const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-registration')
+      })
+    })
+
+    describe('invalid-person', () => {
+      it('ineligible company person missing information', async () => {
+        const user = await TestStripeAccounts.createCompanyMissingPaymentDetails('US')
+        const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-payment-details')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object (individual)', async () => {
+      const country = connect.countrySpecs[Math.floor(Math.random() * connect.countrySpecs.length)]
+      const user = await TestStripeAccounts.createIndividualReadyForSubmission(country.id)
+      assert.strictEqual(user.stripeAccount.metadata.submitted, undefined)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due.length, 2)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due[0].startsWith('tos_acceptance'), true)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due[1].startsWith('tos_acceptance'), true)
+      const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      const stripeAccountNow = await req.patch()
+      assert.notStrictEqual(stripeAccountNow.metadata.submitted, undefined)
+      assert.notStrictEqual(stripeAccountNow.metadata.submitted, null)
+      assert.strictEqual(stripeAccountNow.requirements.past_due.length, 0)
+      assert.strictEqual(stripeAccountNow.requirements.eventually_due.length, 0)
+      assert.strictEqual(stripeAccountNow.requirements.currently_due.length, 0)
+    })
+
+    it('object (company)', async () => {
+      const country = connect.countrySpecs[Math.floor(Math.random() * connect.countrySpecs.length)]
+      const user = await TestStripeAccounts.createCompanyReadyForSubmission(country.id)
+      assert.strictEqual(user.stripeAccount.metadata.submitted, undefined)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due.length, 2)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due[0].startsWith('tos_acceptance'), true)
+      assert.strictEqual(user.stripeAccount.requirements.currently_due[1].startsWith('tos_acceptance'), true)
+      const req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      const stripeAccountNow = await req.patch()
+      assert.notStrictEqual(stripeAccountNow.metadata.submitted, undefined)
+      assert.notStrictEqual(stripeAccountNow.metadata.submitted, null)
+      assert.strictEqual(stripeAccountNow.requirements.past_due.length, 0)
+      assert.strictEqual(stripeAccountNow.requirements.eventually_due.length, 0)
+      assert.strictEqual(stripeAccountNow.requirements.currently_due.length, 0)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

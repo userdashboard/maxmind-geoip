@@ -1,0 +1,27 @@
+{
+  "id": "po_1GlIeZEGDCUdjbwyWLLTe26X",
+  "object": "payout",
+  "amount": 2000,
+  "arrival_date": 1590105600,
+  "automatic": false,
+  "balance_transaction": "txn_1GlIeZEGDCUdjbwyKF85ZyGR",
+  "created": 1590083879,
+  "currency": "nzd",
+  "description": null,
+  "destination": "ba_1GlIePEGDCUdjbwySwUA4lI8",
+  "failure_balance_transaction": null,
+  "failure_code": null,
+  "failure_message": null,
+  "livemode": false,
+  "metadata": {
+    "appid": "tests_1590083768",
+    "testNumber": "1590083768",
+    "accountid": "account_d0a6af7e",
+    "stripeid": "acct_1GlIcnEGDCUdjbwy"
+  },
+  "method": "standard",
+  "source_type": "card",
+  "statement_descriptor": null,
+  "status": "paid",
+  "type": "bank_account"
+}

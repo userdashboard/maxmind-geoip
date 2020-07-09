@@ -1,0 +1,397 @@
+<html>
+
+<head>
+  <title>/api/user/connect/persons#GET (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/persons (GET)</h1><span class="nodejs get" id="nodejs">await global.api.user.connect.Persons.get(req)</span><span class="returns">Returns <span id="returns">array</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-stripe-account</td>
+                  <td>ineligible stripe account for individual</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response"></code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/persons.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const connect = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (!stripeAccount) {
+      throw new Error('invalid-stripeid')
+    }
+    if (stripeAccount.business_type !== 'company') {
+      throw new Error('invalid-stripe-account')
+    }
+    let personids
+    if (req.query.all) {
+      personids = await connect.StorageList.listAll(`${req.appid}/stripeAccount/persons/${req.query.stripeid}`)
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      personids = await connect.StorageList.list(`${req.appid}/stripeAccount/persons/${req.query.stripeid}`, offset, limit)
+    }
+    if (!personids || !personids.length) {
+      return
+    }
+    const persons = []
+    for (const id of personids) {
+      req.query.personid = id
+      const person = await global.api.user.connect.Person.get(req)
+      persons.push(person)
+    }
+    return persons
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/persons.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">
+/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@userdashboard/dashboard/test-helper.js')
+
+describe('/api/user/connect/persons', function () {
+  this.retries(4)
+  this.timeout(30 * 60 * 1000)
+  const cachedResponses = {}
+  const cachedPersons = []
+  before(async () => {
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    global.delayDiskWrites = true
+    const user = await TestHelper.createUser()
+    await TestHelper.createStripeAccount(user, {
+      country: 'AT',
+      type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership:'0'
+    })
+    cachedPersons.unshift(user.representative.id)
+    for (let i = 0, len = 2; i < len; i++) {
+      await TestHelper.createPerson(user, {
+        relationship_director: 'true',
+        relationship_executive: 'true',
+        relationship_title: 'SVP Testing',
+        relationship_percent_ownership: '0'
+      })
+      cachedPersons.unshift(user.director.id)
+      await TestHelper.createPerson(user, {
+        relationship_owner: 'true',
+        relationship_executive: 'true',
+        relationship_title: 'SVP Testing',
+        relationship_percent_ownership: '11'
+      })
+      cachedPersons.unshift(user.owner.id)
+    }
+    const req1 = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}`)
+    req1.account = user.account
+    req1.session = user.session
+    cachedResponses.returns = await req1.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req1.get()
+    const req2 = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}&offset=1`)
+    req2.account = user.account
+    req2.session = user.session
+    cachedResponses.offset = await req2.get()
+    const req3 = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}&limit=1`)
+    req3.account = user.account
+    req3.session = user.session
+    cachedResponses.limit = await req3.get()
+    const req4 = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}&all=true`)
+    req4.account = user.account
+    req4.session = user.session
+    cachedResponses.all = await req4.get()
+  })
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'individual'
+        })
+        const req = TestHelper.createRequest('/api/user/connect/persons')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/persons?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible stripe account for individual', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'individual'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/persons?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+  })
+
+  describe('receives', function () {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      const personsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(personsNow[i].id, cachedPersons[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const personsNow = cachedResponses.limit
+      assert.strictEqual(personsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const personsNow = cachedResponses.all
+      assert.strictEqual(personsNow.length, cachedPersons.length)
+    })
+  })
+
+  describe('returns', function () {
+    it('array', async () => {
+      const persons = cachedResponses.returns
+      assert.strictEqual(persons.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', function () {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const persons = cachedResponses.pageSize
+      assert.strictEqual(persons.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

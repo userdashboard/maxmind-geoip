@@ -1,0 +1,18 @@
+[
+  {
+    "object": "organization",
+    "ownerid": "account_48cef67a",
+    "organizationid": "organization_3c7956d9",
+    "name": "My organization",
+    "email": "kcoventryr@php.not.net",
+    "created": 1588563522
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_181f7c85",
+    "organizationid": "organization_27c7016e",
+    "name": "My organization",
+    "email": "cslidesq@berkeley.not.edu",
+    "created": 1588563522
+  }
+]

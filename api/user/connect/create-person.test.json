@@ -1,0 +1,95 @@
+{
+  "id": "person_HJwV8LRtLpsDiN",
+  "object": "person",
+  "account": "acct_1GlIcXBRwQINquoC",
+  "address": {
+    "city": null,
+    "country": "US",
+    "line1": null,
+    "line2": null,
+    "postal_code": null,
+    "state": null
+  },
+  "created": 1590083755,
+  "dob": {
+    "day": null,
+    "month": null,
+    "year": null
+  },
+  "first_name": null,
+  "id_number_provided": false,
+  "last_name": null,
+  "metadata": {},
+  "relationship": {
+    "director": false,
+    "executive": true,
+    "owner": true,
+    "percent_ownership": 0.1,
+    "representative": true,
+    "title": "Chairperson"
+  },
+  "requirements": {
+    "currently_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "errors": [],
+    "eventually_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "past_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "pending_verification": []
+  },
+  "ssn_last_4_provided": false,
+  "verification": {
+    "additional_document": {
+      "back": null,
+      "details": null,
+      "details_code": null,
+      "front": null
+    },
+    "details": null,
+    "details_code": null,
+    "document": {
+      "back": null,
+      "details": null,
+      "details_code": null,
+      "front": null
+    },
+    "status": "unverified"
+  }
+}

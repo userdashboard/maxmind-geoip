@@ -1,0 +1,555 @@
+<html>
+
+<head>
+  <title>Dashboard documentation</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1>Dashboard</h1>
+          <p><img src="https://github.com/userdashboard/dashboard/workflows/test-and-publish/badge.svg?branch=master" alt="Test suite status" /></p>
+          <p>Dashboard provides the user boilerplate web apps require for users to register, create groups, subscription billing with Stripe etc.</p>
+          <p>You write your application server in any language and Dashboard runs in parallel. Users browse your Dashboard server's URL and it serves its own content for account-related requests and proxies your application server for everything else. An application server needs to serve a guest landing page on <code data-language="js">/</code> and your web app on <code data-language="js">/home</code>, and optionally any other URLs you require.</p>
+          <p>Dashboard is a stateless web server designed to scale horizontally, written in NodeJS. You can publish it to Heroku or similar PaaS and run multiple instances, or use web hosts like Digital Ocean, Vultr, AWS etc load balancing services they provide. In production you should have at least 2 instances of the server sharing requests for basic redundancy.</p>
+          <p>Dashboard's UI offers a generic account management and administration interface resembling the last two decades of web applications. Your application server can serve two special CSS files, <code data-language="js">/public/template-additional.css</code> and <code data-language="js">/public/content-additional.css</code> to theme the Dashboard template and content. If your server does not provide these files your Dashboard server will respond with blank files rather than 404 errors.</p>
+          <p>Your content can occupy the full screen with <code data-language="js">&lt;html template=&quot;false&quot;&gt;</code>. Your content can be accessible to guests by specifying <code data-language="js">&lt;html auth=&quot;false&quot;&gt;</code>. The content you serve can include a <code data-language="js">&lt;template id=&quot;head&quot;&gt;&lt;/template&gt;</code> with HTML to be copied into Dashboard's template <code data-language="js">&lt;HEAD&gt;</code> tag. You can use Dashboard's navigation bar by providing a <code data-language="js">&lt;template id=&quot;navbar&quot;&gt;&lt;/template&gt;</code> with your HTML links.</p>
+          <p>Your application server can access Dashboard's APIs on behalf of your users and administrators to do anything Dashboard's UI offers and more.</p>
+          <h1>Hosting Dashboard yourself</h1>
+          <p>Dashboard requires NodeJS <code data-language="js">12.16.3</code> be installed.</p>
+          <pre><code data-language="js">$ mkdir my-dashboard-server
+$ cd my-dashboard-server
+$ npm init
+$ npm install @userdashboard/dashboard
+$ echo &quot;require('@userdashboard/dashboard').start(__dirname)&quot; &gt; main.js
+$ node main.js
+</code></pre>
+          <h1>Customize registration information</h1>
+          <p>By default users may register with just a username and password, both of which are encrypted so they cannot be used for anything but signing in. You can specify some personal information fields to require in an environment variable:</p>
+          <pre><code data-language="js">    REQUIRE_PROFILE=true
+    PROFILE_FIEDLS=any,combination
+</code></pre>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>full-name</td>
+              </tr>
+              <tr>
+                <td>contact-email</td>
+              </tr>
+              <tr>
+                <td>display-name</td>
+              </tr>
+              <tr>
+                <td>display-email</td>
+              </tr>
+              <tr>
+                <td>dob</td>
+              </tr>
+              <tr>
+                <td>location</td>
+              </tr>
+              <tr>
+                <td>phone</td>
+              </tr>
+              <tr>
+                <td>company-name</td>
+              </tr>
+              <tr>
+                <td>website</td>
+              </tr>
+              <tr>
+                <td>occupation</td>
+              </tr>
+            </tbody>
+          </table>
+          <h1>Adding links to the account or administrator menus</h1>
+          <p>Your web application can add links to the account and administrator menus in its <code data-language="js">package.json</code>:</p>
+          <pre><code data-language="js">{
+    dashboard: {
+        &quot;menus&quot;: {
+            &quot;administrator&quot;: [
+                {
+                &quot;href&quot;: &quot;/administrator/manage-things&quot;,
+                &quot;text&quot;: &quot;Manage things&quot;,
+                &quot;object&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;account&quot;: [
+                {
+                &quot;href&quot;: &quot;/mortgage-calculator&quot;,
+                &quot;text&quot;: &quot;Mortgage calculator&quot;,
+                &quot;object&quot;: &quot;link&quot;
+                }
+            ]
+        },
+    }
+}
+</code></pre>
+          <h1>Access user data from your application server</h1>
+          <p>You can access the Dashboard HTTP APIs on behalf of the user making requests. Dashboard and its modules are entirely API-driven so your application server can retrieve, modify or create any user data. This example uses NodeJS to fetch the user's account from the Dashboard server.</p>
+          <pre><code data-language="js">const account = await proxy(`/api/user/account?accountid=${accountid}`, accountid, sessionid)
+
+const proxy = util.promisify((path, accountid, sessionid, callback) =&gt; {
+    let hashText
+    if (accountid) {
+        hashText = `${process.env.APPLICATION_SERVER_TOKEN}/${accountid}/${sessionid}`
+    } else {
+        hashText = process.env.APPLICATION_SERVER_TOKEN
+    }
+    const salt = bcrypt.genSaltSync(4)
+    const token = bcrypt.hashSync(hashText, salt)
+    const requestOptions = {
+        host: 'dashboard.example.com',
+        path: path,
+        port: '443',
+        method: 'GET',
+        headers: {
+            'x-application-server': 'application.example.com',
+            'x-dashboard-token': token
+        }
+    }
+    if (accountid) {
+        requestOptions.headers['x-accountid'] = accountid
+        requestOptions.headers['x-sessionid'] = sessionid
+    }
+    const proxyRequest = require('jj').request(requestOptions, (proxyResponse) =&gt; {
+        let body = ''
+        proxyResponse.on('data', (chunk) =&gt; {
+            body += chunk
+        })
+        return proxyResponse.on('end', () =&gt; {
+            return callback(null, JSON.parse(body))
+        })
+    })
+    proxyRequest.on('error', (error) =&gt; {
+        return callback(error)
+    })
+    return proxyRequest.end()
+  })
+}
+</code></pre>
+          <h1>Storage backends</h1>
+          <p>Dashboard by default uses local disk, this is good for development and under certain circumstances but generally you should use any of Redis, PostgreSQL, MySQL, MongoDB or S3-compatible for storage.</p>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Package</th>
+                <th>Repository</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-fs/badge.svg?branch=master" alt="Test suite status using file system" /></td>
+                <td>File system</td>
+                <td>For development and single-server apps</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-s3/badge.svg?branch=master" alt="Test suite status using S3 storage" /></td>
+                <td>Amazon S3</td>
+                <td>Minimum speed and minimum scaling cost</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-s3">@userdashboard/storage-s3</a></td>
+                <td><a href="https://github.com/userdashboard/storage-s3">github</a></td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-mysql/badge.svg?branch=master" alt="Test suite status using MySQL storage" /></td>
+                <td>MySQL</td>
+                <td>Medium speed and medium scaling cost</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-mysql">@userdashboard/storage-mysql</a></td>
+                <td><a href="https://github.com/userdashboard/storage-mysql">github</a></td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-mongodb/badge.svg?branch=master" alt="Test suite status using MongoDB storage" /></td>
+                <td>MongoDB</td>
+                <td>Medium speed and medium scaling cost</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-mongodb">@userdashboard/storage-mongodb</a></td>
+                <td><a href="https://github.com/userdashboard/storage-mongodb">github</a></td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-postgresql/badge.svg?branch=master" alt="Test suite status using PostgreSQL storage" /></td>
+                <td>PostgreSQL</td>
+                <td>Medium speed and medium scaling cost</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-postgresql">@userdashboard/storage-postgresql</a></td>
+                <td><a href="https://github.com/userdashboard/storage-postgresql">github</a></td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-redis/badge.svg?branch=master" alt="Test suite status using Redis storage" /></td>
+                <td>Redis</td>
+                <td>Maximum speed and maximum scaling cost</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-redis">@userdashboard/storage-redis</a></td>
+                <td><a href="https://github.com/userdashboard/storage-edis">github</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>You can activate a storage backend with an environment variable. Each have unique configuration requirements specified in their readme files.</p>
+          <pre><code data-language="js">$ STORAGE=@userdashboard/storage-mongodb \
+  MONGODB_URL=mongodb:/.... \
+  node main.js
+</code></pre>
+          <h2>Storage caching</h2>
+          <p>You can complement your storage backend with caching.</p>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Package</th>
+                <th>Repository</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-node-cache/badge.svg?branch=master" alt="Test suite status using NodeJS caching" /></td>
+                <td>NodeJS</td>
+                <td>For single-server apps</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><img src="https://github.com/userdashboard/dashboard/workflows/test-redis-cache/badge.svg?branch=master" alt="Test suite status using Redis caching" /></td>
+                <td>Redis</td>
+                <td>For speeding up disk-based storage</td>
+                <td><a href="https://npmjs.com/package/@userdashboard/storage-redis">@userdashboard/storage-redis</a></td>
+                <td><a href="https://github.com/userdashboard/storage-edis">github</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>You can optionally use Redis as a cache, this is good for any storage on slow disks.</p>
+          <pre><code data-language="js">$ CACHE=@userdashboard/storage-cache-redis \
+  CACHE_REDIS_URL=redis:/.... \
+  node main.js
+</code></pre>
+          <p>If you have a single Dashboard server you can cache within memory:</p>
+          <pre><code data-language="js">$ CACHE=node \
+  node main.js
+</code></pre>
+          <h1>Dashboard modules</h1>
+          <p>Dashboard is modular and by itself it provides only the signing in, account management and basic administration. Modules add new pages and API routes for additional functionality.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Package</th>
+                <th>Repository</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MaxMind GeoIP</td>
+                <td>IP address-based geolocation</td>
+                <td><a href="https://npmjs.com/package/userdashboard/maxmind-geoip">@userdashboard/maxmind-geoip</a></td>
+                <td><a href="https://github.com/userdashboard/maxmind-geoip">github</a></td>
+              </tr>
+              <tr>
+                <td>Organizations</td>
+                <td>User created groups</td>
+                <td><a href="https://npmjs.com/package/userdashboard/organizations">@userdashboard/organizations</a></td>
+                <td><a href="https://github.com/userdashboard/organizations">github</a></td>
+              </tr>
+              <tr>
+                <td>Stripe Connect</td>
+                <td>Marketplace functionality</td>
+                <td><a href="https://npmjs.com/package/userdashboard/stripe-connect">@userdashboard/stripe-connect</a></td>
+                <td><a href="https://github.com/userdashboard/stripe-connect">github</a></td>
+              </tr>
+              <tr>
+                <td>Stripe Subscriptions</td>
+                <td>SaaS functionality</td>
+                <td><a href="https://npmjs.com/package/userdashboard/stripe-subscriptions">@userdashboard/stripe-subscriptions</a></td>
+                <td><a href="https://github.com/userdashboard/stripe-subscriptions">github</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Modules are NodeJS packages that you install with NPM:</p>
+          <pre><code data-language="js">$ npm install @userdashboard/stripe-subscriptions
+</code></pre>
+          <p>You need to notify Dashboard which modules you are using in <code data-language="js">package.json</code> conffiguration:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@userdashboard/stripe-subscriptions&quot;
+  ]
+}
+</code></pre>
+          <p>If you have built your own modules you may submit a pull request to add them to this list.</p>
+          <p>Dashboard modules are able to use their own storage and cache settings:</p>
+          <pre><code data-language="js">$ SUBSCRIPTIONS_STORAGE=@userdashboard/storage-postgresql \
+  SUBSCRIPTIONS_DATABASE_URL=postgres://localhost:5432/subscriptions \
+  ORGANIZATIONS_STORAGE=@userdashboard/storage-postgresql \
+  ORGANIZATIONS_DATABASE_URL=postgres://localhost:5433/organizations \
+  STORAGE=@userdashboard/storage-redis \
+  REDIS_URL=redis://localhost:6379 \
+  node main.js
+</code></pre>
+          <h1>Creating modules for Dashboard</h1>
+          <p>A module is a NodeJS application with the same folder structure as Dashboard. When Dashboard starts it scans its own files, and then any modules specified in the <code data-language="js">package.json</code> to create a combined sitemap of UI and API routes. You can browse the official modules' source to see examples.</p>
+          <pre><code data-language="js">$ mkdir my-module
+$ cd my-module
+$ npm install @userdashboard/dashboard --no-save
+# create main.js to start the server
+# create index.js optionally exporting any relevant API
+# add your content
+$ npm publish
+</code></pre>
+          <p>The &quot;--no-save&quot; flag is used to install Dashboard, this prevents your module from requiring a specific version of Dashboard when it is being installed by users.</p>
+          <p>When your module is published users can install it with NPM:</p>
+          <pre><code data-language="js">$ npm install your_module_name
+</code></pre>
+          <p>Modules must be activated in a web app's <code data-language="js">package.json</code>:</p>
+          <pre><code data-language="js">dashboard: {
+    modules: [ &quot;your_module_name&quot; ]
+}
+</code></pre>
+          <p>These paths have special significance:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Folder</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code data-language="js">/src/www</code></td>
+                <td>Web server root</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/public</code></td>
+                <td>Static assets served quickly</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/account</code></td>
+                <td>User account management pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/account/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/administrator</code></td>
+                <td>Administration pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/administrator/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/user</code></td>
+                <td>User account management pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/user/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/administrator</code></td>
+                <td>Administration APIs</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/administrator/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/webhooks/YOUR_MODULE/</code></td>
+                <td>Endpoints for receiving webhooks (if applicable)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Content pages may export <code data-language="js">before</code>, <code data-language="js">get</code> and <code data-language="js">post</code> methods. API routes may export <code data-language="js">before</code>, <code data-language="js">get</code>, <code data-language="js">post</code>, <code data-language="js">patch</code>, <code data-language="js">delete</code>, <code data-language="js">put</code> methods. If specified, the <code data-language="js">before</code> methods will execute before any <code data-language="js">verb</code>.</p>
+          <p>Guest-accessible content and API routes can be flagged in the HTML or NodeJS:</p>
+          <pre><code data-language="js"># HTML
+&lt;html auth=&quot;false&quot;&gt;
+
+# NodeJS API route
+{ 
+    auth: false,
+    get: (req) = &gt; {
+
+    }
+}
+</code></pre>
+          <p>Content can occupy the full screen without the template via a flag in the HTML or NodeJS:</p>
+          <pre><code data-language="js"># HTML
+&lt;html template=&quot;false&quot;&gt;
+
+# NodeJS page handler
+{ 
+    template: false,
+    get: (req, res) = &gt; {
+
+    }
+}
+</code></pre>
+          <p>Your module can add links to the account and administrator menus in its <code data-language="js">package.json</code>:</p>
+          <pre><code data-language="js">{
+    dashboard: {
+        &quot;menus&quot;: {
+            &quot;administrator&quot;: [
+                {
+                &quot;href&quot;: &quot;/administrator/your_module_name&quot;,
+                &quot;text&quot;: &quot;Administrator link&quot;,
+                &quot;object&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;account&quot;: [
+                {
+                &quot;href&quot;: &quot;/account/your_module_name&quot;,
+                &quot;text&quot;: &quot;Account link&quot;,
+                &quot;object&quot;: &quot;link&quot;
+                }
+            ]
+        },
+    }
+}
+</code></pre>
+          <p>Your module can add <code data-language="js">server</code> handlers that manipulate requests, <code data-language="js">content</code> handlers that adjust the rendered content, and <code data-language="js">proxy</code> handlers that add to header information sent to application servers.</p>
+          <pre><code data-language="js">{
+    dashboard: {
+        &quot;server&quot;: [
+            &quot;/src/server/my-request-modifier.js&quot;
+        ],
+        &quot;content&quot;: [
+            &quot;/src/content/my-content-modifier.js&quot;
+        ],
+        &quot;proxy&quot;: [
+            &quot;/src/proxy/my-header-additions.js&quot;
+        ]
+    }
+}
+</code></pre>
+          <p>Server handlers can execute <code data-language="js">before</code> and/or <code data-language="js">after</code> a visitor is identified as a guest or user:</p>
+          <pre><code data-language="js">module.exports = {
+    before: async (req, res) =&gt; {
+    },
+    after: async (req, res) =&gt; {
+    }
+}
+</code></pre>
+          <p>Content handlers can adjust the <code data-language="js">template</code> and <code data-language="js">page</code> documents before they are served to the user:</p>
+          <pre><code data-language="js">module.exports = {
+    page: async (req, res, pageDoc) =&gt; {
+    },
+    template: async (req, res, templateDoc) =&gt; {
+    }
+}
+</code></pre>
+          <p>Proxy handlers can add to the headers sent to application servers:</p>
+          <pre><code data-language="js">module.exports = async (req, proxyRequestOptions) =&gt; {
+}
+</code></pre>
+          <h1>Support and contributions</h1>
+          <p>If you have encountered a problem post an issue on the appropriate <a href="https://github.com/userdashboard">Github repository</a>.</p>
+          <p>If you would like to contribute check <a href="https://github.com/userdashboard/dashboard">Github Issues</a> for ways you can help.</p>
+          <p>For help using or contributing to this software join the freenode IRC <code data-language="js">#userdashboard</code> chatroom - <a href="https://kiwiirc.com/nextclient/">Web IRC client</a>.</p>
+          <h2>License</h2>
+          <p>This software is licensed under the MIT license, a copy is enclosed in the <code data-language="js">LICENSE</code> file. Included icon assets and the CSS library <code data-language="js">pure-min</code> is licensed separately, refer to the <code data-language="js">icons/licenses</code> folder and <code data-language="js">src/www/public/pure-min.css</code> file for their licensing information.</p>
+          <p>Copyright (c) 2017 - 2020 Ben Lowry</p>
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+          <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+          <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+        <p><a class="skip" href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

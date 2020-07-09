@@ -1,0 +1,337 @@
+<html>
+
+<head>
+  <title>/api/administrator/connect/payouts#GET (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/connect/payouts (GET)</h1><span class="nodejs get" id="nodejs">await global.api.administrator.connect.Payouts.get(req)</span><span class="returns">Returns <span id="returns">array</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>accountid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>stripeid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response"></code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/administrator/connect/payouts.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const connect = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    let index
+    if (req.query.stripeid) {
+      const stripeAccount = await global.api.administrator.connect.StripeAccount.get(req)
+      if (!stripeAccount) {
+        throw new Error('invalid-stripeid')
+      }
+      index = `${req.appid}/stripeAccount/payouts/${req.query.stripeid}`
+    } else if (req.query.accountid) {
+      index = `${req.appid}/account/payouts/${req.query.accountid}`
+    } else {
+      index = `${req.appid}/payouts`
+    }
+    let payoutids
+    if (req.query.all) {
+      payoutids = await connect.StorageList.listAll(index)
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      payoutids = await connect.StorageList.list(index, offset, limit)
+    }
+    if (!payoutids || !payoutids.length) {
+      return
+    }
+    const payouts = []
+    req.query = req.query || {}
+    for (const payoutid of payoutids) {
+      req.query.payoutid = payoutid
+      const payout = await global.api.administrator.connect.Payout.get(req)
+      payouts.push(payout)
+    }
+    return payouts
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/administrator/connect/payouts.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@userdashboard/dashboard/test-helper.js')
+
+describe('/api/administrator/connect/payouts', function () {
+  this.retries(4)
+  this.timeout(30 * 60 * 1000)
+  const cachedResponses = {}
+  const cachedPayouts = []
+  const accountPayouts = []
+  const stripeAccountPayouts = []
+  after(TestHelper.deleteOldWebhooks)
+  before(async () => {
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    await TestHelper.setupWebhook()
+    global.delayDiskWrites = true
+    const administrator = await TestHelper.createOwner()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      // TODO: swap with individual account
+      // the Stripe test api has an error creating fully-activated accounts
+      // so when that gets fixed this code can be changed to speed it up
+      const user = await TestStripeAccounts.createSubmittedCompany('NZ')
+      await TestHelper.createPayout(user)
+      cachedPayouts.unshift(user.payout.id)
+    }
+    let user = await TestStripeAccounts.createSubmittedCompany('NZ')
+    const stripeid = user.stripeAccount.id
+    await TestHelper.createPayout(user)
+    cachedPayouts.unshift(user.payout.id)
+    accountPayouts.unshift(user.payout.id)
+    stripeAccountPayouts.unshift(user.payout.id)
+    await TestHelper.createPayout(user)
+    cachedPayouts.unshift(user.payout.id)
+    accountPayouts.unshift(user.payout.id)
+    stripeAccountPayouts.unshift(user.payout.id)
+    user = await TestStripeAccounts.createSubmittedCompany('NZ', user)
+    await TestHelper.createPayout(user)
+    cachedPayouts.unshift(user.payout.id)
+    accountPayouts.unshift(user.payout.id)
+    const req1 = TestHelper.createRequest('/api/administrator/connect/payouts')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.returns = await req1.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/connect/payouts?offset=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.offset = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/connect/payouts?limit=1')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.limit = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/connect/payouts?all=true')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    cachedResponses.all = await req4.get()
+    const req5 = TestHelper.createRequest(`/api/administrator/connect/payouts?accountid=${user.account.accountid}&all=true`)
+    req5.account = administrator.account
+    req5.session = administrator.session
+    cachedResponses.accountid = await req5.get()
+    const req6 = TestHelper.createRequest(`/api/administrator/connect/payouts?stripeid=${stripeid}&all=true`)
+    req6.account = administrator.account
+    req6.session = administrator.session
+    cachedResponses.stripeid = await req6.get()
+  })
+
+  describe('receives', function () {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      const payoutsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(payoutsNow[i].id, cachedPayouts[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const payoutsNow = cachedResponses.limit
+      assert.strictEqual(payoutsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const payoutsNow = cachedResponses.all
+      assert.strictEqual(payoutsNow.length, cachedPayouts.length)
+    })
+
+    it('optional querystring accountid (string)', async () => {
+      const payoutsNow = cachedResponses.accountid
+      assert.strictEqual(payoutsNow.length, accountPayouts.length)
+    })
+
+    it('optional querystring stripeid (string)', async () => {
+      const payoutsNow = cachedResponses.stripeid
+      assert.strictEqual(payoutsNow.length, stripeAccountPayouts.length)
+    })
+  })
+
+  describe('returns', function () {
+    it('array', async () => {
+      const payouts = cachedResponses.returns
+      assert.strictEqual(payouts.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', function () {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const payouts = cachedResponses.pageSize
+      assert.strictEqual(payouts.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

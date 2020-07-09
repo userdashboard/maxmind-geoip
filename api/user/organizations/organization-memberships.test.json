@@ -1,0 +1,24 @@
+[
+  {
+    "object": "membership",
+    "membershipid": "membership_d1fe19bc",
+    "organizationid": "organization_c6587a02",
+    "accountid": "account_d65c150a",
+    "created": 1588563524,
+    "invitationid": "invitation_9bee4ed8",
+    "profileid": "profile_956cfc50",
+    "displayName": "Jacquenette",
+    "displayEmail": "jarthurs6g@ucsd.not.edu"
+  },
+  {
+    "object": "membership",
+    "membershipid": "membership_140554db",
+    "organizationid": "organization_c6587a02",
+    "accountid": "account_179c5ca4",
+    "created": 1588563524,
+    "invitationid": "invitation_721c8794",
+    "profileid": "profile_fa3ce503",
+    "displayName": "Alicea",
+    "displayEmail": "atummasutti6f@free.not.fr"
+  }
+]

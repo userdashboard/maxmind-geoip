@@ -1,0 +1,26 @@
+[
+  {
+    "object": "session",
+    "sessionid": "session_8bfa898",
+    "accountid": "account_b07c2dc",
+    "created": 1594310132,
+    "expires": 1594311332,
+    "sessionKeyNumber": 1
+  },
+  {
+    "object": "session",
+    "sessionid": "session_387c432",
+    "accountid": "account_b07c2dc",
+    "created": 1594310132,
+    "expires": 1594311332,
+    "sessionKeyNumber": 1
+  },
+  {
+    "object": "session",
+    "sessionid": "session_b66c97d",
+    "accountid": "account_b07c2dc",
+    "created": 1594310132,
+    "expires": 1594311332,
+    "sessionKeyNumber": 1
+  }
+]

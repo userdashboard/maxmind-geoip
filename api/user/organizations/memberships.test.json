@@ -1,0 +1,34 @@
+[
+  {
+    "object": "membership",
+    "membershipid": "membership_4fcd686a",
+    "organizationid": "organization_3de286b7",
+    "accountid": "account_2c5f23f2",
+    "created": 1590082408,
+    "profileid": "profile_c1a243d3",
+    "displayName": "Jeanne",
+    "displayEmail": "jtretterhi@theguardian.not.com"
+  },
+  {
+    "object": "membership",
+    "membershipid": "membership_f9fbff90",
+    "organizationid": "organization_7683fdc0",
+    "accountid": "account_2c5f23f2",
+    "created": 1590082408,
+    "invitationid": "invitation_fcaa8a19",
+    "profileid": "profile_c1a243d3",
+    "displayName": "Jeanne",
+    "displayEmail": "jtretterhi@theguardian.not.com"
+  },
+  {
+    "object": "membership",
+    "membershipid": "membership_21008264",
+    "organizationid": "organization_72465bc0",
+    "accountid": "account_2c5f23f2",
+    "created": 1590082408,
+    "invitationid": "invitation_cd32a40a",
+    "profileid": "profile_c1a243d3",
+    "displayName": "Jeanne",
+    "displayEmail": "jtretterhi@theguardian.not.com"
+  }
+]

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title translate="yes">UserDashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0
+    }
+
+    body {
+      min-width: 250px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      background: linear-gradient(30deg, #117, #715, #ea3);
+      font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif
+    }
+
+    .dashboard {
+      min-width: 230px;
+      position: absolute;
+      top: 25%;
+      left: 25%;
+      border-radius: 0.5rem;
+      width: 50%;
+      min-height: 50%;
+      max-height: 80%;
+      overflow: hidden;
+      border: 1px dotted rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+      background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5))
+    }
+
+    .header {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      height: 3rem;
+      line-height: 3rem;
+      color: inherit;
+      width: 100%
+    }
+
+    .header h2 {
+      flex-direction: row;
+      align-self: flex-start;
+      text-indent: 1rem;
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.75)
+    }
+
+    .header img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-top: 0.75rem;
+      display: block;
+      float: right;
+      margin-left: 0.5rem;
+      opacity: 0.25
+    }
+
+    .header .menu {
+      height: 3rem;
+      float: right;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 3rem;
+      font-size: 0.9rem;
+      margin-right: 1rem
+    }
+
+    .header .menu span {
+      display: inline-block;
+      height: 3rem;
+      line-height: 3rem
+    }
+
+    .navigation {
+      display: flex;
+      width: 100%;
+      top: 3rem;
+      height: 2rem;
+      line-height: 2rem;
+      border-top: 1px dotted rgba(255, 255, 255, 0.5);
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.5)
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #FFF;
+      font-size: 0.8rem;
+      margin-left: 1rem;
+      line-height: 2rem
+    }
+
+    .navigation a:hover {
+      color: #FFF;
+      text-decoration: underline
+    }
+
+    .content {
+      display: flex;
+      height: 100%
+    }
+
+    .content h1 {
+      position: absolute;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: right;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0 0 0 2rem;
+      margin: 0
+    }
+
+    .content h1 span {
+      color: rgba(255, 255, 255, 0.75)
+    }
+
+    .content img {
+      width: 100%;
+      opacity: 0.1
+    }
+
+    @media (max-width: 1024px) {
+      .dashboard {
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 80%;
+        max-height: none
+      }
+
+      .content img {
+        width: auto;
+        height: 100%
+      }
+
+      .content h1 {
+        font-size: 2.4rem
+      }
+    }
+
+    @media (max-width: 650px) {
+      .dashboard {
+        top: 2%;
+        left: 2%;
+        width: 96%;
+        height: 96%;
+        max-height: none
+      }
+
+      .header h2 {
+        font-size: 1rem;
+        text-indent: 0.5rem
+      }
+
+      .header .menu {
+        font-size: 1rem !important
+      }
+
+      .header .menu span {
+        display: none !important
+      }
+
+      .navigation a {
+        font-size: 0.75rem !important
+      }
+
+      .dashboard .navigation a {
+        display: none
+      }
+
+      .navigation a:first-of-type {
+        margin-left: 0.5em !important;
+        display: inline-block
+      }
+
+      .navigation a:last-of-type {
+        display: inline-block
+      }
+
+      .content h1 {
+        font-size: 2rem
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .navigation a {
+        font-size: 0.9rem
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .navigation a {
+        font-size: 1rem
+      }
+    }
+
+    @media (min-width: 1920px) {
+      .dashboard {
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        border-width: 2px
+      }
+
+      .navigation {
+        border-top-width: 2px;
+        border-bottom-width: 2px
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <section class="header">
+      <div class="menus">
+        <div class="menu"><img src="/public/public/account.svg"></div>
+        <div class="menu"><img src="/public/public/administrator.svg"></div>
+      </div>
+    </section>
+    <section class="navigation">
+      <nav>
+        <a href="/dashboard">Documentation</a> <a href="https://github.com/userdashboard/dashboard">Source code</a>
+      </nav>
+    </section>
+    <section class="content">
+      <h1><span>Boilerplate</span> for web apps</h1>
+    </section>
+  </div>
+</body>
+</html>

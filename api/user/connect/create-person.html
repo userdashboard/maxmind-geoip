@@ -1,0 +1,793 @@
+<html>
+
+<head>
+  <title>/api/user/connect/create-person#POST (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/create-person (POST)</h1><span class="nodejs post" id="nodejs">await global.api.user.connect.CreatePerson.post(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="3">invalid-stripe-account</td>
+                  <td>ineligible stripe account for individuals</td>
+                </tr>
+                <tr>
+                  <td>ineligible stripe account does not require directors</td>
+                </tr>
+                <tr>
+                  <td>ineligible stripe account does not require owners</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="2">invalid-relationship_percent_ownership</td>
+                  <td>missing posted relationship_percent_ownership</td>
+                </tr>
+                <tr>
+                  <td>invalid posted relationship_percent_ownership</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="2">invalid-relationship_title</td>
+                  <td>missing posted relationship_title</td>
+                </tr>
+                <tr>
+                  <td>invalid posted relationship_title</td>
+                </tr>
+                <tr>
+                  <td id="description-10" rowspan="1">invalid-relationship_executive</td>
+                  <td>invalid representative must be an executive</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>relationship_representative</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_executive</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_director</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_owner</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_percent_ownership</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_title</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "id": "person_HJwV8LRtLpsDiN",
+  "object": "person",
+  "account": "acct_1GlIcXBRwQINquoC",
+  "address": {
+    "city": null,
+    "country": "US",
+    "line1": null,
+    "line2": null,
+    "postal_code": null,
+    "state": null
+  },
+  "created": "{timestamp}",
+  "dob": {
+    "day": null,
+    "month": null,
+    "year": null
+  },
+  "first_name": null,
+  "id_number_provided": false,
+  "last_name": null,
+  "metadata": {},
+  "relationship": {
+    "director": false,
+    "executive": true,
+    "owner": true,
+    "percent_ownership": 0.1,
+    "representative": true,
+    "title": "Chairperson"
+  },
+  "requirements": {
+    "currently_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "errors": [],
+    "eventually_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "past_due": [
+      "address.city",
+      "address.line1",
+      "address.postal_code",
+      "address.state",
+      "dob.day",
+      "dob.month",
+      "dob.year",
+      "email",
+      "first_name",
+      "last_name",
+      "phone",
+      "ssn_last_4"
+    ],
+    "pending_verification": []
+  },
+  "ssn_last_4_provided": false,
+  "verification": {
+    "additional_document": {
+      "back": null,
+      "details": null,
+      "details_code": null,
+      "front": null
+    },
+    "details": null,
+    "details_code": null,
+    "document": {
+      "back": null,
+      "details": null,
+      "details_code": null,
+      "front": null
+    },
+    "status": "unverified"
+  }
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/create-person.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const connect = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (!stripeAccount) {
+      throw new Error('invalid-stripeid')
+    }
+    if (stripeAccount.business_type !== 'company') {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!req.body.relationship_representative && !req.body.relationship_director && !req.body.relationship_owner) {
+      throw new Error('invalid-selection')
+    }
+    if (req.body.relationship_representative && !req.body.relationship_executive) {
+      throw new Error('invalid-relationship_executive')
+    }
+    // TODO: the 5000 character limit is from Stripe
+    // they'll probably change it so monitor this
+    if (!req.body.relationship_title ||
+        !req.body.relationship_title.length ||
+        req.body.relationship_title.length > 5000) {
+      throw new Error('invalid-relationship_title')
+    }
+    if (!req.body.relationship_percent_ownership) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    let percent
+    try {
+      percent = parseFloat(req.body.relationship_percent_ownership, 10)
+    } catch (s) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    // TODO: 0% ownership throws an error on Stripe if the person is not 'owner=true'
+    if ((!percent && percent !== 0) || percent > 100 || percent < 0) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    if (percent === 0) {
+      if (req.body.relationship_owner) {
+        throw new Error('invalid-relationship_percent_ownership')
+      }
+      delete (req.body.relationship_percent_ownership)
+    }
+    const personInfo = {
+      relationship: {
+        title: req.body.relationship_title
+      }
+    }
+    if (req.body.relationship_percent_ownership) {
+      personInfo.relationship.percent_ownership = req.body.relationship_percent_ownership
+    }
+    if (req.body.relationship_representative) {
+      personInfo.relationship.representative = true
+    }
+    if (req.body.relationship_executive) {
+      personInfo.relationship.executive = true
+    }
+    if (req.body.relationship_director) {
+      if (stripeAccount.metadata.requiresDirectors === 'false') {
+        throw new Error('invalid-stripe-account')
+      }
+      personInfo.relationship.director = true
+    }
+    if (req.body.relationship_owner) {
+      if (stripeAccount.metadata.requiresOwners === 'false') {
+        throw new Error('invalid-stripe-account')
+      }
+      personInfo.relationship.owner = true
+    }
+    const person = await stripeCache.execute('accounts', 'createPerson', req.query.stripeid, personInfo, req.stripeKey)
+    await connect.Storage.write(`${req.appid}/map/personid/stripeid/${person.id}`, req.query.stripeid)
+    await connect.StorageList.add(`${req.appid}/persons`, person.id)
+    await connect.StorageList.add(`${req.appid}/stripeAccount/persons/${req.query.stripeid}`, person.id)
+    return person
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/create-person.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/user/connect/create-person', () => {
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/create-person')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/create-person?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible stripe account for individuals', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'individual'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible stripe account does not require directors', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_director: 'true',
+          relationship_title: 'Chairperson',
+          relationship_percent_ownership: '0.1'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible stripe account does not require owners', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'HK',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_owner: 'true',
+          relationship_title: 'Chairperson',
+          relationship_percent_ownership: '0.1'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-relationship_percent_ownership', () => {
+      it('missing posted relationship_percent_ownership', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_representative: 'true',
+          relationship_executive: 'true',
+          relationship_title: 'Chairperson',
+          relationship_percent_ownership: ''
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-relationship_percent_ownership')
+      })
+
+      it('invalid posted relationship_percent_ownership', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_representative: 'true',
+          relationship_executive: 'true',
+          relationship_title: 'Chairperson',
+          relationship_percent_ownership: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-relationship_percent_ownership')
+      })
+    })
+
+    describe('invalid-relationship_title', () => {
+      it('missing posted relationship_title', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_representative: 'true',
+          relationship_executive: 'true',
+          relationship_title: '',
+          relationship_percent_ownership: '0.1'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-relationship_title')
+      })
+
+      it('invalid posted relationship_title', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_representative: 'true',
+          relationship_executive: 'true',
+          relationship_title: '',
+          relationship_percent_ownership: '0.1'
+        }
+        // TODO: the 5000 character limit is from Stripe
+        // they'll probably change it so monitor this
+        while (req.body.relationship_title.length < 5001) {
+          req.body.relationship_title += '-'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-relationship_title')
+      })
+    })
+
+    describe('invalid-relationship_executive', async () => {
+      it('invalid representative must be an executive', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          relationship_representative: 'true',
+          relationship_title: 'Chairperson',
+          relationship_percent_ownership: '0.1'
+        }
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-relationship_executive')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional posted relationship_representative', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'US',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_representative: 'true',
+        relationship_executive: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.representative, true)
+    })
+
+    it('optionally-required posted relationship_executive', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'US',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_representative: 'true',
+        relationship_executive: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.executive, true)
+    })
+
+    it('optional posted relationship_director', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'GB',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_director: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.director, true)
+    })
+
+    it('optional posted relationship_owner', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'GB',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_owner: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.owner, true)
+    })
+
+    it('required posted relationship_percent_ownership', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'GB',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_director: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.percent_ownership, 0.1)
+    })
+
+    it('required posted relationship_title', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'GB',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_director: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      const person = await req.post()
+      assert.strictEqual(person.relationship.title, 'Chairperson')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'US',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        relationship_representative: 'true',
+        relationship_executive: 'true',
+        relationship_title: 'Chairperson',
+        relationship_percent_ownership: '0.1'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const person = await req.post()
+      assert.strictEqual(person.object, 'person')
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html data-navbar="navbar.html">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/public/style.css">
+  <script async src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/public/wa-mediabox.min.css">
+  <script async src="/public/wa-mediabox.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Reusable boilerplate for web apps</p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full">
+        <a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title"></h1>
+          <div class="ui-container" id="guest-container">
+            <h2>Guest routes</h2>
+            <p>These pages can be browsed by anonymous guests.</p>
+            <ul id="guest-routes-list" class="screenshots desktop"></ul>
+          </div>
+          <div class="ui-container" id="user-container">
+            <h2>User routes</h2>
+            <p>These pages require the user be signed in.</p>
+            <ul id="user-routes-list" class="screenshots desktop"></ul>
+          </div>
+          <div class="ui-container" id="administrator-container">
+            <h2>Administrator routes</h2>
+            <p>These pages are only accessible to administrators.</p>
+            <ul id="administrator-routes-list" class="screenshots desktop"></ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <template id="route-template">
+    <ul>
+      <li>
+        <a href="${route.url}"><img src="${route.src}"></a> <a href="${route.url}">${route.title}</a>
+      </li>
+    </ul>
+  </template>
+</body>
+</html>

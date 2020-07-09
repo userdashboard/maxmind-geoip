@@ -1,0 +1,328 @@
+<html>
+
+<head>
+  <title>/api/user/set-account-deleted#PATCH (dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/set-account-deleted (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.user.SetAccountDeleted.patch(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-accountid</td>
+                  <td>missing querystring accountid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring accountid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-password</td>
+                  <td>missing posted password</td>
+                </tr>
+                <tr>
+                  <td>invalid posted password</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "object": "account",
+  "accountid": "account_599a31f8",
+  "usernameHash": "6a4b356a4e76564d424f35504b754b6b4762464b54375a4146614247366971",
+  "passwordHash": "$2a$04$NlsAWu.gcldo8PQmhbwK1uxnqMtdjPqlyMvtg5iR6/kdJFsg88h.S",
+  "sessionKey": "b7b69d14c5cda830277fd83945c56491afceb4ea859daffbd8932d9681481968",
+  "sessionKeyNumber": 1,
+  "created": "{timestamp}",
+  "administrator": "{timestamp}",
+  "owner": "{timestamp}",
+  "firstName": "Barby",
+  "lastName": "Huntington",
+  "contactEmail": "bhuntingtonnr@statcounter.not.com",
+  "profileid": "profile_e940620b",
+  "lastSignedIn": "{timestamp}",
+  "deleted": "{timestamp}"
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/set-account-deleted.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.user.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-accountid')
+    }
+    let dashboardEncryptionKey = global.dashboardEncryptionKey
+    if (req.server) {
+      dashboardEncryptionKey = req.server.dashboardEncryptionKey || dashboardEncryptionKey
+    }
+    if (!req.body || !req.body.password || !req.body.password.length) {
+      throw new Error('invalid-password')
+    }
+    const realPasswordHash = await dashboard.StorageObject.getProperty(`${req.appid}/account/${req.query.accountid}`, 'passwordHash')
+    const validPassword = await dashboard.Hash.randomSaltCompare(req.body.password, realPasswordHash, dashboardEncryptionKey)
+    if (!validPassword) {
+      throw new Error('invalid-password')
+    }
+    const delay = global.deleteDelay < 1 ? 0 : global.deleteDelay * 24 * 60 * 60
+    req.account.deleted = dashboard.Timestamp.now + delay - 1
+    await dashboard.StorageObject.setProperty(`${req.appid}/account/${req.query.accountid}`, 'deleted', req.account.deleted)
+    await dashboard.StorageList.add(`${req.appid}/deleted/accounts`, req.query.accountid)
+    return req.account
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/set-account-deleted.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/user/set-account-deleted', () => {
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('missing querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/set-account-deleted')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/set-account-deleted?accountid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-deleted?accountid=${user2.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-password', () => {
+      it('missing posted password', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-deleted?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          password: ''
+        }
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password')
+      })
+
+      it('invalid posted password', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-deleted?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          password: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/set-account-deleted?accountid=${user.account.accountid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        password: user.account.password
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const account = await req.patch()
+      assert.strictEqual(account.object, 'account')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment DELETE_DELAY', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/set-account-deleted?accountid=${user.account.accountid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        password: user.account.password
+      }
+      global.deleteDelay = 3
+      const accountNow = await req.patch()
+      const now = Math.floor(new Date().getTime() / 1000)
+      const days = Math.ceil((accountNow.deleted - now) / 60 / 60 / 24)
+      assert.strictEqual(days, 3)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

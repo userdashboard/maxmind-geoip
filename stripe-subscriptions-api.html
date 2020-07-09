@@ -1,0 +1,851 @@
+<html navbar="navbar.html">
+
+<head>
+  <title>Stripe Subscriptions module API index</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Reusable boilerplate for web apps</p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">Stripe Subscriptions module API index</h1>
+          <div id="user-container">
+            <h2>User API</h2>
+            <table id="user-routes-table" class="api">
+              <tr>
+                <th>User API address</th>
+                <th>URL parameters</th>
+                <th>POST parameters</th>
+              </tr>
+              <tbody>
+                <tr id="route-0">
+                  <td><a href="/api/user/subscriptions/charge">/api/user/subscriptions/charge</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Charge.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-1">
+                  <td><a href="/api/user/subscriptions/charges-count">/api/user/subscriptions/charges-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.ChargesCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-2">
+                  <td><a href="/api/user/subscriptions/charges">/api/user/subscriptions/charges</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Charges.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-2">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-3">
+                  <td><a href="/api/user/subscriptions/create-cancelation-refund">/api/user/subscriptions/create-cancelation-refund</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateCancelationRefund.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-4">
+                  <td><a href="/api/user/subscriptions/create-customer">/api/user/subscriptions/create-customer</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateCustomer.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-5">
+                  <td><a href="/api/user/subscriptions/create-payment-intent">/api/user/subscriptions/create-payment-intent</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreatePaymentIntent.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-6">
+                  <td><a href="/api/user/subscriptions/create-payment-method">/api/user/subscriptions/create-payment-method</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreatePaymentMethod.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-6">
+                      <li>name</li>
+                      <li>cvc</li>
+                      <li>number</li>
+                      <li>exp_month</li>
+                      <li>exp_year</li>
+                      <li>token</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-7">
+                  <td><a href="/api/user/subscriptions/create-refund-request">/api/user/subscriptions/create-refund-request</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateRefundRequest.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-8">
+                  <td><a href="/api/user/subscriptions/create-refund">/api/user/subscriptions/create-refund</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateRefund.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-9">
+                  <td><a href="/api/user/subscriptions/create-setup-intent">/api/user/subscriptions/create-setup-intent</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateSetupIntent.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-10">
+                  <td><a href="/api/user/subscriptions/create-subscription">/api/user/subscriptions/create-subscription</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateSubscription.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-11">
+                  <td><a href="/api/user/subscriptions/create-usage-record">/api/user/subscriptions/create-usage-record</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.subscriptions.CreateUsageRecord.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-11">
+                      <li>quantity</li>
+                      <li>action</li>
+                      <li>subscriptionitemid</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-12">
+                  <td><a href="/api/user/subscriptions/customer">/api/user/subscriptions/customer</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Customer.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-13">
+                  <td><a href="/api/user/subscriptions/customers">/api/user/subscriptions/customers</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Customers.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-13">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-14">
+                  <td><a href="/api/user/subscriptions/delete-customer">/api/user/subscriptions/delete-customer</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.user.subscriptions.DeleteCustomer.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-15">
+                  <td><a href="/api/user/subscriptions/delete-subscription">/api/user/subscriptions/delete-subscription</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.user.subscriptions.DeleteSubscription.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-16">
+                  <td><a href="/api/user/subscriptions/invoice">/api/user/subscriptions/invoice</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Invoice.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-17">
+                  <td><a href="/api/user/subscriptions/invoices-count">/api/user/subscriptions/invoices-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.InvoicesCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-18">
+                  <td><a href="/api/user/subscriptions/invoices">/api/user/subscriptions/invoices</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Invoices.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-18">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-19">
+                  <td><a href="/api/user/subscriptions/payment-intent">/api/user/subscriptions/payment-intent</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentIntent.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-20">
+                  <td><a href="/api/user/subscriptions/payment-intents-count">/api/user/subscriptions/payment-intents-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentIntentsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-21">
+                  <td><a href="/api/user/subscriptions/payment-intents">/api/user/subscriptions/payment-intents</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentIntents.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-21">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-22">
+                  <td><a href="/api/user/subscriptions/payment-method">/api/user/subscriptions/payment-method</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentMethod.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-23">
+                  <td><a href="/api/user/subscriptions/payment-methods-count">/api/user/subscriptions/payment-methods-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentMethodsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-24">
+                  <td><a href="/api/user/subscriptions/payment-methods">/api/user/subscriptions/payment-methods</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PaymentMethods.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-24">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-25">
+                  <td><a href="/api/user/subscriptions/published-plan">/api/user/subscriptions/published-plan</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedPlan.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-26">
+                  <td><a href="/api/user/subscriptions/published-plans-count">/api/user/subscriptions/published-plans-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedPlansCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-27">
+                  <td><a href="/api/user/subscriptions/published-plans">/api/user/subscriptions/published-plans</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedPlans.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-27">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-28">
+                  <td><a href="/api/user/subscriptions/published-product">/api/user/subscriptions/published-product</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedProduct.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-29">
+                  <td><a href="/api/user/subscriptions/published-products-count">/api/user/subscriptions/published-products-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedProductsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-30">
+                  <td><a href="/api/user/subscriptions/published-products">/api/user/subscriptions/published-products</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.PublishedProducts.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-30">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-31">
+                  <td><a href="/api/user/subscriptions/refund">/api/user/subscriptions/refund</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Refund.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-32">
+                  <td><a href="/api/user/subscriptions/refunds-count">/api/user/subscriptions/refunds-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.RefundsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-33">
+                  <td><a href="/api/user/subscriptions/refunds">/api/user/subscriptions/refunds</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Refunds.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-33">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-34">
+                  <td><a href="/api/user/subscriptions/reset-subscription-canceling">/api/user/subscriptions/reset-subscription-canceling</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.ResetSubscriptionCanceling.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-35">
+                  <td><a href="/api/user/subscriptions/set-customer-coupon">/api/user/subscriptions/set-customer-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetCustomerCoupon.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-36">
+                  <td><a href="/api/user/subscriptions/set-invoice-paid">/api/user/subscriptions/set-invoice-paid</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetInvoicePaid.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-37">
+                  <td><a href="/api/user/subscriptions/set-payment-intent-canceled">/api/user/subscriptions/set-payment-intent-canceled</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetPaymentIntentCanceled.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-38">
+                  <td><a href="/api/user/subscriptions/set-payment-method-detached">/api/user/subscriptions/set-payment-method-detached</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetPaymentMethodDetached.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-39">
+                  <td><a href="/api/user/subscriptions/set-setup-intent-canceled">/api/user/subscriptions/set-setup-intent-canceled</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSetupIntentCanceled.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-40">
+                  <td><a href="/api/user/subscriptions/set-subscription-canceled">/api/user/subscriptions/set-subscription-canceled</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSubscriptionCanceled.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-41">
+                  <td><a href="/api/user/subscriptions/set-subscription-coupon">/api/user/subscriptions/set-subscription-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSubscriptionCoupon.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-42">
+                  <td><a href="/api/user/subscriptions/set-subscription-plan">/api/user/subscriptions/set-subscription-plan</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSubscriptionPlan.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-43">
+                  <td><a href="/api/user/subscriptions/set-subscription-quantity">/api/user/subscriptions/set-subscription-quantity</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSubscriptionQuantity.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-44">
+                  <td><a href="/api/user/subscriptions/set-subscription-tax-percent">/api/user/subscriptions/set-subscription-tax-percent</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.subscriptions.SetSubscriptionTaxPercent.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-45">
+                  <td><a href="/api/user/subscriptions/setup-intent">/api/user/subscriptions/setup-intent</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.SetupIntent.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-46">
+                  <td><a href="/api/user/subscriptions/setup-intents-count">/api/user/subscriptions/setup-intents-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.SetupIntentsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-47">
+                  <td><a href="/api/user/subscriptions/setup-intents">/api/user/subscriptions/setup-intents</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.SetupIntents.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-47">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-48">
+                  <td><a href="/api/user/subscriptions/subscription">/api/user/subscriptions/subscription</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Subscription.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-49">
+                  <td><a href="/api/user/subscriptions/subscriptions-count">/api/user/subscriptions/subscriptions-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.SubscriptionsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-50">
+                  <td><a href="/api/user/subscriptions/subscriptions">/api/user/subscriptions/subscriptions</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.Subscriptions.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-50">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-51">
+                  <td><a href="/api/user/subscriptions/upcoming-invoice">/api/user/subscriptions/upcoming-invoice</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.UpcomingInvoice.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-52">
+                  <td><a href="/api/user/subscriptions/usage-record-summaries">/api/user/subscriptions/usage-record-summaries</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.subscriptions.UsageRecordSummaries.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-52">
+                      <li>starting_after</li>
+                      <li>ending_before</li>
+                      <li>limit</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="administrator-container">
+            <h2>Administrator API</h2>
+            <table id="administrator-routes-table" class="api">
+              <tr>
+                <th>Administrator API address</th>
+                <th>URL parameters</th>
+                <th>POST parameters</th>
+              </tr>
+              <tbody>
+                <tr id="route-53">
+                  <td><a href="/api/administrator/subscriptions/charge">/api/administrator/subscriptions/charge</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Charge.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-54">
+                  <td><a href="/api/administrator/subscriptions/charges-count">/api/administrator/subscriptions/charges-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.ChargesCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-55">
+                  <td><a href="/api/administrator/subscriptions/charges">/api/administrator/subscriptions/charges</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Charges.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-55">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-56">
+                  <td><a href="/api/administrator/subscriptions/coupon">/api/administrator/subscriptions/coupon</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Coupon.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-57">
+                  <td><a href="/api/administrator/subscriptions/coupons-count">/api/administrator/subscriptions/coupons-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.CouponsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-58">
+                  <td><a href="/api/administrator/subscriptions/coupons">/api/administrator/subscriptions/coupons</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Coupons.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-58">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-59">
+                  <td><a href="/api/administrator/subscriptions/create-cancelation-refund">/api/administrator/subscriptions/create-cancelation-refund</a><span class="method POST">POST</span><span class="nodejs">await global.api.administrator.subscriptions.CreateCancelationRefund.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-60">
+                  <td><a href="/api/administrator/subscriptions/create-coupon">/api/administrator/subscriptions/create-coupon</a><span class="method POST">POST</span><span class="nodejs">await global.api.administrator.subscriptions.CreateCoupon.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-60">
+                      <li>duration</li>
+                      <li>amount_off</li>
+                      <li>currency</li>
+                      <li>percent_off</li>
+                      <li></li>
+                      <li>duration_in_months</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-61">
+                  <td><a href="/api/administrator/subscriptions/create-plan">/api/administrator/subscriptions/create-plan</a><span class="method POST">POST</span><span class="nodejs">await global.api.administrator.subscriptions.CreatePlan.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-61">
+                      <li>published</li>
+                      <li>trial_period_days</li>
+                      <li>usage_type</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-62">
+                  <td><a href="/api/administrator/subscriptions/create-product">/api/administrator/subscriptions/create-product</a><span class="method POST">POST</span><span class="nodejs">await global.api.administrator.subscriptions.CreateProduct.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-62">
+                      <li>published</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-63">
+                  <td><a href="/api/administrator/subscriptions/create-refund">/api/administrator/subscriptions/create-refund</a><span class="method POST">POST</span><span class="nodejs">await global.api.administrator.subscriptions.CreateRefund.post(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-64">
+                  <td><a href="/api/administrator/subscriptions/customer">/api/administrator/subscriptions/customer</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Customer.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-65">
+                  <td><a href="/api/administrator/subscriptions/customers-count">/api/administrator/subscriptions/customers-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.CustomersCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-66">
+                  <td><a href="/api/administrator/subscriptions/customers">/api/administrator/subscriptions/customers</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Customers.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-66">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-67">
+                  <td><a href="/api/administrator/subscriptions/delete-coupon">/api/administrator/subscriptions/delete-coupon</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.administrator.subscriptions.DeleteCoupon.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-68">
+                  <td><a href="/api/administrator/subscriptions/delete-plan">/api/administrator/subscriptions/delete-plan</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.administrator.subscriptions.DeletePlan.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-69">
+                  <td><a href="/api/administrator/subscriptions/delete-product">/api/administrator/subscriptions/delete-product</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.administrator.subscriptions.DeleteProduct.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-70">
+                  <td><a href="/api/administrator/subscriptions/delete-subscription">/api/administrator/subscriptions/delete-subscription</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.administrator.subscriptions.DeleteSubscription.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-71">
+                  <td><a href="/api/administrator/subscriptions/invoice">/api/administrator/subscriptions/invoice</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Invoice.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-72">
+                  <td><a href="/api/administrator/subscriptions/invoices-count">/api/administrator/subscriptions/invoices-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.InvoicesCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-73">
+                  <td><a href="/api/administrator/subscriptions/invoices">/api/administrator/subscriptions/invoices</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Invoices.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-73">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-74">
+                  <td><a href="/api/administrator/subscriptions/payment-intent">/api/administrator/subscriptions/payment-intent</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentIntent.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-75">
+                  <td><a href="/api/administrator/subscriptions/payment-intents-count">/api/administrator/subscriptions/payment-intents-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentIntentsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-76">
+                  <td><a href="/api/administrator/subscriptions/payment-intents">/api/administrator/subscriptions/payment-intents</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentIntents.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-76">
+                      <li>offset</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-77">
+                  <td><a href="/api/administrator/subscriptions/payment-method">/api/administrator/subscriptions/payment-method</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentMethod.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-78">
+                  <td><a href="/api/administrator/subscriptions/payment-methods-count">/api/administrator/subscriptions/payment-methods-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentMethodsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-79">
+                  <td><a href="/api/administrator/subscriptions/payment-methods">/api/administrator/subscriptions/payment-methods</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PaymentMethods.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-79">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-80">
+                  <td><a href="/api/administrator/subscriptions/payout">/api/administrator/subscriptions/payout</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Payout.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-81">
+                  <td><a href="/api/administrator/subscriptions/payouts-count">/api/administrator/subscriptions/payouts-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PayoutsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-82">
+                  <td><a href="/api/administrator/subscriptions/payouts">/api/administrator/subscriptions/payouts</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Payouts.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-82">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-83">
+                  <td><a href="/api/administrator/subscriptions/plan">/api/administrator/subscriptions/plan</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Plan.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-84">
+                  <td><a href="/api/administrator/subscriptions/plans-count">/api/administrator/subscriptions/plans-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.PlansCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-85">
+                  <td><a href="/api/administrator/subscriptions/plans">/api/administrator/subscriptions/plans</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Plans.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-85">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-86">
+                  <td><a href="/api/administrator/subscriptions/product">/api/administrator/subscriptions/product</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Product.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-87">
+                  <td><a href="/api/administrator/subscriptions/products-count">/api/administrator/subscriptions/products-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.ProductsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-88">
+                  <td><a href="/api/administrator/subscriptions/products">/api/administrator/subscriptions/products</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Products.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-88">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-89">
+                  <td><a href="/api/administrator/subscriptions/refund-requests-count">/api/administrator/subscriptions/refund-requests-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.RefundRequestsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-90">
+                  <td><a href="/api/administrator/subscriptions/refund-requests">/api/administrator/subscriptions/refund-requests</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.RefundRequests.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-90">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-91">
+                  <td><a href="/api/administrator/subscriptions/refund">/api/administrator/subscriptions/refund</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Refund.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-92">
+                  <td><a href="/api/administrator/subscriptions/refunds-count">/api/administrator/subscriptions/refunds-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.RefundsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-93">
+                  <td><a href="/api/administrator/subscriptions/refunds">/api/administrator/subscriptions/refunds</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Refunds.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-93">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-94">
+                  <td><a href="/api/administrator/subscriptions/reset-customer-coupon">/api/administrator/subscriptions/reset-customer-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.ResetCustomerCoupon.patch(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-94">
+                      <li>object</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-95">
+                  <td><a href="/api/administrator/subscriptions/reset-subscription-coupon">/api/administrator/subscriptions/reset-subscription-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.ResetSubscriptionCoupon.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-96">
+                  <td><a href="/api/administrator/subscriptions/set-charge-flagged">/api/administrator/subscriptions/set-charge-flagged</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetChargeFlagged.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-97">
+                  <td><a href="/api/administrator/subscriptions/set-coupon-published">/api/administrator/subscriptions/set-coupon-published</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetCouponPublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-98">
+                  <td><a href="/api/administrator/subscriptions/set-coupon-unpublished">/api/administrator/subscriptions/set-coupon-unpublished</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetCouponUnpublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-99">
+                  <td><a href="/api/administrator/subscriptions/set-invoice-uncollectible">/api/administrator/subscriptions/set-invoice-uncollectible</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetInvoiceUncollectible.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-100">
+                  <td><a href="/api/administrator/subscriptions/set-plan-published">/api/administrator/subscriptions/set-plan-published</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetPlanPublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-101">
+                  <td><a href="/api/administrator/subscriptions/set-plan-unpublished">/api/administrator/subscriptions/set-plan-unpublished</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetPlanUnpublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-102">
+                  <td><a href="/api/administrator/subscriptions/set-product-published">/api/administrator/subscriptions/set-product-published</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetProductPublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-103">
+                  <td><a href="/api/administrator/subscriptions/set-product-unpublished">/api/administrator/subscriptions/set-product-unpublished</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetProductUnpublished.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-104">
+                  <td><a href="/api/administrator/subscriptions/set-refund-request-denied">/api/administrator/subscriptions/set-refund-request-denied</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetRefundRequestDenied.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-105">
+                  <td><a href="/api/administrator/subscriptions/set-subscription-canceled">/api/administrator/subscriptions/set-subscription-canceled</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetSubscriptionCanceled.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-106">
+                  <td><a href="/api/administrator/subscriptions/set-subscription-coupon">/api/administrator/subscriptions/set-subscription-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.SetSubscriptionCoupon.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-107">
+                  <td><a href="/api/administrator/subscriptions/setup-intent">/api/administrator/subscriptions/setup-intent</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.SetupIntent.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-108">
+                  <td><a href="/api/administrator/subscriptions/setup-intents-count">/api/administrator/subscriptions/setup-intents-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.SetupIntentsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-109">
+                  <td><a href="/api/administrator/subscriptions/setup-intents">/api/administrator/subscriptions/setup-intents</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.SetupIntents.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-109">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-110">
+                  <td><a href="/api/administrator/subscriptions/subscription">/api/administrator/subscriptions/subscription</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Subscription.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-111">
+                  <td><a href="/api/administrator/subscriptions/subscriptions-count">/api/administrator/subscriptions/subscriptions-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.SubscriptionsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-112">
+                  <td><a href="/api/administrator/subscriptions/subscriptions">/api/administrator/subscriptions/subscriptions</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.Subscriptions.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-112">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-113">
+                  <td><a href="/api/administrator/subscriptions/update-coupon">/api/administrator/subscriptions/update-coupon</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.UpdateCoupon.patch(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-113">
+                      <li>name</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-114">
+                  <td><a href="/api/administrator/subscriptions/update-plan">/api/administrator/subscriptions/update-plan</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.UpdatePlan.patch(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-114">
+                      <li>trial_period_days</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-115">
+                  <td><a href="/api/administrator/subscriptions/update-product">/api/administrator/subscriptions/update-product</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.administrator.subscriptions.UpdateProduct.patch(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-115">
+                      <li>name</li>
+                      <li>statement_descriptor</li>
+                      <li>unit_label</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-116">
+                  <td><a href="/api/administrator/subscriptions/usage-record-summaries">/api/administrator/subscriptions/usage-record-summaries</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.subscriptions.UsageRecordSummaries.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-116">
+                      <li>starting_after</li>
+                      <li>ending_before</li>
+                      <li>limit</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div><template id="parameter-item-template" template="parameter-item-template">
+    <li>${parameter.name}</li>
+  </template><template id="route-row-template" template="route-row-template">
+    <tr id="route-${route.id}">
+      <td><a href="${route.url}">${route.url}</a><span class="method ${route.verb}">${route.verb}</span><span class="nodejs">await ${route.nodejs}.${route.verb.toLowerCase()}(req)</span></td>
+      <td>
+        <ul id="url-parameters-${route.id}"></ul>
+      </td>
+      <td>
+        <ul id="post-parameters-${route.id}"></ul>
+      </td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "object": "membership",
+    "membershipid": "membership_a889dafa",
+    "organizationid": "organization_0c6d56bc",
+    "accountid": "account_84948915",
+    "created": 1588563522,
+    "invitationid": "invitation_bcaf1d35",
+    "profileid": "profile_1a6cb600",
+    "displayName": "Birgit",
+    "displayEmail": "bgrelka52@mail.not.ru"
+  },
+  {
+    "object": "membership",
+    "membershipid": "membership_4dcbcf03",
+    "organizationid": "organization_e1f7e38d",
+    "accountid": "account_84948915",
+    "created": 1588563522,
+    "invitationid": "invitation_9dab4018",
+    "profileid": "profile_1a6cb600",
+    "displayName": "Birgit",
+    "displayEmail": "bgrelka52@mail.not.ru"
+  }
+]

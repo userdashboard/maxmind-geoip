@@ -1,0 +1,268 @@
+<html navbar="navbar.html">
+
+<head>
+  <title>Organizations module API index</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Reusable boilerplate for web apps</p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">Organizations module API index</h1>
+          <div id="user-container">
+            <h2>User API</h2>
+            <table id="user-routes-table" class="api">
+              <tr>
+                <th>User API address</th>
+                <th>URL parameters</th>
+                <th>POST parameters</th>
+              </tr>
+              <tbody>
+                <tr id="route-0">
+                  <td><a href="/api/user/organizations/create-invitation">/api/user/organizations/create-invitation</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.organizations.CreateInvitation.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-0">
+                      <li>secret-code</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-1">
+                  <td><a href="/api/user/organizations/create-membership">/api/user/organizations/create-membership</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.organizations.CreateMembership.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-1">
+                      <li>secret-code</li>
+                      <li>profileid</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-2">
+                  <td><a href="/api/user/organizations/create-organization">/api/user/organizations/create-organization</a><span class="method POST">POST</span><span class="nodejs">await global.api.user.organizations.CreateOrganization.post(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-2">
+                      <li>organization-email</li>
+                      <li>organization-name</li>
+                      <li>profileid</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr id="route-3">
+                  <td><a href="/api/user/organizations/delete-invitation">/api/user/organizations/delete-invitation</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.user.organizations.DeleteInvitation.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-4">
+                  <td><a href="/api/user/organizations/delete-membership">/api/user/organizations/delete-membership</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.user.organizations.DeleteMembership.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-5">
+                  <td><a href="/api/user/organizations/delete-organization">/api/user/organizations/delete-organization</a><span class="method DELETE">DELETE</span><span class="nodejs">await global.api.user.organizations.DeleteOrganization.delete(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-6">
+                  <td><a href="/api/user/organizations/invitation">/api/user/organizations/invitation</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Invitation.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-7">
+                  <td><a href="/api/user/organizations/invitations-count">/api/user/organizations/invitations-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.InvitationsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-8">
+                  <td><a href="/api/user/organizations/invitations">/api/user/organizations/invitations</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Invitations.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-8">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                      <li>organizationid</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-9">
+                  <td><a href="/api/user/organizations/membership">/api/user/organizations/membership</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Membership.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-10">
+                  <td><a href="/api/user/organizations/memberships-count">/api/user/organizations/memberships-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.MembershipsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-11">
+                  <td><a href="/api/user/organizations/memberships">/api/user/organizations/memberships</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Memberships.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-11">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                      <li>organizationid</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-12">
+                  <td><a href="/api/user/organizations/open-invitation">/api/user/organizations/open-invitation</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.OpenInvitation.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-13">
+                  <td><a href="/api/user/organizations/organization-membership">/api/user/organizations/organization-membership</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.OrganizationMembership.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-14">
+                  <td><a href="/api/user/organizations/organization">/api/user/organizations/organization</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Organization.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-15">
+                  <td><a href="/api/user/organizations/organizations-count">/api/user/organizations/organizations-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.OrganizationsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-16">
+                  <td><a href="/api/user/organizations/organizations">/api/user/organizations/organizations</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.organizations.Organizations.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-16">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-17">
+                  <td><a href="/api/user/organizations/set-organization-owner">/api/user/organizations/set-organization-owner</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.organizations.SetOrganizationOwner.patch(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-18">
+                  <td><a href="/api/user/organizations/update-organization">/api/user/organizations/update-organization</a><span class="method PATCH">PATCH</span><span class="nodejs">await global.api.user.organizations.UpdateOrganization.patch(req)</span></td>
+                  <td></td>
+                  <td>
+                    <ul id="post-parameters-18">
+                      <li>name</li>
+                      <li>email</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="administrator-container">
+            <h2>Administrator API</h2>
+            <table id="administrator-routes-table" class="api">
+              <tr>
+                <th>Administrator API address</th>
+                <th>URL parameters</th>
+                <th>POST parameters</th>
+              </tr>
+              <tbody>
+                <tr id="route-19">
+                  <td><a href="/api/administrator/organizations/invitation">/api/administrator/organizations/invitation</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Invitation.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-20">
+                  <td><a href="/api/administrator/organizations/invitations-count">/api/administrator/organizations/invitations-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.InvitationsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-21">
+                  <td><a href="/api/administrator/organizations/invitations">/api/administrator/organizations/invitations</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Invitations.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-21">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                      <li>accountid</li>
+                      <li>organizationid</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-22">
+                  <td><a href="/api/administrator/organizations/membership">/api/administrator/organizations/membership</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Membership.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-23">
+                  <td><a href="/api/administrator/organizations/memberships-count">/api/administrator/organizations/memberships-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.MembershipsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-24">
+                  <td><a href="/api/administrator/organizations/memberships">/api/administrator/organizations/memberships</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Memberships.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-24">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                      <li>accountid</li>
+                      <li>organizationid</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+                <tr id="route-25">
+                  <td><a href="/api/administrator/organizations/organization">/api/administrator/organizations/organization</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Organization.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-26">
+                  <td><a href="/api/administrator/organizations/organizations-count">/api/administrator/organizations/organizations-count</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.OrganizationsCount.get(req)</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id="route-27">
+                  <td><a href="/api/administrator/organizations/organizations">/api/administrator/organizations/organizations</a><span class="method GET">GET</span><span class="nodejs">await global.api.administrator.organizations.Organizations.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-27">
+                      <li>offset</li>
+                      <li>limit</li>
+                      <li>all</li>
+                      <li>accountid</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div><template id="parameter-item-template" template="parameter-item-template">
+    <li>${parameter.name}</li>
+  </template><template id="route-row-template" template="route-row-template">
+    <tr id="route-${route.id}">
+      <td><a href="${route.url}">${route.url}</a><span class="method ${route.verb}">${route.verb}</span><span class="nodejs">await ${route.nodejs}.${route.verb.toLowerCase()}(req)</span></td>
+      <td>
+        <ul id="url-parameters-${route.id}"></ul>
+      </td>
+      <td>
+        <ul id="post-parameters-${route.id}"></ul>
+      </td>
+    </tr>
+  </template>
+</body>
+
+</html>

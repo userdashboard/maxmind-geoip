@@ -1,0 +1,16 @@
+[
+  {
+    "object": "invitation",
+    "organizationid": "organization_1d910649",
+    "invitationid": "invitation_f866564d",
+    "secretCodeHash": "643379387561387279416830377a77687a694137592e7a554b414c52393979",
+    "created": 1588563523
+  },
+  {
+    "object": "invitation",
+    "organizationid": "organization_1d910649",
+    "invitationid": "invitation_f05ae957",
+    "secretCodeHash": "2e62504d5a4555676669386d577354655870587347646d76526c505a713679",
+    "created": 1588563523
+  }
+]

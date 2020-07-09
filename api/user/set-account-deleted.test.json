@@ -1,0 +1,17 @@
+{
+  "object": "account",
+  "accountid": "account_0b6ca22",
+  "usernameHash": "18f44c88ea4096664c6fc814b0cbfde1592b9a3b47afba755cb40da960065e54c9cf00498f65645ee376b4f5109dc6bb95e98b19b6449ec9741ef302d1591b41",
+  "passwordHash": "$2a$04$IZTCksdFv00lUcj7.eQrs.zB5Iog.tF2IKv4GGJ/9nUwgGM47onZW",
+  "sessionKey": "b6a5fcc04dff906b4fb55ecd537b77cc065d3f70c7abaeef85f2e695bcd24591",
+  "sessionKeyNumber": 1,
+  "created": 1594310132,
+  "administrator": 1594310132,
+  "owner": 1594310132,
+  "firstName": "Mina",
+  "lastName": "Kunde",
+  "contactEmail": "Mina78@hotmail.com",
+  "profileid": "profile_d8cb090",
+  "lastSignedIn": 1594310132,
+  "deleted": 1594914931
+}

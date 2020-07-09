@@ -1,0 +1,219 @@
+<html>
+
+<head>
+  <title>Organizations module documentation</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1>Organizations module for Dashboard</h1>
+          <p><img src="https://github.com/userdashboard/organizations/workflows/test-and-publish/badge.svg?branch=master" alt="Test suite status" /></p>
+          <p>Dashboard bundles everything a web app needs, all the &quot;boilerplate&quot; like signing in and changing passwords, into a parallel server so you can write a much smaller web app.</p>
+          <p>The organizations module allows users to create organizations and invitations other users can accept to join. Users must share the invitations themselves with the recipients.</p>
+          <p>Your application server can use the Organizations module's API to fetch what organizations a user is in and use that data to allow shared access or assign ownership or whatever other purpose.</p>
+          <p>A complete UI is provided for users to create and manage their organizations and memberships, and a basic administrator UI is provided for oversight but has no actual functionality yet.</p>
+          <p>Environment configuration variables are documented in <code data-language="js">start-dev.sh</code>. You can view API documentation in <code data-language="js">api.txt</code>, or in more detail on the <a href="https://userdashboard.github.io/">documentation site</a>. Join the freenode IRC #userdashboard chatroom for support - <a href="https://kiwiirc.com/nextclient/">Web IRC client</a>.</p>
+          <h2>Import this module</h2>
+          <p>On your Dashboard server you need to install this module with NPM:</p>
+          <pre><code data-language="js">$ npm install @userdashboard/organizations
+</code></pre>
+          <p>Edit your <code data-language="js">package.json</code> to activate the module:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@userdashboard/organizations&quot;
+  ]
+}
+</code></pre>
+          <h2>Storage engine</h2>
+          <p>By default this module will share whatever storage you use for Dashboard. You can specify a Dashboard storage module to use instead.</p>
+          <pre><code data-language="js">    ORGANIZATIONS_STORAGE=@userdashboard/storage-mongodb
+    ORGANIZATIONS_MONGODB_URL=mongo://localhost:27017/organizations
+</code></pre>
+          <h1>Customizing membership profiles</h1>
+          <p>Memberships designate a Profile which you can configure to collect the information relevant to your organizations. You specify the fields you want in an environment variable:</p>
+          <pre><code data-language="js">MEMBERSHIP_PROFILE_FIELDS=&quot;any,of,the,below&quot;
+</code></pre>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>display-name</td>
+              </tr>
+              <tr>
+                <td>display-email</td>
+              </tr>
+              <tr>
+                <td>contact-email</td>
+              </tr>
+              <tr>
+                <td>full-name</td>
+              </tr>
+              <tr>
+                <td>dob</td>
+              </tr>
+              <tr>
+                <td>phone</td>
+              </tr>
+              <tr>
+                <td>occupation</td>
+              </tr>
+              <tr>
+                <td>location</td>
+              </tr>
+              <tr>
+                <td>location</td>
+              </tr>
+              <tr>
+                <td>company-name</td>
+              </tr>
+              <tr>
+                <td>website</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Supporting your users</h2>
+          <p>Every page in Dashboard and official modules has a series of screenshots that demonstrate how to browse to the page and optionally what the page does. If a user wants to change their password or cancel a subscription or submit a Connect registration, you can browse the screenshots on the <a href="https://userdashboard.github.io/">documentation site</a>.</p>
+          <h3>Request organization data from your application server</h3>
+          <p>Dashboard and official modules are completely API-driven and you can access the same APIs on behalf of the user making requests. You perform <code data-language="js">GET</code>, <code data-language="js">POST</code>, <code data-language="js">PATCH</code>, and <code data-language="js">DELETE</code> HTTP requests against the API endpoints to fetch or modify data. This example uses NodeJS to fetch the user's organizations from the Dashboard server, your application server can be in any language.</p>
+          <p>You can view API documentation within the NodeJS modules' <code data-language="js">api.txt</code> files, or on the <a href="https://userdashboard.github.io/organizations-api">documentation site</a>.</p>
+          <pre><code data-language="js">const organizations = await proxy(`/api/user/organizations/organizations?accountid=${accountid}&amp;all=true`, accountid, sessionid)
+
+const proxy = util.promisify((path, accountid, sessionid, callback) =&gt; {
+    let hashText
+    if (accountid) {
+        hashText = `${process.env.APPLICATION_SERVER_TOKEN}/${accountid}/${sessionid}`
+    } else {
+        hashText = process.env.APPLICATION_SERVER_TOKEN
+    }
+    const salt = bcrypt.genSaltSync(4)
+    const token = bcrypt.hashSync(hashText, salt)
+    const requestOptions = {
+        host: 'dashboard.example.com',
+        path: path,
+        port: '443',
+        method: 'GET',
+        headers: {
+            'x-application-server': 'application.example.com',
+            'x-dashboard-token': token
+        }
+    }
+    if (accountid) {
+        requestOptions.headers['x-accountid'] = accountid
+        requestOptions.headers['x-sessionid'] = sessionid
+    }
+    const proxyRequest = require('https').request(requestOptions, (proxyResponse) =&gt; {
+        let body = ''
+        proxyResponse.on('data', (chunk) =&gt; {
+            body += chunk
+        })
+        return proxyResponse.on('end', () =&gt; {
+            return callback(null, JSON.parse(body))
+        })
+    })
+    proxyRequest.on('error', (error) =&gt; {
+        return callback(error)
+    })
+    return proxyRequest.end()
+  })
+}
+</code></pre>
+        </div>
+        <p><a class="skip" href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

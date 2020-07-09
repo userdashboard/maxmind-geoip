@@ -1,0 +1,26 @@
+[
+  {
+    "object": "organization",
+    "ownerid": "account_cc664b63",
+    "organizationid": "organization_ef1589b2",
+    "name": "My organization",
+    "email": "lzorzinpe@xing.not.com",
+    "created": 1590082409
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_cc664b63",
+    "organizationid": "organization_9543e615",
+    "name": "My organization",
+    "email": "lzorzinpe@xing.not.com",
+    "created": 1590082409
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_cc664b63",
+    "organizationid": "organization_48a9e8a1",
+    "name": "My organization",
+    "email": "lzorzinpe@xing.not.com",
+    "created": 1590082409
+  }
+]

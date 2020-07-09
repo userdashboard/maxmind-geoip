@@ -1,0 +1,397 @@
+<html>
+
+<head>
+  <title>/api/user/set-account-username#PATCH (dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/set-account-username (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.user.SetAccountUsername.patch(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-accountid</td>
+                  <td>missing querystring accountid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring accountid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-password</td>
+                  <td>missing posted password</td>
+                </tr>
+                <tr>
+                  <td>invalid posted password</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-new-username</td>
+                  <td>missing posted new-username</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="2">invalid-new-username-length</td>
+                  <td>posted new-username too short</td>
+                </tr>
+                <tr>
+                  <td>posted new-username too long</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "object": "account",
+  "accountid": "account_b14aa3ae",
+  "usernameHash": "694471484a546f7734746c425550585a37506357425039796a7a6f47445861",
+  "passwordHash": "$2a$04$P4EGvDxDKACmHre16CJdeewLVZN96XufLQLo.tmLR3rPvTbKAiTpe",
+  "sessionKey": "215a280f4f2b65d86636fe4f292f36072126ebf204dbb795a9cc58dd1a7b59ef",
+  "sessionKeyNumber": 1,
+  "created": "{timestamp}",
+  "administrator": "{timestamp}",
+  "owner": "{timestamp}",
+  "firstName": "Mackenzie",
+  "lastName": "Espadas",
+  "contactEmail": "mespadasbl@dailymail.co.not.uk",
+  "profileid": "profile_c4125e47",
+  "lastSignedIn": "{timestamp}",
+  "usernameLastChanged": "{timestamp}"
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/set-account-username.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.user.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-accountid')
+    }
+    if (!req.body || !req.body['new-username']) {
+      throw new Error('invalid-new-username')
+    }
+    if (global.minimumUsernameLength > req.body['new-username'].length ||
+      global.maximumUsernameLength < req.body['new-username'].length) {
+      throw new Error('invalid-new-username-length')
+    }
+    if (!req.body.password || !req.body.password.length) {
+      throw new Error('invalid-password')
+    }
+    let dashboardEncryptionKey = global.dashboardEncryptionKey
+    let bcryptFixedSalt = global.bcryptFixedSalt
+    if (req.server) {
+      dashboardEncryptionKey = req.server.dashboardEncryptionKey || dashboardEncryptionKey
+      bcryptFixedSalt = req.server.bcryptFixedSalt || bcryptFixedSalt
+    }
+    const realPasswordHash = await dashboard.StorageObject.getProperty(`${req.appid}/account/${req.query.accountid}`, 'passwordHash')
+    const validPassword = await dashboard.Hash.randomSaltCompare(req.body.password, realPasswordHash, dashboardEncryptionKey)
+    if (!validPassword) {
+      throw new Error('invalid-password')
+    }
+    const usernameHash = await dashboard.Hash.fixedSaltHash(req.body['new-username'], bcryptFixedSalt, dashboardEncryptionKey)
+    const oldUsernameHash = await dashboard.StorageObject.getProperty(`${req.appid}/account/${req.query.accountid}`, 'usernameHash')
+    await dashboard.Storage.delete(`${req.appid}/map/usernames/${oldUsernameHash}`)
+    await dashboard.Storage.write(`${req.appid}/map/usernames/${usernameHash}`, req.query.accountid)
+    await dashboard.StorageObject.setProperty(`${req.appid}/account/${req.query.accountid}`, 'usernameHash', usernameHash)
+    req.account.usernameLastChanged = dashboard.Timestamp.now
+    await dashboard.StorageObject.setProperty(`${req.appid}/account/${req.query.accountid}`, 'usernameLastChanged', dashboard.Timestamp.now)
+    return req.account
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/set-account-username.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/user/set-account-username', () => {
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('missing querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/set-account-username')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/set-account-username?accountid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user2.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-password', () => {
+      it('missing posted password', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'new-username': '1234567890',
+          password: ''
+        }
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password')
+      })
+
+      it('invalid posted password', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'new-username': '1234567890',
+          password: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password')
+      })
+    })
+
+    describe('invalid-new-username', () => {
+      it('missing posted new-username', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'new-username': '',
+          password: '1234567890'
+        }
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-new-username')
+      })
+    })
+
+    describe('invalid-new-username-length', () => {
+      it('posted new-username too short', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'new-username': '1',
+          password: user.account.password
+        }
+        global.minimumUsernameLength = 100
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-new-username-length')
+      })
+
+      it('posted new-username too long', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'new-username': '12345678',
+          password: user.account.password
+        }
+        global.maximumUsernameLength = 1
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-new-username-length')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/set-account-username?accountid=${user.account.accountid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'new-username': 'a1234567890',
+        password: user.account.password
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const account = await req.patch()
+      assert.strictEqual(account.object, 'account')
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

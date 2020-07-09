@@ -1,0 +1,1325 @@
+<html>
+
+<head>
+  <title>/api/user/create-account#POST (dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/create-account (POST)</h1><span class="nodejs post" id="nodejs">await global.api.user.CreateAccount.post(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-username</td>
+                  <td>missing posted username</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-username-length</td>
+                  <td>posted username too short</td>
+                </tr>
+                <tr>
+                  <td>posted username too long</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-password</td>
+                  <td>missing posted password</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-password-length</td>
+                  <td>posted password too short</td>
+                </tr>
+                <tr>
+                  <td>posted password too long</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="1">invalid-first-name</td>
+                  <td>missing posted first-name</td>
+                </tr>
+                <tr>
+                  <td id="description-7" rowspan="2">invalid-first-name-length</td>
+                  <td>posted first-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted first-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-9" rowspan="1">invalid-last-name</td>
+                  <td>missing posted last-name</td>
+                </tr>
+                <tr>
+                  <td id="description-10" rowspan="2">invalid-last-name-length</td>
+                  <td>posted last-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted last-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-12" rowspan="1">invalid-display-name</td>
+                  <td>missing posted display-name</td>
+                </tr>
+                <tr>
+                  <td id="description-13" rowspan="2">invalid-display-name-length</td>
+                  <td>posted display-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted display-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-15" rowspan="1">invalid-company-name</td>
+                  <td>missing posted company-name</td>
+                </tr>
+                <tr>
+                  <td id="description-16" rowspan="1">invalid-contact-email</td>
+                  <td>missing posted contact-email</td>
+                </tr>
+                <tr>
+                  <td id="description-17" rowspan="1">invalid-display-email</td>
+                  <td>missing posted display-email</td>
+                </tr>
+                <tr>
+                  <td id="description-18" rowspan="1">invalid-location</td>
+                  <td>missing posted location</td>
+                </tr>
+                <tr>
+                  <td id="description-19" rowspan="1">invalid-occupation</td>
+                  <td>missing posted occupation</td>
+                </tr>
+                <tr>
+                  <td id="description-20" rowspan="1">invalid-phone</td>
+                  <td>missing posted phone</td>
+                </tr>
+                <tr>
+                  <td id="description-21" rowspan="1">invalid-dob</td>
+                  <td>missing posted dob</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>first-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>last-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>display-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>company-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>contact-email</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>display-email</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>location</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>occupation</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>phone</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>dob</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "object": "account",
+  "accountid": "account_1c6d7105",
+  "usernameHash": "373432552f756468326c537a554e5373616459653136533839483236796a6d",
+  "passwordHash": "$2a$04$2Q6C52OeOLC90NzqtO6U1ulm25R5/4sv8gOffE2iDm35zWmsCu7Eu",
+  "sessionKey": "5829121133c5d9fc77124075abc54035f32523c5ef2890899c06a4a60d5de68a",
+  "sessionKeyNumber": 1,
+  "created": "{timestamp}",
+  "administrator": "{timestamp}",
+  "owner": "{timestamp}"
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/create-account.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  auth: false,
+  post: async (req) => {
+    if (!req || !req.body) {
+      throw new Error('invalid-username')
+    }
+    if (!req.body.username || !req.body.username.length) {
+      throw new Error('invalid-username')
+    }
+    if (!req.body.password || !req.body.password.length) {
+      throw new Error('invalid-password')
+    }
+    if (global.minimumUsernameLength > req.body.username.length ||
+        global.maximumUsernameLength < req.body.username.length) {
+      throw new Error('invalid-username-length')
+    }
+    if (global.minimumPasswordLength > req.body.password.length ||
+        global.maximumPasswordLength < req.body.password.length) {
+      throw new Error('invalid-password-length')
+    }
+    if (global.requireProfile) {
+      const profileFields = req.userProfileFields || global.userProfileFields
+      for (const field of profileFields) {
+        switch (field) {
+          case 'full-name':
+            if (!req.body['first-name'] || !req.body['first-name'].length) {
+              throw new Error('invalid-first-name')
+            }
+            if (global.minimumProfileFirstNameLength > req.body['first-name'].length ||
+              global.maximumProfileFirstNameLength < req.body['first-name'].length) {
+              throw new Error('invalid-first-name-length')
+            }
+            if (!req.body['last-name'] || !req.body['last-name'].length) {
+              throw new Error('invalid-last-name')
+            }
+            if (global.minimumProfileLastNameLength > req.body['last-name'].length ||
+              global.maximumProfileLastNameLength < req.body['last-name'].length) {
+              throw new Error('invalid-last-name-length')
+            }
+            continue
+          case 'contact-email':
+            if (!req.body[field] || req.body[field].indexOf('@') < 1) {
+              throw new Error(`invalid-${field}`)
+            }
+            continue
+          case 'display-email':
+            if (!req.body[field] || req.body[field].indexOf('@') < 1) {
+              throw new Error(`invalid-${field}`)
+            }
+            continue
+          case 'display-name':
+            if (!req.body[field] || !req.body[field].length) {
+              throw new Error(`invalid-${field}`)
+            }
+            if (global.minimumProfileDisplayNameLength > req.body[field].length ||
+              global.maximumProfileDisplayNameLength < req.body[field].length) {
+              throw new Error('invalid-display-name-length')
+            }
+            continue
+          case 'dob':
+            if (!req.body[field] || !req.body[field].length) {
+              throw new Error(`invalid-${field}`)
+            }
+            try {
+              const date = dashboard.Format.parseDate(req.body[field])
+              if (!date || !date.getFullYear) {
+                throw new Error(`invalid-${field}`)
+              }
+            } catch (error) {
+              throw new Error(`invalid-${field}`)
+            }
+            continue
+          default:
+            if (!req.body || !req.body[field]) {
+              throw new Error(`invalid-${field}`)
+            }
+            continue
+        }
+      }
+    }
+    const accountid = `account_${await dashboard.UUID.generateID()}`
+    let dashboardEncryptionKey = global.dashboardEncryptionKey
+    let bcryptFixedSalt = global.bcryptFixedSalt
+    if (req.server) {
+      dashboardEncryptionKey = req.server.dashboardEncryptionKey || dashboardEncryptionKey
+      bcryptFixedSalt = req.server.bcryptFixedSalt || bcryptFixedSalt
+    }
+    const usernameHash = await dashboard.Hash.fixedSaltHash(req.body.username, bcryptFixedSalt, dashboardEncryptionKey)
+    const passwordHash = await dashboard.Hash.randomSaltHash(req.body.password, dashboardEncryptionKey)
+    const accountInfo = {
+      object: 'account',
+      accountid: accountid,
+      usernameHash: usernameHash,
+      passwordHash: passwordHash,
+      sessionKey: dashboard.UUID.random(64),
+      sessionKeyNumber: 1,
+      created: dashboard.Timestamp.now
+    }
+    const otherUsersExist = await dashboard.StorageList.list(`${req.appid}/accounts`, 0, 1)
+    if (!otherUsersExist) {
+      accountInfo.administrator = dashboard.Timestamp.now
+      accountInfo.owner = dashboard.Timestamp.now
+    }
+    await dashboard.Storage.write(`${req.appid}/map/usernames/${usernameHash}`, accountid)
+    await dashboard.Storage.write(`${req.appid}/account/${accountid}`, accountInfo)
+    await dashboard.StorageList.add(`${req.appid}/accounts`, accountid)
+    if (!otherUsersExist) {
+      await dashboard.StorageList.add(`${req.appid}/administrator/accounts`, accountid)
+    }
+    req.query = req.query || {}
+    req.query.accountid = accountid
+    req.body.default = 'true'
+    req.account = accountInfo
+    if (global.requireProfile) {
+      const profile = await global.api.user.CreateProfile.post(req)
+      for (const x in profile) {
+        accountInfo[x] = accountInfo[x] || profile[x]
+      }
+    }
+    return accountInfo
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/user/create-account.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/user/create-account', () => {
+  describe('exceptions', () => {
+    describe('invalid-username', () => {
+      it('missing posted username', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-username')
+      })
+    })
+
+    describe('invalid-username-length', () => {
+      it('posted username too short', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password'
+        }
+        let errorMessage
+        global.minimumUsernameLength = 100
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-username-length')
+      })
+
+      it('posted username too long', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password'
+        }
+        global.maximumUsernameLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-username-length')
+      })
+    })
+
+    describe('invalid-password', () => {
+      it('missing posted password', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password')
+      })
+    })
+
+    describe('invalid-password-length', () => {
+      it('posted password too short', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: '1'
+        }
+        global.minimumPasswordLength = 100
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password-length')
+      })
+
+      it('posted password too long', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: '12345'
+        }
+        global.maximumPasswordLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-password-length')
+      })
+    })
+
+    describe('invalid-first-name', () => {
+      it('missing posted first-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password',
+          'last-name': 'Person'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-first-name')
+      })
+    })
+
+    describe('invalid-first-name-length', () => {
+      it('posted first-name too short', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'first-name': 'Test',
+          'last-name': 'Person'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.minimumProfileFirstNameLength = 100
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-first-name-length')
+      })
+
+      it('posted first-name too long', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'first-name': 'Test',
+          'last-name': 'Person'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.maximumProfileFirstNameLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-first-name-length')
+      })
+    })
+
+    describe('invalid-last-name', () => {
+      it('missing posted last-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password',
+          'first-name': 'Test'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-last-name')
+      })
+    })
+
+    describe('invalid-last-name-length', () => {
+      it('posted last-name too short', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'first-name': 'Test',
+          'last-name': 'Person'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.minimumProfileLastNameLength = 100
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-last-name-length')
+      })
+
+      it('posted last-name too long', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'first-name': 'Test',
+          'last-name': 'Person'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.maximumProfileLastNameLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-last-name-length')
+      })
+    })
+
+    describe('invalid-display-name', () => {
+      it('missing posted display-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name')
+      })
+    })
+
+    describe('invalid-display-name-length', () => {
+      it('posted display-name too short', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'display-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        global.minimumProfileDisplayNameLength = 100
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name-length')
+      })
+
+      it('posted display-name too long', async () => {
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: '123456',
+          password: 'password',
+          'display-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        global.maximumProfileDisplayNameLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name-length')
+      })
+    })
+
+    describe('invalid-company-name', () => {
+      it('missing posted company-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['company-name']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-company-name')
+      })
+    })
+
+    describe('invalid-company-name-length', () => {
+    })
+
+    describe('invalid-contact-email', () => {
+      it('missing posted contact-email', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['contact-email']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-contact-email')
+      })
+    })
+
+    describe('invalid-display-email', () => {
+      it('missing posted display-email', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['display-email']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-email')
+      })
+    })
+
+    describe('invalid-location', () => {
+      it('missing posted location', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['location']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-location')
+      })
+    })
+
+    describe('invalid-occupation', () => {
+      it('missing posted occupation', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['occupation']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-occupation')
+      })
+    })
+
+    describe('invalid-phone', () => {
+      it('missing posted phone', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['phone']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-phone')
+      })
+    })
+
+    describe('invalid-dob', () => {
+      it('missing posted dob', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['dob']
+        const req = TestHelper.createRequest('/api/user/create-account')
+        req.body = {
+          username: 'username',
+          password: 'password'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-dob')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optionally-required posted first-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'first-name': 'Testing',
+        'last-name': 'Person'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.firstName, 'Testing')
+    })
+
+    it('optionally-required posted last-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'first-name': 'Person',
+        'last-name': 'Testing'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.lastName, 'Testing')
+    })
+
+    it('optionally-required posted display-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['display-name']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'display-name': 'Testing'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.displayName, 'Testing')
+    })
+
+    it('optionally-required posted company-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['company-name']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'company-name': 'Testing'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.companyName, 'Testing')
+    })
+
+    it('optionally-required posted contact-email', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['contact-email']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'contact-email': 'test@test.com'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.contactEmail, 'test@test.com')
+    })
+
+    it('optionally-required posted display-email', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['display-email']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        'display-email': 'test@test.com'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.displayEmail, 'test@test.com')
+    })
+
+    it('optionally-required posted location', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['location']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        location: 'testing'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.location, 'testing')
+    })
+
+    it('optionally-required posted occupation', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['occupation']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        occupation: 'testing'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.occupation, 'testing')
+    })
+
+    it('optionally-required posted phone', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['phone']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        phone: '123-456-7890'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.phone, '123-456-7890')
+    })
+
+    it('optionally-required posted dob', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['dob']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username',
+        password: 'password',
+        dob: '1950-01-01'
+      }
+      const account = await req.post()
+      assert.strictEqual(account.dob, '1950-01-01')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      global.requireProfile = false
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username-' + new Date().getTime(),
+        password: 'password1234',
+        confirm: 'password1234'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const account = await req.post()
+      assert.strictEqual(account.object, 'account')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment MINIMUM_USERNAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password'
+      }
+      global.minimumUsernameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-username-length')
+    })
+
+    it('environment MAXIMUM_USERNAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password'
+      }
+      global.maximumUsernameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-username-length')
+    })
+
+    it('environment MINIMUM_PASSWORD_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password'
+      }
+      global.minimumPasswordLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-password-length')
+    })
+
+    it('environment MAXIMUM_PASSWORD_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username-' + new Date().getTime(),
+        password: 'password1234',
+        confirm: 'password1234'
+      }
+      global.maximumPasswordLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-password-length')
+    })
+
+    it('environment REQUIRE_PROFILE', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['contact-email']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: 'username-' + new Date().getTime(),
+        password: 'password1234',
+        confirm: 'password1234',
+        'first-name': 'Tester',
+        'last-name': 'Person'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-contact-email')
+    })
+
+    it('environment USER_PROFILE_FIELDS', async () => {
+      global.requireProfile = true
+      const req = TestHelper.createRequest('/api/user/create-account')
+      const fields = ['full-name', 'display-name', 'contact-email', 'display-email', 'dob', 'phone', 'occupation', 'location', 'company-name', 'website']
+      const body = {
+        'first-name': 'Test',
+        'last-name': 'Person',
+        'contact-email': 'test1@test.com',
+        'display-email': 'test2@test.com',
+        dob: '2000-01-01',
+        'display-name': 'tester',
+        phone: '456-789-0123',
+        occupation: 'Programmer',
+        location: 'USA',
+        'company-name': 'Test company',
+        website: 'https://example.com'
+      }
+      for (const field of fields) {
+        req.body = {
+          username: 'username-' + new Date().getTime(),
+          password: 'password1234',
+          confirm: 'password1234'
+        }
+        if (field === 'full-name') {
+          req.body['first-name'] = body['first-name']
+          req.body['last-name'] = body['last-name']
+        } else {
+          req.body[field] = body[field]
+        }
+        global.userProfileFields = [field]
+        const displayName = global.profileFieldMap[field]
+        const account = await req.post()
+        assert.strictEqual(account[displayName], body[field])
+      }
+    })
+
+    it('environment MINIMUM_PROFILE_FIRST_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'first-name': 'Test',
+        'last-name': 'Person'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      global.minimumProfileFirstNameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-first-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_FIRST_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'first-name': 'Test',
+        'last-name': 'Person'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      global.maximumProfileFirstNameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-first-name-length')
+    })
+
+    it('environment MINIMUM_PROFILE_LAST_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'first-name': 'Test',
+        'last-name': 'Person'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      global.minimumProfileLastNameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-last-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_LAST_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'first-name': 'Test',
+        'last-name': 'Person'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      global.maximumProfileLastNameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-last-name-length')
+    })
+
+    it('environment MINIMUM_PROFILE_DISPLAY_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'display-name': '1'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['display-name']
+      global.minimumProfileDisplayNameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-display-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_DISPLAY_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'display-name': 'meeeee123'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['display-name']
+      global.maximumProfileDisplayNameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-display-name-length')
+    })
+
+    it('environment MINIMUM_PROFILE_COMPANY_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'company-name': '1'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['company-name']
+      global.minimumProfileCompanyNameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-company-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_COMPANY_NAME_LENGTH', async () => {
+      const req = TestHelper.createRequest('/api/user/create-account')
+      req.body = {
+        username: '123456',
+        password: 'password',
+        'company-name': 'acme inc'
+      }
+      global.requireProfile = true
+      global.userProfileFields = ['company-name']
+      global.maximumProfileCompanyNameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-company-name-length')
+    })
+
+    it('override req.userProfileFields', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['full-name', 'display-name', 'contact-email', 'display-email', 'dob', 'phone', 'occupation', 'location', 'company-name', 'website']
+      const req = TestHelper.createRequest('/api/user/create-account')
+      const body = {
+        'first-name': 'Test',
+        'last-name': 'Person',
+        'contact-email': 'test1@test.com',
+        'display-email': 'test2@test.com',
+        dob: '2000-01-01',
+        'display-name': 'tester',
+        phone: '456-789-0123',
+        occupation: 'Programmer',
+        location: 'USA',
+        'company-name': 'Test company',
+        website: 'https://example.com'
+      }
+      for (const field of global.userProfileFields) {
+        req.userProfileFields = [field]
+        req.body = {
+          username: 'username-' + new Date().getTime(),
+          password: 'password1234',
+          confirm: 'password1234'
+        }
+        if (field === 'full-name') {
+          req.body['first-name'] = body['first-name']
+          req.body['last-name'] = body['last-name']
+        } else {
+          req.body[field] = body[field]
+        }
+        const displayName = global.profileFieldMap[field]
+        const account = await req.route.api.post(req)
+        assert.strictEqual(account[displayName], body[field])
+      }
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

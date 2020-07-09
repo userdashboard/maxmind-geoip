@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html data-navbar="navbar.html">
+<head>
+  <title></title>
+  <link rel="stylesheet" href="/public/style.css">
+  <script async src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+</head>
+<body>
+  <a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full">
+        <a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title"></h1><span class="nodejs" id="nodejs"></span> <span class="returns">Returns <span id="returns"></span></span>
+          <div id="exceptions-container">
+            <a name="exceptions" id="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+            </table>
+          </div>
+          <div id="receives-container">
+            <a name="receives" id="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+            </table>
+          </div>
+          <div id="redacts-container">
+            <a name="redacts" id="redacts"></a>
+            <h2>Redacts</h2>
+            <p>Some properties are redacted when accessing the objects:</p>
+            <ul id="redacts"></ul>
+          </div>
+          <div id="configuration-container">
+            <a name="configuration" id="configuration"></a>
+            <h2>Configuration</h2>
+            <p>This request behavior can be modified by these circumstances:</p>
+            <ul id="configuration"></ul>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response"></code></pre>
+          </div><a name="source" id="source"></a>
+          <h2>NodeJS source (<a id="github_source">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source"></code></pre><a name="tests" id="tests"></a>
+          <h2>Test source (<a id="github_tests">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests"></code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <template id="redacted-item-template">
+    <ul>
+      <li>${property.name}</li>
+    </ul>
+  </template>
+  <template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template>
+  <template id="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+</html>

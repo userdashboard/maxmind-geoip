@@ -1,0 +1,752 @@
+<html>
+
+<head>
+  <title>/api/user/connect/update-payment-information#PATCH (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/update-payment-information (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.user.connect.UpdatePaymentInformation.patch(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "id": "acct_1GlIpVAs8PWGu23G",
+  "object": "account",
+  "business_profile": {
+    "mcc": null,
+    "name": null,
+    "product_description": null,
+    "support_address": null,
+    "support_email": null,
+    "support_phone": null,
+    "support_url": null,
+    "url": null
+  },
+  "business_type": "individual",
+  "capabilities": {
+    "card_payments": "inactive",
+    "transfers": "inactive"
+  },
+  "charges_enabled": false,
+  "country": "US",
+  "created": "{timestamp}",
+  "default_currency": "usd",
+  "details_submitted": false,
+  "email": null,
+  "external_accounts": {
+    "object": "list",
+    "data": [
+      {
+        "id": "ba_1GlIpXAs8PWGu23GCAH0euFY",
+        "object": "bank_account",
+        "account": "acct_1GlIpVAs8PWGu23G",
+        "account_holder_name": "Farly MacQuarrie",
+        "account_holder_type": "individual",
+        "bank_name": "STRIPE TEST BANK",
+        "country": "US",
+        "currency": "usd",
+        "default_for_currency": true,
+        "fingerprint": "YqHpjsZuMMM7klDt",
+        "last4": "6789",
+        "metadata": {},
+        "routing_number": "110000000",
+        "status": "new"
+      }
+    ],
+    "has_more": false,
+    "total_count": 1,
+    "url": "/v1/accounts/acct_1GlIpVAs8PWGu23G/external_accounts"
+  },
+  "metadata": {
+    "appid": "tests_1590084555",
+    "accountid": "account_75f2d407",
+    "ip": "127.0.0.1",
+    "requiresOwners": "true",
+    "requiresDirectors": "false"
+  },
+  "payouts_enabled": false,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "disabled_reason": "requirements.past_due",
+    "errors": [],
+    "eventually_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "past_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "pending_verification": []
+  },
+  "settings": {
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": false
+      },
+      "statement_descriptor_prefix": null
+    },
+    "dashboard": {
+      "display_name": null,
+      "timezone": "Etc/UTC"
+    },
+    "payments": {
+      "statement_descriptor": "",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": false,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    }
+  },
+  "tos_acceptance": {
+    "date": null,
+    "ip": null,
+    "user_agent": null
+  },
+  "type": "custom"
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/update-payment-information.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const connect = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (stripeAccount.metadata.accountid !== req.account.accountid) {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!req.body || !req.body.currency || !req.body.currency.length) {
+      throw new Error('invalid-currency')
+    }
+    if (!req.body.country || !req.body.country.length) {
+      throw new Error('invalid-country')
+    }
+    if (!connect.countrySpecIndex[req.body.country]) {
+      throw new Error('invalid-country')
+    }
+    if (!req.body.account_holder_name || !req.body.account_holder_name.length) {
+      throw new Error('invalid-account_holder_name')
+    }
+    if (!req.body.account_holder_type || !req.body.account_holder_type.length) {
+      throw new Error('invalid-account_holder_type')
+    }
+    if (req.body.account_holder_type !== 'individual' &&
+        req.body.account_holder_type !== 'company') {
+      throw new Error('invalid-account_holder_type')
+    }
+    let requiredFields
+    switch (req.body.country) {
+      case 'AU':
+        requiredFields = ['account_number', 'bsb_number']
+        break
+      case 'GB':
+        if (req.body.currency === 'gbp') {
+          requiredFields = ['account_number', 'sort_code']
+        } else {
+          requiredFields = ['iban']
+        }
+        break
+      case 'CA':
+        requiredFields = ['account_number', 'institution_number', 'transit_number']
+        break
+      case 'MY':
+      case 'US':
+      case 'NZ':
+        requiredFields = ['account_number', 'routing_number']
+        break
+      case 'HK':
+        requiredFields = ['account_number', 'clearing_code', 'branch_code']
+        break
+      case 'JP':
+      case 'SG':
+      case 'BR':
+        requiredFields = ['account_number', 'bank_code', 'branch_code']
+        break
+      default:
+        requiredFields = ['iban']
+        break
+    }
+    for (const field of requiredFields) {
+      if (!req.body[field]) {
+        throw new Error(`invalid-${field}`)
+      }
+      if (field === 'iban') {
+        const countryPart = req.body[field].substring(0, 2).toUpperCase()
+        if (!connect.countryCurrencyIndex[countryPart]) {
+          throw new Error('invalid-iban')
+        }
+        const numericPart = req.body[field].substring(2)
+        const integers = '0123456789'
+        for (let i = 0, len = numericPart.length; i < len; i++) {
+          if (integers.indexOf(numericPart.charAt(i)) === -1) {
+            throw new Error('invalid-iban')
+          }
+        }
+        continue
+      }
+      if (process.env.NODE_ENV === 'testing' && req.body[field] === 'TESTMYKL') {
+        // do nothing
+      } else {
+        const int = parseInt(req.body[field], 10)
+        if (!int && int !== 0) {
+          throw new Error(`invalid-${field}`)
+        }
+        if (int.toString() !== req.body[field]) {
+          if (req.body[field].startsWith('0')) {
+            let zeroes = ''
+            for (let i = 0, len = req.body[field].length; i < len; i++) {
+              if (req.body[field].charAt(i) !== '0') {
+                break
+              }
+              zeroes += '0'
+            }
+            if (int > 0) {
+              zeroes += int.toString()
+            }
+            if (zeroes !== req.body[field]) {
+              throw new Error(`invalid-${field}`)
+            }
+          } else {
+            throw new Error(`invalid-${field}`)
+          }
+        }
+      }
+    }
+    const currencies = connect.countryCurrencyIndex[stripeAccount.country]
+    let foundCurrency = false
+    for (const currency of currencies) {
+      foundCurrency = currency.currency === req.body.currency
+      if (foundCurrency) {
+        break
+      }
+    }
+    if (!foundCurrency) {
+      throw new Error('invalid-currency')
+    }
+    const stripeData = {
+      external_account: {
+        object: 'bank_account',
+        currency: req.body.currency,
+        country: req.body.country,
+        account_holder_name: req.body.account_holder_name,
+        account_holder_type: req.body.account_holder_type
+      }
+    }
+    switch (req.body.country) {
+      case 'AU':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.bsb_number
+        break
+      case 'GB':
+        if (req.body.currency === 'gbp') {
+          stripeData.external_account.account_number = req.body.account_number
+          stripeData.external_account.routing_number = req.body.sort_code
+        } else {
+          stripeData.external_account.account_number = req.body.iban
+        }
+        break
+      case 'CA':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.transit_number + '-' + req.body.institution_number
+        break
+      case 'HK':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.clearing_code + '-' + req.body.branch_code
+        break
+      case 'JP':
+      case 'BR':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.bank_code + '' + req.body.branch_code
+        break
+      case 'SG':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.bank_code + '-' + req.body.branch_code
+        break
+      case 'NZ':
+      case 'US':
+      case 'MY':
+        stripeData.external_account.account_number = req.body.account_number
+        stripeData.external_account.routing_number = req.body.routing_number
+        break
+      default:
+        stripeData.external_account.account_number = req.body.iban
+        break
+    }
+    try {
+      const stripeAccountNow = await stripeCache.execute('accounts', 'update', req.query.stripeid, stripeData, req.stripeKey)
+      const bankAccount = stripeAccountNow.external_accounts.data[0]
+      await connect.StorageList.add(`${req.appid}/stripeAccount/bankAccounts/${req.query.stripeid}`, bankAccount.id)
+      await connect.Storage.write(`${req.appid}/map/bankAccount/stripeid/${bankAccount.id}`, req.query.stripeid)
+      await stripeCache.delete(req.query.stripeid)
+      return stripeAccountNow
+    } catch (error) {
+      if (error.message && error.message.startsWith('invalid-external_account_')) {
+        throw new Error(error.message.replace('external_account_', ''))
+      }
+      throw error
+    }
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/update-payment-information.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const connect = require('../../../../../index.js')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@userdashboard/dashboard/test-helper.js')
+
+describe('/api/user/connect/update-payment-information', function () {
+  this.retries(4)
+  this.timeout(30 * 60 * 1000)
+  // TODO: invalid values marked as 'false' are skipped until they can be verified
+  const invalidValues = {
+    account_holder_name: false,
+    account_holder_type: 'invalid',
+    routing_number: '111111111',
+    account_number: '111111111',
+    bank_code: false,
+    branch_code: false,
+    clearing_code: false,
+    bsb_number: false,
+    institution_number: false,
+    currency: 'invalid',
+    country: 'invalid',
+    iban: 'invalid',
+    transit_number: false,
+    sort_code: false
+  }
+  const errorMessages = {}
+  const invalidMessages = {}
+  const submitResponses = {}
+  const submitIdentities = {}
+  before(async () => {
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const testedMissingFields = []
+    for (const country of connect.countrySpecs) {
+      let payload
+      if (TestStripeAccounts.paymentData[country.id].length) {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])[0]
+      } else {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])
+      }
+      if (payload === false) {
+        continue
+      }
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: country.id,
+        type: 'company'
+      })
+      errorMessages[country.id] = {}
+      invalidMessages[country.id] = {}
+      submitIdentities[country.id] = user.profile
+      for (const field in payload) {
+        if (testedMissingFields.indexOf(field) > -1) {
+          continue
+        }
+        testedMissingFields.push(field)
+        const req = TestHelper.createRequest(`/api/user/connect/update-payment-information?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        if (TestStripeAccounts.paymentData[country.id].length) {
+          req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id][0], user.profile)
+        } else {
+          req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id], user.profile)
+        }
+        delete (req.body[field])
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessages[country.id][field] = error.message
+        }
+        req.body[field] = invalidValues[field]
+        try {
+          await req.patch()
+        } catch (error) {
+          invalidMessages[country.id][field] = error.message
+        }
+      }
+      const req = TestHelper.createRequest(`/api/user/connect/update-payment-information?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      if (TestStripeAccounts.paymentData[country.id].length) {
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id][0], user.profile)
+      } else {
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id], user.profile)
+      }
+      submitResponses[country.id] = await req.patch()
+    }
+  })
+
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-payment-information')
+        req.account = user.account
+        req.session = user.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData.US)
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-payment-information?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData.US)
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/update-payment-information?stripeid=${user.stripeAccount.id}`)
+        req.account = user2.account
+        req.session = user2.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[user.stripeAccount.country])
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+    const testedMissingFields = []
+    for (const country of connect.countrySpecs) {
+      let payload
+      if (TestStripeAccounts.paymentData[country.id].length) {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])[0]
+      } else {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])
+      }
+      if (payload === false) {
+        continue
+      }
+      for (const field in payload) {
+        if (testedMissingFields.indexOf(field) > -1) {
+          continue
+        }
+        testedMissingFields.push(field)
+        describe(`invalid-${field}`, () => {
+          it(`missing posted ${field}`, async () => {
+            const errorMessage = errorMessages[country.id][field]
+            assert.strictEqual(errorMessage, `invalid-${field}`)
+          })
+          if (invalidValues[field] !== undefined && invalidValues[field] !== false) {
+            it(`invalid posted ${field}`, async () => {
+              const errorMessage = invalidMessages[country.id][field]
+              assert.strictEqual(errorMessage, `invalid-${field}`)
+            })
+          }
+        })
+      }
+    }
+  })
+
+  describe('receives', () => {
+    const testedRequiredFields = []
+    for (const country of connect.countrySpecs) {
+      let payload
+      if (TestStripeAccounts.paymentData[country.id].length) {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])[0]
+      } else {
+        payload = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData[country.id])
+      }
+      if (payload === false) {
+        continue
+      }
+      for (const field in payload) {
+        if (testedRequiredFields.indexOf(field) > -1) {
+          continue
+        }
+        testedRequiredFields.push(field)
+        it(`optionally-required posted ${field}`, async () => {
+          const stripeAccountNow = submitResponses[country.id]
+          if (field === 'iban' || field === 'account_number') {
+            assert.strictEqual(stripeAccountNow.external_accounts.data[0].last4, payload[field].substring(payload[field].length - 4))
+          } else if (field === 'bsb_number' ||
+                     field === 'institution_number' ||
+                     field === 'sort_code' ||
+                     field === 'bank_code' ||
+                     field === 'branch_code' ||
+                     field === 'clearing_code' ||
+                     field === 'transit_number') {
+            const routing = stripeAccountNow.external_accounts.data[0].routing_number.split(' ').join('').split('-').join('')
+            assert.strictEqual(true, routing.indexOf(payload[field]) > -1)
+          } else if (field === 'account_holder_name') {
+            assert.strictEqual(stripeAccountNow.external_accounts.data[0][field], submitIdentities[country.id].firstName + ' ' +  submitIdentities[country.id].lastName)
+          } else {
+            assert.strictEqual(stripeAccountNow.external_accounts.data[0][field], payload[field])
+          }
+        })
+      }
+    }
+  })
+
+  describe('returns', () => {
+      it('object', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'US',
+        type: 'individual'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/update-payment-information?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = TestStripeAccounts.createPostData(TestStripeAccounts.paymentData.US, user.profile)
+      req.filename = __filename
+      req.saveResponse = true
+      const stripeAccountNow = await req.patch()
+      assert.strictEqual(stripeAccountNow.object, 'account')
+      assert.strictEqual(stripeAccountNow.external_accounts.data.length, 1)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

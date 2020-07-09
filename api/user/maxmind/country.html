@@ -1,0 +1,281 @@
+<html>
+
+<head>
+  <title>/api/user/maxmind/country#GET (maxmind-geoip)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/maxmind/country (GET)</h1><span class="nodejs get" id="nodejs">await global.api.user.maxmind.Country.get(req)</span><span class="returns">Returns <span id="returns">object</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-ip</td>
+                  <td>missing querystring ip</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring ip</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>ip</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "continent": {
+    "code": "NA",
+    "geoname_id": 6255149,
+    "names": {
+      "de": "Nordamerika",
+      "en": "North America",
+      "es": "Norteamérica",
+      "fr": "Amérique du Nord",
+      "ja": "北アメリカ",
+      "pt-BR": "América do Norte",
+      "ru": "Северная Америка",
+      "zh-CN": "北美洲"
+    }
+  },
+  "country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  },
+  "registered_country": {
+    "geoname_id": 6252001,
+    "iso_code": "US",
+    "names": {
+      "de": "USA",
+      "en": "United States",
+      "es": "Estados Unidos",
+      "fr": "États-Unis",
+      "ja": "アメリカ合衆国",
+      "pt-BR": "Estados Unidos",
+      "ru": "США",
+      "zh-CN": "美国"
+    }
+  }
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/maxmind-geoip/tree/master/src/www/api/user/maxmind/country.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const maxmind = require('maxmind')
+const path = require('path')
+let db
+
+module.exports = {
+  auth: false,
+  get: async (req) => {
+    if (!req.query || !req.query.ip) {
+      throw new Error('invalid-ip')
+    }
+    db = db || maxmind.openSync(path.join(__dirname, '../../../../GeoLite2-Country.mmdb'))
+    if (process.env.NODE_ENV !== 'production' && req.query.ip === '127.0.0.1') {
+      req.query.ip = '8.8.8.8'
+    }
+    const country = db.get(req.query.ip)
+    if (country === null) {
+      throw new Error('invalid-ip')
+    }
+    return country
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/maxmind-geoip/tree/master/src/www/api/user/maxmind/country.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/user/maxmind/country', () => {
+  describe('exceptions', () => {
+    describe('invalid-ip', () => {
+      it('missing querystring ip', async () => {
+        const req = TestHelper.createRequest('/api/user/maxmind/country')
+        let errorMesage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMesage = error.message
+        }
+        assert.strictEqual(errorMesage, 'invalid-ip')
+      })
+
+      it('invalid querystring ip', async () => {
+        const req = TestHelper.createRequest('/api/user/maxmind/country?ip=invalid')
+        let errorMesage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMesage = error.message
+        }
+        assert.strictEqual(errorMesage, 'invalid-ip')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('required querystring ip', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8')
+      const country = await req.get()
+      assert.strictEqual(country.country.iso_code, 'US')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const req = TestHelper.createRequest('/api/user/maxmind/country?ip=8.8.8.8')
+      req.filename = __filename
+      req.saveResponse = true
+      const country = await req.get()
+      assert.strictEqual(country.country.iso_code, 'US')
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,1323 @@
+<html>
+
+<head>
+  <title>/api/user/connect/update-stripe-account#PATCH (stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/update-stripe-account (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.user.connect.UpdateStripeAccount.patch(req)</span><span class="returns">Returns <span id="returns">object (company),object (individual)</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="2">invalid-token</td>
+                  <td>missing posted token</td>
+                </tr>
+                <tr>
+                  <td>invalid posted token</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">{
+  "id": "acct_1GlIrFH3AupOADYn",
+  "object": "account",
+  "business_profile": {
+    "mcc": "0763",
+    "name": null,
+    "product_description": null,
+    "support_address": null,
+    "support_email": null,
+    "support_phone": null,
+    "support_url": null,
+    "url": "https://51.not.la"
+  },
+  "business_type": "individual",
+  "capabilities": {
+    "card_payments": "pending",
+    "transfers": "pending"
+  },
+  "charges_enabled": false,
+  "country": "US",
+  "created": "{timestamp}",
+  "default_currency": "usd",
+  "details_submitted": false,
+  "email": null,
+  "external_accounts": {
+    "object": "list",
+    "data": [],
+    "has_more": false,
+    "total_count": 0,
+    "url": "/v1/accounts/acct_1GlIrFH3AupOADYn/external_accounts"
+  },
+  "individual": {
+    "id": "person_HJwkpZBXUjzZRL",
+    "object": "person",
+    "account": "acct_1GlIrFH3AupOADYn",
+    "address": {
+      "city": "New York",
+      "country": "US",
+      "line1": "285 Fulton St",
+      "line2": null,
+      "postal_code": "10007",
+      "state": "NY"
+    },
+    "created": 1590084667,
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1950
+    },
+    "email": "flehrmannbr@51.not.la",
+    "first_name": "Farleigh",
+    "id_number_provided": false,
+    "last_name": "Lehrmann",
+    "metadata": {},
+    "phone": "+14567890123",
+    "relationship": {
+      "director": false,
+      "executive": false,
+      "owner": false,
+      "percent_ownership": null,
+      "representative": true,
+      "title": null
+    },
+    "requirements": {
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "id_number",
+        "individual.address.city",
+        "individual.address.postal_code",
+        "individual.address.state"
+      ]
+    },
+    "ssn_last_4_provided": true,
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "pending"
+    }
+  },
+  "metadata": {
+    "appid": "tests_1590084663",
+    "accountid": "account_7eb3ffc6",
+    "ip": "127.0.0.1",
+    "requiresOwners": "true",
+    "requiresDirectors": "false",
+    "token": "false"
+  },
+  "payouts_enabled": false,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "disabled_reason": "requirements.past_due",
+    "errors": [],
+    "eventually_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "past_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "pending_verification": [
+      "individual.address.city",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.id_number"
+    ]
+  },
+  "settings": {
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": false
+      },
+      "statement_descriptor_prefix": null
+    },
+    "dashboard": {
+      "display_name": "51.not.la",
+      "timezone": "Etc/UTC"
+    },
+    "payments": {
+      "statement_descriptor": "51.NOT.LA",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": false,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    }
+  },
+  "tos_acceptance": {
+    "date": null,
+    "ip": null,
+    "user_agent": null
+  },
+  "type": "custom"
+}</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/update-stripe-account.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const connect = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    req.body = req.body || {}
+    if (global.stripeJS === 3 && !req.body.token) {
+      throw new Error('invalid-token')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (!stripeAccount.requirements.currently_due.length) {
+      throw new Error('invalid-stripe-account')
+    }
+    const accountInfo = {}
+    if (global.stripeJS === 3) {
+      accountInfo.account_token = req.body.token
+    } else {
+      let validateDOB = false
+      if (req.body.dob_day) {
+        validateDOB = true
+        try {
+          const day = parseInt(req.body.dob_day, 10)
+          if (!day || day < 1 || day > 31) {
+            throw new Error('invalid-dob_day')
+          }
+        } catch (s) {
+          throw new Error('invalid-dob_day')
+        }
+      }
+      if (req.body.dob_month) {
+        validateDOB = true
+        try {
+          const month = parseInt(req.body.dob_month, 10)
+          if (!month || month < 1 || month > 12) {
+            throw new Error('invalid-dob_month')
+          }
+        } catch (s) {
+          throw new Error('invalid-dob_month')
+        }
+      }
+      if (req.body.dob_year) {
+        validateDOB = true
+        try {
+          const year = parseInt(req.body.dob_year, 10)
+          if (!year || year < 1900 || year > new Date().getFullYear() - 18) {
+            throw new Error('invalid-dob_year111')
+          }
+        } catch (s) {
+          throw new Error('invalid-dob_year')
+        }
+      }
+      if (validateDOB) {
+        if (!req.body.dob_day) {
+          throw new Error('invalid-dob_day')
+        }
+        if (!req.body.dob_month) {
+          throw new Error('invalid-dob_month')
+        }
+        if (!req.body.dob_year) {
+          throw new Error('invalid-dob_year')
+        }
+        try {
+          Date.parse(`${req.body.dob_year}/${req.body.dob_month}/${req.body.dob_day}`)
+        } catch (error) {
+          throw new Error('invalid-dob_day')
+        }
+      }
+      accountInfo.metadata = {
+        token: false
+      }
+      if (req.uploads) {
+        if (req.uploads.verification_document_front) {
+          const frontData = {
+            purpose: 'identity_document',
+            file: {
+              type: 'application/octet-stream',
+              name: req.uploads.verification_document_front.name,
+              data: req.uploads.verification_document_front.buffer
+            }
+          }
+          const front = await stripeCache.execute('files', 'create', frontData, req.stripeKey)
+          req.body.verification_document_front = front.id
+        }
+        if (req.uploads.verification_document_back) {
+          const backData = {
+            purpose: 'identity_document',
+            file: {
+              type: 'application/octet-stream',
+              name: req.uploads.verification_document_back.name,
+              data: req.uploads.verification_document_back.buffer
+            }
+          }
+          const back = await stripeCache.execute('files', 'create', backData, req.stripeKey)
+          req.body.verification_document_back = back.id
+        }
+        if (req.uploads.verification_additional_document_front) {
+          const frontData = {
+            purpose: 'identity_document',
+            file: {
+              type: 'application/octet-stream',
+              name: req.uploads.verification_additional_document_front.name,
+              data: req.uploads.verification_additional_document_front.buffer
+            }
+          }
+          const front = await stripeCache.execute('files', 'create', frontData, req.stripeKey)
+          req.body.verification_additional_document_front = front.id
+        }
+        if (req.uploads.verification_additional_document_back) {
+          const backData = {
+            purpose: 'identity_document',
+            file: {
+              type: 'application/octet-stream',
+              name: req.uploads.verification_additional_document_back.name,
+              data: req.uploads.verification_additional_document_back.buffer
+            }
+          }
+          const back = await stripeCache.execute('files', 'create', backData, req.stripeKey)
+          req.body.verification_additional_document_back = back.id
+        }
+      }
+      for (const field of stripeAccount.requirements.currently_due) {
+        const posted = field.split('.').join('_').replace('company_', '').replace('individual_', '')
+        if (!req.body[posted]) {
+          if (field === 'company.address.line2' ||
+              field === 'company.verification.document' ||
+              field === 'individual.verification.document' ||
+              field === 'individual.verification.additional_document' ||
+              field === 'external_account' ||
+              field.startsWith('relationship.') ||
+              field.startsWith('tos_acceptance.') ||
+              field.startsWith('person_') ||
+            (field === 'business_profile.url' && req.body.business_profile_product_description) ||
+            (field === 'business_profile.product_description' && req.body.business_profile_url)) {
+            continue
+          }
+          if (field === 'business_profile.product_description' && !req.body.business_profile_url) {
+            throw new Error('invalid-business_profile_url')
+          }
+          throw new Error(`invalid-${posted}`)
+        }
+        if (posted.startsWith('business_profile_')) {
+          const property = posted.substring('business_profile_'.length)
+          accountInfo.business_profile = accountInfo.business_profile || {}
+          accountInfo.business_profile[property] = req.body[posted]
+        } else if (posted.startsWith('address_kanji_')) {
+          const property = posted.substring('address_kanji_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address_kanji = accountInfo.company.address_kanji || {}
+            accountInfo.company.address_kanji[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address_kanji = accountInfo.individual.address_kanji || {}
+            accountInfo.individual.address_kanji[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('address_kana_')) {
+          const property = posted.substring('address_kana_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address_kana = accountInfo.company.address_kana || {}
+            accountInfo.company.address_kana[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address_kana = accountInfo.individual.address_kana || {}
+            accountInfo.individual.address_kana[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('address_')) {
+          const property = posted.substring('address_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address = accountInfo.company.address || {}
+            accountInfo.company.address[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address = accountInfo.individual.address || {}
+            accountInfo.individual.address[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('dob_')) {
+          const property = posted.substring('dob_'.length)
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.dob = accountInfo.individual.dob || {}
+          accountInfo.individual.dob[property] = req.body[posted]
+        } else {
+          if (stripeAccount.business_type === 'company') {
+            const property = field.substring('company.'.length)
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company[property] = req.body[posted]
+          } else {
+            const property = field.substring('individual.'.length)
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual[property] = req.body[posted]
+          }
+        }
+      }
+      for (const field of stripeAccount.requirements.eventually_due) {
+        const posted = field.split('.').join('_').replace('company_', '').replace('individual_', '')
+        if (!req.body[posted]) {
+          continue
+        }
+        if (posted.startsWith('business_profile_')) {
+          const property = posted.substring('business_profile_'.length)
+          accountInfo.business_profile = accountInfo.business_profile || {}
+          accountInfo.business_profile[property] = req.body[posted]
+        } else if (posted.startsWith('address_kanji_')) {
+          const property = posted.substring('address_kanji_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address_kanji = accountInfo.company.address_kanji || {}
+            accountInfo.company.address_kanji[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address_kanji = accountInfo.individual.address_kanji || {}
+            accountInfo.individual.address_kanji[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('address_kana_')) {
+          const property = posted.substring('address_kana_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address_kana = accountInfo.company.address_kana || {}
+            accountInfo.company.address_kana[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address_kana = accountInfo.individual.address_kana || {}
+            accountInfo.individual.address_kana[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('address_')) {
+          const property = posted.substring('address_'.length)
+          if (stripeAccount.business_type === 'company') {
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company.address = accountInfo.company.address || {}
+            accountInfo.company.address[property] = req.body[posted]
+          } else {
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual.address = accountInfo.individual.address || {}
+            accountInfo.individual.address[property] = req.body[posted]
+          }
+        } else if (posted.startsWith('dob_')) {
+          const property = posted.substring('dob_'.length)
+          accountInfo.individual.dob = accountInfo.individual.dob || {}
+          accountInfo.individual.dob[property] = req.body[posted]
+        } else {
+          if (stripeAccount.business_type === 'company') {
+            const property = field.substring('company.'.length)
+            accountInfo.company = accountInfo.company || {}
+            accountInfo.company[property] = req.body[posted]
+          } else {
+            const property = field.substring('individual.'.length)
+            accountInfo.individual = accountInfo.individual || {}
+            accountInfo.individual[property] = req.body[posted]
+          }
+        }
+      }
+      if (req.body.business_profile_mcc) {
+        const mccList = connect.getMerchantCategoryCodes(req.language)
+        let found = false
+        for (const mcc of mccList) {
+          found = mcc.code === req.body.business_profile_mcc
+          if (found) {
+            break
+          }
+        }
+        if (!found) {
+          throw new Error('invalid-business_profile_mcc')
+        }
+        accountInfo.business_profile = accountInfo.business_profile || {}
+        accountInfo.business_profile.mcc = req.body.business_profile_mcc
+      }
+      if (req.body.business_profile_url) {
+        if (!req.body.business_profile_url.startsWith('http://') &&
+            !req.body.business_profile_url.startsWith('https://')) {
+          throw new Error('invalid-business_profile_url')
+        }
+        accountInfo.business_profile = accountInfo.business_profile || {}
+        accountInfo.business_profile.url = req.body.business_profile_url
+      }
+      if (req.body.business_profile_product_description) {
+        accountInfo.business_profile = accountInfo.business_profile || {}
+        accountInfo.business_profile.product_description = req.body.business_profile_product_description
+      }
+      // TODO: these fields are optional but not represented in requirements
+      // so when Stripe updates to have something like an 'optionally_due' array
+      // the manual checks can be removed
+      if (req.body.address_line2) {
+        accountInfo.company.address = accountInfo.company.address || {}
+        accountInfo.company.address.line2 = req.body.address_line2
+      }
+      if (req.body.address_country && req.body.address_country.length) {
+        if (!connect.countryNameIndex[req.body.address_country]) {
+          throw new Error('invalid-address_country')
+        }
+        if (stripeAccount.business_type === 'company') {
+          accountInfo.company = accountInfo.company || []
+          accountInfo.company.address = accountInfo.company.address || {}
+          accountInfo.company.address.country = req.body.address_country
+        } else {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.address = accountInfo.individual.address || {}
+          accountInfo.individual.address.country = req.body.address_country
+        }
+      }
+      if (req.body.address_state && req.body.address_state.length) {
+        const states = connect.countryDivisions[req.body.address_country || stripeAccount.country]
+        let found
+        for (const state of states) {
+          found = state.value === req.body.address_state
+          if (found) {
+            break
+          }
+        }
+        if (!found) {
+          throw new Error('invalid-address_state')
+        }
+        if (stripeAccount.business_type === 'company') {
+          accountInfo.company.address = accountInfo.company.address || {}
+          accountInfo.company.address.state = req.body.address_state
+        } else {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.address = accountInfo.individual.address || {}
+          accountInfo.individual.address.state = req.body.address_state
+        }
+      }
+      if (req.body.address_postal_code) {
+        if (stripeAccount.business_type === 'company') {
+          accountInfo.company = accountInfo.company || {}
+          accountInfo.company.address = accountInfo.company.address || {}
+          accountInfo.company.address.postal_code = req.body.address_postal_code
+        } else {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.address = accountInfo.individual.address || {}
+          accountInfo.individual.address.postal_code = req.body.address_postal_code
+        }
+      }
+      if (req.body.tax_id && !req.body.tax_id.length) {
+        throw new Error('invalid-tax_id')
+      }
+      // TODO: check this document is required before updating
+      // currently Stripe do not correctly report it as required
+      // during testing it just goes straight to review without
+      // submitting or ever requiring it
+      if (stripeAccount.business_type === 'company') {
+        if (req.body.verification_document_back) {
+          accountInfo.company = accountInfo.company || {}
+          accountInfo.company.verification = accountInfo.company.verification || {}
+          accountInfo.company.verification.document = accountInfo.company.verification.document || {}
+          accountInfo.company.verification.document.back = req.body.verification_document_back
+        }
+        if (req.body.verification_document_front) {
+          accountInfo.company = accountInfo.company || {}
+          accountInfo.company.verification = accountInfo.company.verification || {}
+          accountInfo.company.verification.document = accountInfo.company.verification.document || {}
+          accountInfo.company.verification.document.front = req.body.verification_document_front
+        }
+      } else {
+        if (req.body.gender && req.body.gender !== 'male' && req.body.gender !== 'female') {
+          throw new Error('invalid-gender')
+        }
+        // TODO: 7 was arbitrarily selected as a minimum
+        // but there must be an actual minimum value, and it
+        // should be possible to have per-country minimums
+        if (req.body.id_number && (!req.body.id_number.length || req.body.id_number.length < 7)) {
+          throw new Error('invalid-id_number')
+        }
+        if (req.body.ssn_last_4 && req.body.ssn_last_4.length !== 4) {
+          throw new Error('invalid-ssn_last_4')
+        }
+        if (req.body.verification_document_back) {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.verification = accountInfo.individual.verification || {}
+          accountInfo.individual.verification.document = accountInfo.individual.verification.document || {}
+          accountInfo.individual.verification.document.back = req.body.verification_document_back
+        }
+        if (req.body.verification_document_front) {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.verification = accountInfo.individual.verification || {}
+          accountInfo.individual.verification.document = accountInfo.individual.verification.document || {}
+          accountInfo.individual.verification.document.front = req.body.verification_document_front
+        }
+        if (req.body.verification_additional_document_back) {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.verification = accountInfo.individual.verification || {}
+          accountInfo.individual.verification.additional_document = accountInfo.individual.verification.additional_document || {}
+          accountInfo.individual.verification.additional_document.back = req.body.verification_additional_document_back
+        }
+        if (req.body.verification_additional_document_front) {
+          accountInfo.individual = accountInfo.individual || {}
+          accountInfo.individual.verification = accountInfo.individual.verification || {}
+          accountInfo.individual.verification.additional_document = accountInfo.individual.verification.additional_document || {}
+          accountInfo.individual.verification.additional_document.front = req.body.verification_additional_document_front
+        }
+      }
+    }
+    try {
+      const stripeAccountNow = await stripeCache.execute('accounts', 'update', req.query.stripeid, accountInfo, req.stripeKey)
+      await stripeCache.delete(req.query.stripeid)
+      return stripeAccountNow
+    } catch (error) {
+      if (error.message && error.message.startsWith('invalid-company_')) {
+        throw new Error(error.message.replace('company_', ''))
+      }
+      throw error
+    }
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/stripe-connect/tree/master/src/www/api/user/connect/update-stripe-account.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const connect = require('../../../../../index.js')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@userdashboard/dashboard/test-helper.js')
+
+describe('/api/user/connect/update-stripe-account', function () {
+  this.retries(4)
+  this.timeout(60 * 60 * 1000)
+  const rejectIndividualMissingResults = {}
+  const rejectCompanyMissingResults = {}
+  const submitIndividualResponse = {}
+  const submitIndividualPayload = {}
+  const submitCompanyResponse = {}
+  const submitCompanyPayload = {}
+  const testedIndividualRequiredFields = []
+  const testedCompanyRequiredFields = [
+    'relationship_title',
+    'relationship_director',
+    'relationship_executive',
+    'relationship_representative',
+    'relationship_owner'
+  ]
+  const uploadFields = [
+    'verification_document_front',
+    'verification_document_back',
+    'verification_additional_document_front',
+    'verification_additional_document_back'
+  ]
+  after(TestHelper.deleteOldWebhooks)
+  before(async () => {
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    await TestHelper.setupWebhook()
+    const individuals = {}
+    const companies = {}
+    for (const country of connect.countrySpecs) {
+      let individual = individuals[country.id]
+      if (!individual) {
+        individual = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(individual, {
+          country: country.id,
+          type: 'individual'
+        })
+        individuals[country.id] = individual
+      }
+      const individualPayload = TestStripeAccounts.createPostData(TestStripeAccounts.individualData[country.id])
+      if (individualPayload === false) {
+        continue
+      }
+      for (const field in individualPayload) {
+        if (testedIndividualRequiredFields.indexOf(field) > -1) {
+          continue
+        }
+        testedIndividualRequiredFields.push(field)
+        const req3 = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${individual.stripeAccount.id}`)
+        req3.account = individual.account
+        req3.session = individual.session
+        req3.body = TestStripeAccounts.createPostData(TestStripeAccounts.individualData[country.id])
+        delete (req3.body[field])
+        try {
+          await req3.patch()
+        } catch (error) {
+          rejectIndividualMissingResults[field] = error.message
+        }
+      }
+      const req3 = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${individual.stripeAccount.id}`)
+      req3.account = individual.account
+      req3.session = individual.session
+      req3.body = TestStripeAccounts.createPostData(TestStripeAccounts.individualData[country.id])
+      const submitResponse = await req3.patch()
+      for (const field in individualPayload) {
+        submitIndividualResponse[field] = submitResponse
+      }
+      submitIndividualPayload[country.id] = individualPayload
+      let company = companies[country.id]
+      if (!company) {
+        company = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(company, {
+          country: country.id,
+          type: 'company'
+        })
+        companies[country.id] = company
+      }
+      const companyPayload = TestStripeAccounts.createPostData(TestStripeAccounts.companyData[country.id])
+      if (companyPayload === false) {
+        continue
+      }
+      for (const field in companyPayload) {
+        if (testedCompanyRequiredFields.indexOf(field) > -1) {
+          continue
+        }
+        testedCompanyRequiredFields.push(field)
+        const req3 = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${company.stripeAccount.id}`)
+        req3.account = company.account
+        req3.session = company.session
+        req3.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData[country.id])
+        delete (req3.body[field])
+        try {
+          await req3.patch()
+        } catch (error) {
+          rejectCompanyMissingResults[field] = error.message
+        }
+      }
+      const req4 = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${company.stripeAccount.id}`)
+      req4.account = company.account
+      req4.session = company.session
+      req4.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData[country.id])
+      const submitResponse2 = await req4.patch()
+      for (const field in companyPayload) {
+        submitCompanyResponse[field] = submitResponse2
+      }
+      submitCompanyPayload[country.id] = companyPayload
+    }
+    // upload fields
+    const individual1 = await TestHelper.createUser()
+    await TestHelper.createStripeAccount(individual1, {
+      country: 'AT',
+      type: 'individual'
+    })
+    await TestHelper.updateStripeAccount(individual1, TestStripeAccounts.createPostData(TestStripeAccounts.individualData.AT))
+    const individual2 = await TestHelper.createUser()
+    await TestHelper.createStripeAccount(individual2, {
+      country: 'AT',
+      type: 'individual'
+    })
+    await TestHelper.updateStripeAccount(individual2, TestStripeAccounts.createPostData(TestStripeAccounts.individualData.AT))
+    await TestHelper.updateStripeAccount(individual2, null, {
+      verification_document_front: TestHelper['success_id_scan_back.png'],
+      verification_document_back: TestHelper['success_id_scan_back.png']
+    })
+    for (const field of uploadFields) {
+      const user = field.startsWith('verification_additional') ? individual2 : individual1
+      const property = field.replace('verification_', 'verification.').replace('_front', '').replace('_back', '')
+      await TestHelper.waitForAccountRequirement(user, `individual.${property}`)
+      const req2 = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+      req2.uploads = {
+        verification_additional_document_front: TestHelper['success_id_scan_back.png'],
+        verification_additional_document_back: TestHelper['success_id_scan_back.png'],
+        verification_document_front: TestHelper['success_id_scan_back.png'],
+        verification_document_back: TestHelper['success_id_scan_back.png']
+      }
+      delete (req2.uploads[field])
+      try {
+        await req2.patch()
+      } catch (error) {
+        rejectIndividualMissingResults[field] = error.message
+      }
+    }
+  })
+  describe('exceptions', async () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-stripe-account')
+        req.account = user.account
+        req.session = user.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.US)
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-stripe-account?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.US)
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'DE',
+          type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+        req.account = user2.account
+        req.session = user2.session
+        req.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.DE)
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+    // const invalidIndividualValues = {
+    //   gender: 'invalid',
+    //   id_number: '0',
+    //   ssn_last_4: '0',
+    //   dob_day: '0',
+    //   dob_month: '0',
+    //   dob_year: '0'
+    // }
+    // const invalidCompanyValues = {
+    //   address_line1: false,
+    //   address_city: false,
+    //   address_state: 'invalid',
+    //   address_country: 'invalid',
+    //   address_postal_code: 'invalid',
+    //   address_kana_line1: false,
+    //   address_kana_city: false,
+    //   address_kana_town: 'invalid',
+    //   address_kana_state: 'invalid',
+    //   address_kana_postal_code: false,
+    //   address_kanji_line1: false,
+    //   address_kanji_city: false,
+    //   address_kanji_town: false,
+    //   address_kanji_state: 'invalid',
+    //   address_kanji_postal_code: false,
+    //   business_profile_mcc: 'invalid',
+    //   business_profile_url: 'invalid',
+    //   tax_id: false,
+    //   phone: 'invalid',
+    //   name: false,
+    //   name_kana: false,
+    //   name_kanji: false
+    // }
+    const testedCompanyMissingFields = []
+    for (const country of connect.countrySpecs) {
+      const companyPayload = TestStripeAccounts.createPostData(TestStripeAccounts.companyData[country.id])
+      for (const field in companyPayload) {
+        if (testedCompanyMissingFields.indexOf(field) > -1) {
+          continue
+        }
+        testedCompanyMissingFields.push(field)
+        describe(`invalid-${field}`, async () => {
+          it(`missing posted ${field} (company)`, async () => {
+            const errorMessage = rejectCompanyMissingResults[field]
+            assert.strictEqual(errorMessage, `invalid-${field}`)
+          })
+
+          // if (invalidCompanyValues[field] !== undefined && invalidCompanyValues[field] !== false) {
+          //   it(`invalid posted ${field}`, async () => {
+          //     const errorMessage = rejectCompanyInvalidResults[field]
+          //     assert.strictEqual(errorMessage, `invalid-${field}`)
+          //   })
+          // }
+        })
+      }
+    }
+    const testedIndividualMissingFields = []
+    for (const country of connect.countrySpecs) {
+      const individualPayload = TestStripeAccounts.createPostData(TestStripeAccounts.individualData[country.id])
+      for (const field in individualPayload) {
+        if (testedIndividualMissingFields.indexOf(field) > -1) {
+          continue
+        }
+        testedIndividualMissingFields.push(field)
+        describe(`invalid-${field}`, async () => {
+          it(`missing posted ${field} (individual)`, async () => {
+            const errorMessage = rejectIndividualMissingResults[field]
+            assert.strictEqual(errorMessage, `invalid-${field}`)
+          })
+
+          // if (invalidIndividualValues[field] !== undefined && invalidIndividualValues[field] !== false) {
+          //   it(`invalid posted ${field}`, async () => {
+          //     const errorMessage = rejectInvidividualInvalidResults[field]
+          //     assert.strictEqual(errorMessage, `invalid-${field}`)
+          //   })
+          // }
+        })
+      }
+    }
+
+    describe('invalid-token', () => {
+      it('missing posted token', async () => {
+        global.stripeJS = 3
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'GB',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = TestHelper.createMultiPart(req, TestStripeAccounts.createPostData(TestStripeAccounts.companyData.GB), {
+          verification_document_back: TestHelper['success_id_scan_back.png'],
+          verification_document_front: TestHelper['success_id_scan_front.png']
+        })
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-token')
+      })
+
+      it('invalid posted token', async () => {
+        global.stripeJS = 3
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'GB',
+          type: 'company'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        const body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.GB)
+        body.token = 'invalid'
+        req.body = TestHelper.createMultiPart(req, body, {
+          verification_document_back: TestHelper['success_id_scan_back.png'],
+          verification_document_front: TestHelper['success_id_scan_front.png']
+        })
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-token')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    const testedCompanyRequiredFields = []
+    for (const country of connect.countrySpecs) {
+      const companyPayload = submitCompanyPayload[country.id]
+      for (const field in companyPayload) {
+        if (testedCompanyRequiredFields.indexOf(field) > -1) {
+          continue
+        }
+        testedCompanyRequiredFields.push(field)
+        it(`optionally-required posted ${field}`, async () => {
+          const stripeAccountNow = submitCompanyResponse[field]
+          if (field.startsWith('address_kana_')) {
+            const property = field.substring('address_kana_'.length)
+            assert.strictEqual(stripeAccountNow.company.address_kana[property], companyPayload[field])
+          } else if (field.startsWith('address_kanji')) {
+            const property = field.substring('address_kanji_'.length)
+            if (field === 'address_kanji_patchal_code') {
+              assert.strictEqual(stripeAccountNow.company.address_kanji[property], '１５００００１')
+            } else {
+              assert.strictEqual(stripeAccountNow.company.address_kanji[property], companyPayload[field])
+            }
+          } else if (field.startsWith('address_')) {
+            const property = field.substring('address_'.length)
+            assert.strictEqual(stripeAccountNow.company.address[property], companyPayload[field])
+          } else if (field.startsWith('business_profile')) {
+            const property = field.substring('business_profile_'.length)
+            assert.strictEqual(stripeAccountNow.business_profile[property], companyPayload[field])
+          } else {
+            // TODO: Stripe may or may not transform the phone number
+            // by removing hyphons and adding the country dial code
+            // but submitting in that format is not allowed too
+            if (field === 'phone') {
+              if (stripeAccountNow.company[field] === companyPayload[field]) {
+                assert.strictEqual(stripeAccountNow.company[field], companyPayload[field])
+              } else {
+                let withoutCountryCode = companyPayload[field]
+                withoutCountryCode = withoutCountryCode.substring(withoutCountryCode.indexOf('4'))
+                assert.strictEqual(stripeAccountNow.company[field], withoutCountryCode)
+              }
+            } else if (field === 'tax_id') {
+              assert.strictEqual(stripeAccountNow.company.tax_id_provided, true)
+            } else {
+              assert.strictEqual(stripeAccountNow.company[field], companyPayload[field])
+            }
+          }
+        })
+      }
+    }
+    const testedIndividualRequiredFields = []
+    for (const country of connect.countrySpecs) {
+      const individualPayload = submitIndividualPayload[country.id]
+      for (const field in individualPayload) {
+        if (testedIndividualRequiredFields.indexOf(field) > -1) {
+          continue
+        }
+        testedIndividualRequiredFields.push(field)
+        it(`optionally-required posted ${field}`, async () => {
+          const stripeAccountNow = submitIndividualResponse[field]
+          if (field.startsWith('address_kana_')) {
+            const property = field.substring('address_kana_'.length)
+            assert.strictEqual(stripeAccountNow.individual.address_kana[property], individualPayload[field])
+          } else if (field.startsWith('address_kanji')) {
+            const property = field.substring('address_kanji_'.length)
+            if (field === 'address_kanji_patchal_code') {
+              assert.strictEqual(stripeAccountNow.individual.address_kanji[property], '１５００００１')
+            } else {
+              assert.strictEqual(stripeAccountNow.individual.address_kanji[property], individualPayload[field])
+            }
+          } else if (field.startsWith('address_')) {
+            const property = field.substring('address_'.length)
+            assert.strictEqual(stripeAccountNow.individual.address[property], individualPayload[field])
+          } else if (field.startsWith('business_profile')) {
+            const property = field.substring('business_profile_'.length)
+            assert.strictEqual(stripeAccountNow.business_profile[property], individualPayload[field])
+          } else if (field.startsWith('dob_')) {
+            const property = field.substring('dob_'.length)
+            assert.strictEqual(stripeAccountNow.individual.dob[property], parseInt(individualPayload[field], 10))
+          } else {
+            // TODO: Stripe may or may not transform the phone number
+            // by removing hyphons and adding the country dial code
+            // but submitting in that format is not allowed too
+            if (field === 'phone') {
+              if (stripeAccountNow.individual[field] === individualPayload[field]) {
+                assert.strictEqual(stripeAccountNow.individual[field], individualPayload[field])
+              } else {
+                let withoutCountryCode = individualPayload[field]
+                withoutCountryCode = withoutCountryCode.substring(withoutCountryCode.indexOf('4'))
+                assert.strictEqual(stripeAccountNow.individual[field], withoutCountryCode)
+              }
+            } else if (field === 'ssn_last_4') {
+              assert.strictEqual(stripeAccountNow.individual.ssn_last_4_provided, true)
+            } else if (field === 'id_number') {
+              assert.strictEqual(stripeAccountNow.individual.id_number_provided, true)
+            } else {
+              assert.strictEqual(stripeAccountNow.individual[field], individualPayload[field])
+            }
+          }
+        })
+      }
+    }
+
+    const uploadFields = [
+      // may be company or individual verification document
+      'verification_document_front',
+      'verification_document_back',
+      // only individual
+      'verification_additional_document_front',
+      'verification_additional_document_back'
+    ]
+    for (const field of uploadFields) {
+      it(`optionally-required patched ${field}`, async () => {
+        const user = await TestHelper.createUser()
+        if (field.indexOf('additional') > -1) {
+          await TestHelper.createStripeAccount(user, {
+            country: 'GB',
+            type: 'individual'
+          })
+        } else {
+          await TestHelper.createStripeAccount(user, {
+            country: 'GB',
+            type: 'company'
+          })
+        }
+        const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+        req.account = user.account
+        req.session = user.session
+        let body
+        if (user.stripeAccount.business_type === 'company') {
+          body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.GB)
+        } else {
+          body = TestStripeAccounts.createPostData(TestStripeAccounts.individualData.GB)
+        }
+        req.body = TestHelper.createMultiPart(req, body, {
+          [field]: TestHelper['success_id_scan_back.png']
+        })
+        const stripeAccountNow = await req.patch()
+        if (field === 'verification_document_front') {
+          assert.notStrictEqual(stripeAccountNow.company.verification.document.front, null)
+          assert.notStrictEqual(stripeAccountNow.company.verification.document.front, undefined)
+        } else if (field === 'verification_document_back') {
+          assert.notStrictEqual(stripeAccountNow.company.verification.document.back, null)
+          assert.notStrictEqual(stripeAccountNow.company.verification.document.back, undefined)
+        } else if (field === 'verification_additional_document_front') {
+          assert.notStrictEqual(stripeAccountNow.individual.verification.additional_document.front, null)
+          assert.notStrictEqual(stripeAccountNow.individual.verification.additional_document.front, undefined)
+        } else {
+          assert.notStrictEqual(stripeAccountNow.individual.verification.additional_document.back, null)
+          assert.notStrictEqual(stripeAccountNow.individual.verification.additional_document.back, undefined)
+        }
+      })
+    }
+  })
+
+  describe('returns', () => {
+    it('object (company)', async () => {
+      const country = connect.countrySpecs[Math.floor(Math.random() * connect.countrySpecs.length)]
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: country.id,
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData[country.id])
+      req.uploads = {
+        verification_document_back: TestHelper['success_id_scan_back.png'],
+        verification_document_front: TestHelper['success_id_scan_front.png']
+      }
+      const stripeAccountNow = await req.patch()
+      assert.strictEqual(stripeAccountNow.object, 'account')
+      assert.strictEqual(stripeAccountNow.metadata.token, 'false')
+    })
+
+    it('object (individual)', async () => {
+      const country = connect.countrySpecs[Math.floor(Math.random() * connect.countrySpecs.length)]
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: country.id,
+        type: 'individual'
+      })
+      const req = TestHelper.createRequest(`/api/user/connect/update-stripe-account?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = TestStripeAccounts.createPostData(TestStripeAccounts.individualData[country.id])
+      req.uploads = {
+        verification_document_back: TestHelper['success_id_scan_back.png'],
+        verification_document_front: TestHelper['success_id_scan_front.png']
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const stripeAccountNow = await req.patch()
+      assert.strictEqual(stripeAccountNow.object, 'account')
+      assert.strictEqual(stripeAccountNow.metadata.token, 'false')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment STRIPE_JS', async () => {
+      global.stripeJS = 3
+      const user = await TestHelper.createUser()
+      await TestHelper.createStripeAccount(user, {
+        country: 'US',
+        type: 'company'
+      })
+      const req = TestHelper.createRequest(`/account/connect/edit-stripe-account?stripeid=${user.stripeAccount.id}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = TestStripeAccounts.createPostData(TestStripeAccounts.companyData.US)
+      await req.post()
+      const stripeAccountNow = await global.api.user.connect.StripeAccount.get(req)
+      // TODO: verifying information was submitted by token is
+      // not possible so for now when objects are updated
+      // without a token they have a metadata.token = false flag set
+      assert.strictEqual(stripeAccountNow.metadata.token, undefined)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

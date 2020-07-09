@@ -1,0 +1,168 @@
+{
+  "id": "acct_1GlIrFH3AupOADYn",
+  "object": "account",
+  "business_profile": {
+    "mcc": "0763",
+    "name": null,
+    "product_description": null,
+    "support_address": null,
+    "support_email": null,
+    "support_phone": null,
+    "support_url": null,
+    "url": "https://51.not.la"
+  },
+  "business_type": "individual",
+  "capabilities": {
+    "card_payments": "pending",
+    "transfers": "pending"
+  },
+  "charges_enabled": false,
+  "country": "US",
+  "created": 1590084665,
+  "default_currency": "usd",
+  "details_submitted": false,
+  "email": null,
+  "external_accounts": {
+    "object": "list",
+    "data": [],
+    "has_more": false,
+    "total_count": 0,
+    "url": "/v1/accounts/acct_1GlIrFH3AupOADYn/external_accounts"
+  },
+  "individual": {
+    "id": "person_HJwkpZBXUjzZRL",
+    "object": "person",
+    "account": "acct_1GlIrFH3AupOADYn",
+    "address": {
+      "city": "New York",
+      "country": "US",
+      "line1": "285 Fulton St",
+      "line2": null,
+      "postal_code": "10007",
+      "state": "NY"
+    },
+    "created": 1590084667,
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1950
+    },
+    "email": "flehrmannbr@51.not.la",
+    "first_name": "Farleigh",
+    "id_number_provided": false,
+    "last_name": "Lehrmann",
+    "metadata": {},
+    "phone": "+14567890123",
+    "relationship": {
+      "director": false,
+      "executive": false,
+      "owner": false,
+      "percent_ownership": null,
+      "representative": true,
+      "title": null
+    },
+    "requirements": {
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "id_number",
+        "individual.address.city",
+        "individual.address.postal_code",
+        "individual.address.state"
+      ]
+    },
+    "ssn_last_4_provided": true,
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "pending"
+    }
+  },
+  "metadata": {
+    "appid": "tests_1590084663",
+    "accountid": "account_7eb3ffc6",
+    "ip": "127.0.0.1",
+    "requiresOwners": "true",
+    "requiresDirectors": "false",
+    "token": "false"
+  },
+  "payouts_enabled": false,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "disabled_reason": "requirements.past_due",
+    "errors": [],
+    "eventually_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "past_due": [
+      "external_account",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "pending_verification": [
+      "individual.address.city",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.id_number"
+    ]
+  },
+  "settings": {
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": false
+      },
+      "statement_descriptor_prefix": null
+    },
+    "dashboard": {
+      "display_name": "51.not.la",
+      "timezone": "Etc/UTC"
+    },
+    "payments": {
+      "statement_descriptor": "51.NOT.LA",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": false,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    }
+  },
+  "tos_acceptance": {
+    "date": null,
+    "ip": null,
+    "user_agent": null
+  },
+  "type": "custom"
+}

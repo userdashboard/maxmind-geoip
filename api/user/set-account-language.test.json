@@ -1,0 +1,17 @@
+{
+  "object": "account",
+  "accountid": "account_4867d30",
+  "usernameHash": "c3f6379116c15a9e46cec1719b7b09d7860e927aeda180876d5c9f8916ed0ff2c8d1ef2d7d50bb9653cbfce36be796af349991f5758426b283903eb1b814735c",
+  "passwordHash": "$2a$04$2WfUSxq2aoqtLYWd6bkWIOm6fUSv7aAEabL77WuEI9gUD8/tTh.TG",
+  "sessionKey": "5b9b4c3696d45a4fdbbbd4c178ec3e303b669202ff3aaa8d8c6570a5c79f4bcb",
+  "sessionKeyNumber": 1,
+  "created": 1594310132,
+  "administrator": 1594310132,
+  "owner": 1594310132,
+  "firstName": "Anika",
+  "lastName": "Rau",
+  "contactEmail": "Anika72@gmail.com",
+  "profileid": "profile_c9fd3c6",
+  "lastSignedIn": 1594310132,
+  "language": "es"
+}

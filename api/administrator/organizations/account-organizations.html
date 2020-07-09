@@ -1,0 +1,391 @@
+<html>
+
+<head>
+  <title>/api/administrator/organizations/account-organizations#GET (organizations)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI demonstration</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI demonstration</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI demonstration</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI demonstration</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI demonstration</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI demonstration</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/organizations/account-organizations (GET)</h1><span class="nodejs get" id="nodejs">await global.api.administrator.organizations.AccountOrganizations.get(req)</span><span class="returns">Returns <span id="returns">array</span></span>
+          <div class="response-container">
+            <h2>Response
+              <pre><code data-language="json" id="response">[
+  {
+    "object": "organization",
+    "ownerid": "account_48cef67a",
+    "organizationid": "organization_3c7956d9",
+    "name": "My organization",
+    "email": "kcoventryr@php.not.net",
+    "created": 1588563522
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_181f7c85",
+    "organizationid": "organization_27c7016e",
+    "name": "My organization",
+    "email": "cslidesq@berkeley.not.edu",
+    "created": 1588563522
+  }
+]</code></pre>
+            </h2>
+          </div>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These errors occur if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tr>
+                <td rowSpan="2">invalid-accountid</td>
+                <td>missing querystring accountid</td>
+              </tr>
+              <tr>
+                <td>invalid querystring accountid</td>
+              </tr>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tr>
+                <td>offset </td>
+                <td>integer</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+              <tr>
+                <td>limit </td>
+                <td>integer</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+              <tr>
+                <td>all </td>
+                <td>boolean</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+            </table>
+          </div>
+          <div id="configuration-container"><a name="configuration"></a>
+            <h2>Configuration</h2>
+            <p>This request behavior can be modified by these circumstances:</p>
+            <ul id="configuration"></ul>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/organizations/tree/master/src/www/api/administrator/organizations/account-organizations.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('@userdashboard/dashboard')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.administrator.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-account')
+    }
+    let organizationids
+    if (req.query.all) {
+      organizationids = await dashboard.StorageList.listAll(`${req.appid}/account/organizations/${req.query.accountid}`)
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      organizationids = await dashboard.StorageList.list(`${req.appid}/account/organizations/${req.query.accountid}`, offset, limit)
+    }
+    if (!organizationids || !organizationids.length) {
+      return null
+    }
+    const items = []
+    for (const organizationid of organizationids) {
+      req.query.organizationid = organizationid
+      const organization = await global.api.administrator.organizations.Organization.get(req)
+      items.push(organization)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/organizations/tree/master/src/www/api/administrator/organizations/account-organizations.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/administrator/organizations/account-organizations', () => {
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('missing querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/organizations/account-organizations')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/organizations/account-organizations?accountid=invalid')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      global.delayDiskWrites = true
+      const administrator = await TestHelper.createOwner()
+      const organizations = []
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.firstName,
+        'display-email': user.profile.contactEmail
+      })
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createOrganization(user, {
+          email: user.profile.displayEmail,
+          name: 'My organization',
+          profileid: user.profile.profileid
+        })
+        organizations.unshift(user.organization.organizationid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/organizations/account-organizations?accountid=${user.account.accountid}&offset=${offset}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const organizationsNow = await req.get()
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(organizationsNow[i].organizationid, organizations[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const administrator = await TestHelper.createOwner()
+      const organizations = []
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.firstName,
+        'display-email': user.profile.contactEmail
+      })
+      for (let i = 0, len = limit + 1; i < len; i++) {
+        await TestHelper.createOrganization(user, {
+          email: user.profile.displayEmail,
+          name: 'My organization',
+          profileid: user.profile.profileid
+        })
+        organizations.unshift(user.organization.organizationid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/organizations/account-organizations?accountid=${user.account.accountid}&limit=${limit}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const organizationsNow = await req.get()
+      assert.strictEqual(organizationsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const organizations = []
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.firstName,
+        'display-email': user.profile.contactEmail
+      })
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createOrganization(user, {
+          email: user.profile.displayEmail,
+          name: 'My organization',
+          profileid: user.profile.profileid
+        })
+        organizations.unshift(user.organization.organizationid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/organizations/account-organizations?accountid=${user.account.accountid}&all=true`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const organizationsNow = await req.get()
+      assert.strictEqual(organizationsNow.length, organizations.length)
+    })
+  })
+  describe('returns', () => {
+    it('array', async () => {
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.firstName,
+        'display-email': user.profile.contactEmail
+      })
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        global.userProfileFields = ['contact-email', 'full-name']
+        const owner = await TestHelper.createUser()
+        global.userProfileFields = ['display-email', 'display-name']
+        await TestHelper.createProfile(owner, {
+          'display-name': owner.profile.firstName,
+          'display-email': owner.profile.contactEmail
+        })
+        await TestHelper.createOrganization(owner, {
+          email: owner.profile.displayEmail,
+          name: 'My organization',
+          profileid: owner.profile.profileid
+        })
+        await TestHelper.createInvitation(owner)
+        await TestHelper.acceptInvitation(user, owner)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/organizations/account-organizations?accountid=${user.account.accountid}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      req.filename = __filename
+      req.saveResponse = true
+      const organizationsNow = await req.get()
+      assert.strictEqual(organizationsNow.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.firstName,
+        'display-email': user.profile.contactEmail
+      })
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createOrganization(user, {
+          email: user.profile.displayEmail,
+          name: 'My organization',
+          profileid: user.profile.profileid
+        })
+      }
+      const req = TestHelper.createRequest(`/api/administrator/organizations/account-organizations?accountid=${user.account.accountid}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const organizationsNow = await req.get()
+      assert.strictEqual(organizationsNow.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

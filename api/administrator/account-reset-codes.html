@@ -1,0 +1,353 @@
+<html>
+
+<head>
+  <title>/api/administrator/account-reset-codes#PATCH (dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI demonstration</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI demonstration</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI demonstration</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI demonstration</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI demonstration</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI demonstration</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/account-reset-codes (PATCH)</h1><span class="nodejs patch" id="nodejs">await global.api.administrator.AccountResetCodes.patch(req)</span><span class="returns">Returns <span id="returns">array</span></span>
+          <div class="response-container">
+            <h2>Response
+              <pre><code data-language="json" id="response">[
+  {
+    "object": "resetCode",
+    "accountid": "account_9acb775b",
+    "codeid": "code_9a7a6c4d",
+    "created": 1588561322
+  },
+  {
+    "object": "resetCode",
+    "accountid": "account_9acb775b",
+    "codeid": "code_0daa0794",
+    "created": 1588561322
+  }
+]</code></pre>
+            </h2>
+          </div>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These errors occur if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tr>
+                <td rowSpan="2">invalid-accountid</td>
+                <td>unspecified querystring accountid</td>
+              </tr>
+              <tr>
+                <td>invalid querystring accountid</td>
+              </tr>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tr>
+                <td>offset </td>
+                <td>integer</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+              <tr>
+                <td>limit </td>
+                <td>integer</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+              <tr>
+                <td>all </td>
+                <td>boolean</td>
+                <td>optional</td>
+                <td>URL</td>
+              </tr>
+            </table>
+          </div>
+          <div id="redacts-container"><a name="redacts"></a>
+            <h2>Redacts</h2>
+            <p>Some properties are redacted when accessing the objects:</p>
+            <ul id="redacts"></ul>
+          </div>
+          <div id="configuration-container"><a name="configuration"></a>
+            <h2>Configuration</h2>
+            <p>This request behavior can be modified by these circumstances:</p>
+            <ul id="configuration"></ul>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/administrator/account-reset-codes.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.administrator.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-account')
+    }
+    let codeids
+    if (req.query.all) {
+      codeids = await dashboard.StorageList.listAll(`${req.appid}/account/resetCodes/${req.query.accountid}`)
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      codeids = await dashboard.StorageList.list(`${req.appid}/account/resetCodes/${req.query.accountid}`, offset, limit)
+    }
+    if (!codeids || !codeids.length) {
+      return null
+    }
+    req.cacheData = await dashboard.Storage.readMany(`${req.appid}/resetCode`, codeids)
+    const resetCodes = []
+    for (const codeid of codeids) {
+      req.query.codeid = codeid
+      const resetCode = await global.api.administrator.ResetCode.get(req)
+      resetCodes.push(resetCode)
+    }
+    return resetCodes
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/administrator/account-reset-codes.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/administrator/account-reset-codes', () => {
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('unspecified querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/account-reset-codes')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/account-reset-codes?accountid=invalid')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async () => {
+      global.delayDiskWrites = true
+      const offset = 1
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      const codes = []
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createResetCode(user)
+        codes.unshift(user.resetCode.codeid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}&offset=${offset}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const codesNow = await req.get()
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(codesNow[i].codeid, codes[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      const codes = []
+      for (let i = 0, len = limit + 1; i < len; i++) {
+        await TestHelper.createResetCode(user)
+        codes.unshift(user.resetCode.codeid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}&limit=${limit}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const codesNow = await req.get()
+      assert.strictEqual(codesNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      const codes = []
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createResetCode(user)
+        codes.unshift(user.resetCode.codeid)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}&all=true`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const codesNow = await req.get()
+      assert.strictEqual(codesNow.length, codes.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createResetCode(user)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      req.filename = __filename
+      req.saveResponse = true
+      const codesNow = await req.get()
+      assert.strictEqual(codesNow.length, global.pageSize)
+    })
+  })
+
+  describe('redacts', () => {
+    it('secretCodeHash', async () => {
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      await TestHelper.createResetCode(user)
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const codesNow = await req.get()
+      assert.strictEqual(codesNow[0].secretCodeHash, undefined)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const administrator = await TestHelper.createOwner()
+      const user = await TestHelper.createUser()
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createResetCode(user)
+      }
+      const req = TestHelper.createRequest(`/api/administrator/account-reset-codes?accountid=${user.account.accountid}`)
+      req.account = administrator.account
+      req.session = administrator.session
+      const codesNow = await req.get()
+      assert.strictEqual(codesNow.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+{
+  "id": "acct_1GlIccBM0JSxTCPZ",
+  "object": "account",
+  "business_profile": {
+    "mcc": null,
+    "name": null,
+    "product_description": null,
+    "support_address": null,
+    "support_email": null,
+    "support_phone": null,
+    "support_url": null,
+    "url": null
+  },
+  "business_type": "individual",
+  "capabilities": {
+    "card_payments": "inactive",
+    "transfers": "inactive"
+  },
+  "charges_enabled": false,
+  "country": "US",
+  "created": 1590083758,
+  "default_currency": "usd",
+  "details_submitted": false,
+  "email": null,
+  "external_accounts": {
+    "object": "list",
+    "data": [],
+    "has_more": false,
+    "total_count": 0,
+    "url": "/v1/accounts/acct_1GlIccBM0JSxTCPZ/external_accounts"
+  },
+  "metadata": {
+    "appid": "tests_1590083756",
+    "accountid": "account_7e9b9198",
+    "ip": "127.0.0.1",
+    "requiresOwners": "true",
+    "requiresDirectors": "false"
+  },
+  "payouts_enabled": false,
+  "requirements": {
+    "current_deadline": null,
+    "currently_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "external_account",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "disabled_reason": "requirements.past_due",
+    "errors": [],
+    "eventually_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "external_account",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "past_due": [
+      "business_profile.mcc",
+      "business_profile.url",
+      "external_account",
+      "individual.address.city",
+      "individual.address.line1",
+      "individual.address.postal_code",
+      "individual.address.state",
+      "individual.dob.day",
+      "individual.dob.month",
+      "individual.dob.year",
+      "individual.email",
+      "individual.first_name",
+      "individual.last_name",
+      "individual.phone",
+      "individual.ssn_last_4",
+      "tos_acceptance.date",
+      "tos_acceptance.ip"
+    ],
+    "pending_verification": []
+  },
+  "settings": {
+    "branding": {
+      "icon": null,
+      "logo": null,
+      "primary_color": null,
+      "secondary_color": null
+    },
+    "card_payments": {
+      "decline_on": {
+        "avs_failure": false,
+        "cvc_failure": false
+      },
+      "statement_descriptor_prefix": null
+    },
+    "dashboard": {
+      "display_name": null,
+      "timezone": "Etc/UTC"
+    },
+    "payments": {
+      "statement_descriptor": "",
+      "statement_descriptor_kana": null,
+      "statement_descriptor_kanji": null
+    },
+    "payouts": {
+      "debit_negative_balances": false,
+      "schedule": {
+        "delay_days": 2,
+        "interval": "daily"
+      },
+      "statement_descriptor": null
+    }
+  },
+  "tos_acceptance": {
+    "date": null,
+    "ip": null,
+    "user_agent": null
+  },
+  "type": "custom"
+}

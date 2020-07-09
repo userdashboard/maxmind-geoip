@@ -1,0 +1,198 @@
+html { font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif; font-size: 90%; color: #000; }
+body { background-color: #FFF; color: #000; padding: 0; margin: 0 }
+header {  background: linear-gradient(30deg, #117, #715, #ea3); color: #FFF; width: 100% }
+header h1 { padding: 1rem 1rem 0.5rem 1rem }
+header p { display: inline-block; margin: 0; padding: 0 0 1rem 1rem; font-size: 1.4rem; color: rgba(255, 255, 255, 0.5) }
+header a { font-size: 1.4rem; color: rgba(255, 255, 255, 0.75); font-size: 1.4rem }
+section { display: inline-block; vertical-align: top; margin-right: 1% }
+section:last-of-type { margin-right: 0 }
+h1 { margin: 0; padding: 0; padding: 1rem 0 0 1rem }
+h2 { margin: 0; font-size: 1.2rem; padding: 1rem }
+h3 { margin: 0; font-size: 1.2rem; padding: 0 0 0 1rem }
+a { font-size: 1rem }
+p { padding: 0 1rem }
+p, ul { margin-bottom: 1.8rem }
+p img { margin-right: 1rem }
+li { line-height: 2rem; list-style-type: none }
+li h2 { text-transform: uppercase; font-weight: normal; font-size: 0.9rem; color: #666; padding: 0; margin: 0.25rem 0 0 0 }
+li ul { margin: 0; padding-left: 0.5rem }
+a { color: #117; text-decoration: none; font-size: 1.2rem }
+a:hover { color: #07C }
+.body-container { display: flex; flex-direction: column; flex-wrap: wrap }
+.section-container { display: flex; flex-direction: row; flex: 1 }
+section.full { flex: 1 }
+section.side { flex-basis: 24rem; width: 24rem }
+section.navigation { font-size: 1.2rem }
+section.navigation h2 { padding: 1rem 0 0 1rem }
+section.navigation li h2 { padding: 0 }
+section.navigation li ul { margin: 0 }
+section.navigation li li { margin: 0 }
+section.navigation p { margin-bottom: 0; margin-right: 2rem }
+
+/* index page */
+p.note { font-size: 1.2rem; max-width: 36rem; line-height: 1.6rem; margin-top: 0.5rem }
+menu.index { display: none; padding-left: 1rem }
+menu.index li,
+menu.indexes li { list-style-type: none }
+menu.index a,
+menu.indexes a { display: inline-block }
+menu.indexes { padding: 0.5rem 0 0 1rem; margin: 0; }
+menu.indexes a { color: #117 }
+a.skip { display: none; font-size: 1rem; color: #117 }
+/* content */
+div.content { padding: 2rem; font-size: 1.2rem }
+div.content pre,
+div.content code,
+div.content a,
+div.content li,
+div.content th,
+div.content td { font-size: inherit; line-height: 1.6rem }
+div.content h1 { font-size: 2rem; padding-left: 0; font-weight: normal }
+div.content h2,
+div.content p { padding: 0; margin-bottom: 1.2rem; max-width: 90rem }
+div.content li h2 { margin-bottom: 0 }
+div.content p code { color: #900 }
+div.content p a { text-decoration: underline }
+div.content li { line-height: 1.4rem }
+div.content pre { font-size: 1.2rem; display: inline-block; background-color: beige; border: 0.5rem solid beige; max-width: 100%; overflow: auto }
+div.content td pre { background-color: transparent; border: none }
+
+table.insides td { vertical-align: top }
+ul.division { padding: 0; margin: 0; max-width: 60rem }
+ul.division li { width: 100%; min-width: 34%; max-width: 49%; display: inline-block; vertical-align: top }
+ul.division h2 { text-transform: none; font-size: 1.1rem; background-color: #333; color: #FFF; padding: 0.25rem 0.5rem }
+ul.insides { margin: 0; padding: 0; list-style-type: none }
+ul.insides li { min-width: none; max-width: none; font-size: 1rem; font-family: monospace; line-height: 1.4rem; width: auto; display: block }
+ul.insides li.title { font-size: 0.8rem; text-transform: uppercase; color: #666; font-family: inherit; margin-top: 1rem }
+ul.insides li.title:first-of-type { margin-top: 0 }
+.devices { margin: 0 0 2rem 0; padding: 0; list-style-type: none }
+.devices li { cursor: pointer; color: #666; display: inline-block; font-size: 1.4rem; margin-right: 1rem; margin-left: 1rem; padding: 0.5rem }
+.devices li:hover { color: #333 }
+.devices li:first-of-type { margin-left: 0 }
+.devices li:last-of-type { border-right: 0; margin-right: 0 } 
+.devices li.current { background-color: #DDD; border-radius: 0.25rem }
+.screenshot-container { margin-top: 1rem }
+.screenshot-container h2 { font-size: 1.6rem }
+ul.screenshots,
+ul.screenshots { list-style-type: none; margin: 0 0 2rem 0; padding: 0; width: 100% }
+ul.screenshots li { width: 100%; max-width: 462px; padding: 10px; margin: 0 2rem 2rem 0; vertical-align: top; text-align: center; background-color: #DDD; display: inline-block }
+ul.screenshots a { display: inline-block }
+ul.screenshots img { width: 100%; max-width: 460px; height: auto; display: block; margin-bottom: 0.5rem }
+div.ui-container { margin-top: 1rem }
+pre.example { max-height: 24rem; overflow: scroll; padding: 0.1rem; background-color: #DDD }
+a.home { font-weight: bold; margin: 1rem; display: inline-block }
+span.nodejs { display: inline-block; font-size: 1rem; margin: 0.5rem 0 1rem 0 }
+span.returns { display: block; margin: 0 0 2rem 0; color: #666; font-style: italic; font-weight: bold; font-size: 1.1rem }
+span.get { color: darkgreen }
+span.post { color: darkblue }
+span.patch { color: purple }
+span.delete { color: red }
+table { border-collapse: collapse; margin-bottom: 1rem; width: 100%; max-width: 90rem }
+table.api { font-family: monospace; margin: 1rem 0 }
+table.api td { vertical-align: top }
+table.api span { color: #666 }
+table.api .method { color: #FFF; border-radius: 0.25rem; font-size: 0.9rem; line-height: 0.9rem; padding: 0.25rem }
+table.api .get { background-color: darkgreen }
+table.api .post { background-color: darkblue }
+table.api .patch { background-color: purple }
+table.api .delete { background-color: red }
+table.api .nodejs { display: block; color: #666; font-size: 0.9rem; margin: 0 }
+th { background-color: #333; color: #FFF; text-align: left }
+th,
+td { padding: 0.5rem 1rem 0.5rem 0.5rem; border: 1px solid #333 }
+td { background-color: #FFF }
+th.small { width: 6rem }
+th.large { width: 24rem }
+tr.alt td { background-color: #DDD }
+pre { margin: 0 0 2rem 2rem }
+td ul { margin: 0; padding: 0 }
+
+.dashboard { width: 100%; max-width: 90rem; height: 30%; border-radius: 0.5rem; overflow: hidden; border: 1px dotted #333; box-shadow: 0 0 1rem #999; margin-bottom: 1rem }
+.dashboard .header { background-color: #DDD; justify-content: space-between; display: flex; flex-direction: row; height: 3rem; line-height: 3rem; color: inherit; width: 100% }
+.dashboard .header h2 { flex-direction: row; align-self: flex-start; font-weight: normal; margin: 0; }
+.dashboard .header h2 span { display: inline-block; height: 1rem; width: 8rem; background-color: #CCC; padding: 0 1rem; line-height: 1rem; margin: 1rem 0 0 1rem }
+.dashboard .header img { width: 1.5rem; height: 1.5rem; margin-top: 0.75rem; display: block; float: right; margin-left: 0.5rem }
+.dashboard .header .menu { height: 3rem; float: right; color: rgba(255, 255, 255, 0.75); line-height: 3rem; font-size: 0.9rem; margin-right: 1rem }
+.dashboard .header .menu span { display: inline-block; height: 3rem; line-height: 3rem }
+.dashboard .navigation { background-color: #DDD; display: flex; width: 100%; top: 3rem; height: 2rem; line-height: 2rem; border-top: 1px dotted #333; border-bottom: 1px dotted #333 }
+.dashboard .navigation nav { color: #666; font-size: 1rem; text-indent: 1rem }
+.dashboard .navigation a { display: inline-block; min-width: 2rem; height: 1rem; margin-top: 0.5rem; background-color: #CCC; padding: 0 1rem; line-height: 2rem; margin-right: 1rem }
+.dashboard .navigation a:first-of-type { width: 4rem }
+.dashboard .navigation a:last-of-type { width: 3rem }
+.dashboard .content { height: 100%; padding: 0 }
+.dashboard .content h2 { margin: 1rem }
+.dashboard .content p { max-width: auto !important; margin: 1rem; color: #666 }
+
+.lightbox { width: 100%; height: 100%; background-color: #DDD; position: absolute; top: 0; left: 0 }
+.lightbox img { position: absolute; left: 50%; top: 50%; border: 1px solid #FFF; background-color: #CCC; padding: 1rem }
+
+/* solarized dark theme, Original Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com> */
+pre,
+.hljs { display: block; overflow-x: auto; padding: 02rem; background: beige; color: #444 }
+.hljs-comment, 
+.hljs-quote { color: #586e75 }
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition { color: #859900 }
+.hljs-number, .hljs-string, .hljs-meta .hljs-meta-string, .hljs-literal, .hljs-doctag, .hljs-regexp { color: #2aa198 }
+.hljs-title, .hljs-section, .hljs-name, .hljs-selector-id, .hljs-selector-class { color: #268bd2 }
+.hljs-attribute, .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-class .hljs-title, .hljs-type { color: #b58900 }
+.hljs-symbol, .hljs-bullet, .hljs-subst, .hljs-meta, .hljs-meta .hljs-keyword, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-link { color: #cb4b16 }
+.hljs-built_in, .hljs-deletion { color: #dc322f }
+.hljs-formula { background: #073642 }
+.hljs-emphasis { font-style: italic }
+.hljs-strong { font-weight: bold }
+
+@media (min-width: 1920px) {
+  .skip { display: none }
+  div.content .skip { display: inline-block }
+}
+@media (max-width: 1280px) {
+  section { width: 100% !important; max-width: none; min-width: none }
+  menu.index,
+  .skip { display: inline-block !important }
+  .content { padding: 1rem !important }
+  .division { width: 100% !important }
+  .division li { width: 100% !important }
+  .dashboard { height: 50%; width: 96% }
+}
+
+@media (max-width: 600px) {
+  .content { padding: 0.5rem !important }
+  .screenshots li { padding: 0 !important; margin-right: 0 !important }
+  .dashboard .navigation a:last-of-type { display: none }
+  .insides li,
+  .insides a { font-size: 0.75rem !important }
+  .insides th,
+  .insides td { padding: 0.25rem 0.5rem }
+}
+
+/* tree map for sitemaps via https://www.cssscript.com/clean-tree-diagram/ */
+.tree-body { display: table }
+.tree-body .devices { margin-top: 1rem }
+.tree-body #sitemap { margin-top: 5rem }
+.tree,
+.tree ul,
+.tree li { list-style: none; margin: 0; padding: 0; position: relative }
+.tree { margin: 0 0 1em; text-align: center }
+.tree,
+.tree ul { display: table }
+.tree ul { width: 100% }
+.tree li { display: table-cell; padding: 2rem 0; vertical-align: top }
+.tree li:before { border-bottom: 0.1rem dotted #333; content: ""; left: 0; position: absolute; right: 0; top: 0 }
+.tree li:first-child:before { left: 50% }
+.tree li:last-child:before { right: 50% }
+.tree code,
+.tree a { color: #333 !important; display: inline-block; margin: 0 1rem 2rem; padding: 0.25rem; position: relative }
+.tree ul:before,
+.tree code:before,
+.tree a:before { border-left: 0.1rem dotted #333; content: ""; height: 2rem; left: 50%; position: absolute }
+.tree ul:before { top: -2rem }
+.tree code:before,
+.tree a:before { top: -2rem }
+.tree>li { margin-top: 0 }
+.tree>li:before,
+.tree>li:after,
+.tree>li>code:before,
+.tree>li>a:before { border: none }
+.tree img { max-width: 24rem; margin-bottom: 0.5rem; border: 1px solid #CCC }

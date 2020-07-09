@@ -1,0 +1,324 @@
+<html>
+
+<head>
+  <title>/api/administrator/accounts#GET (dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Documentation for <a href="/users/home">users</a>, <a href="/administrators/home">administrators</a> and <a href="/developers">developers</a></p>
+    </header>
+    <div class="section-container">
+      <section class="side navigation">
+        <menu class="index"><a class="skip" href="#content">Skip to content</a></menu>
+        <ul>
+          <li>
+            <h2>Dashboard</h2>
+            <ul>
+              <li><a href="/dashboard">Documentation</a></li>
+              <li><a href="/dashboard-sitemap">Visual sitemap</a></li>
+              <li><a href="/dashboard-ui">UI index</a></li>
+              <li><a href="/dashboard-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/dashboard">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/dashboard">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>MaxMind GeoIP module</h2>
+            <ul>
+              <li><a href="/maxmind-geoip-module">Documentation</a></li>
+              <li><a href="/maxmind-geoip-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/maxmind-geoip">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/maxmind-geoip">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Organizations module</h2>
+            <ul>
+              <li><a href="/organizations-module">Documentation</a></li>
+              <li><a href="/organizations-sitemap">Visual sitemap</a></li>
+              <li><a href="/organizations-ui">UI index</a></li>
+              <li><a href="/organizations-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/organizations">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/organizations">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Connect module</h2>
+            <ul>
+              <li><a href="/stripe-connect-module">Documentation</a></li>
+              <li><a href="/stripe-connect-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-connect-ui">UI index</a></li>
+              <li><a href="/stripe-connect-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-connect">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-connect">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Stripe Subscriptions module</h2>
+            <ul>
+              <li><a href="/stripe-subscriptions-module">Documentation</a></li>
+              <li><a href="/stripe-subscriptions-sitemap">Visual sitemap</a></li>
+              <li><a href="/stripe-subscriptions-ui">UI index</a></li>
+              <li><a href="/stripe-subscriptions-api">API index</a></li>
+              <li><a href="https://github.com/userdashboard/stripe-subscriptions">Github repository</a></li>
+              <li><a href="https://npmjs.com/package/@userdashboard/stripe-subscriptions">NPM package</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example web app</h2>
+            <ul>
+              <li><a href="/example-web-app">Documentation</a></li>
+              <li><a href="/example-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-web-app">Github repository</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>Example subscription web app</h2>
+            <ul>
+              <li><a href="/example-subscription-web-app">Documentation</a></li>
+              <li><a href="/example-subscription-web-app-sitemap">Visual sitemap</a></li>
+              <li><a href="/example-subscription-web-app-ui">UI index</a></li>
+              <li><a href="https://github.com/userdashboard/example-subscription-web-app">Github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="full"><a name="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/accounts (GET)</h1><span class="nodejs get" id="nodejs">await global.api.administrator.Accounts.get(req)</span><span class="returns">Returns <span id="returns">array</span></span>
+          <div id="exceptions-container"><a name="exceptions"></a>
+            <h2>Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+            </table>
+          </div>
+          <div id="receives-container"><a name="receives"></a>
+            <h2>Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="response-container">
+            <h2>Example response</h2>
+            <pre><code data-language="json" id="response">[
+  {
+    "object": "account",
+    "accountid": "account_b0699124",
+    "sessionKeyNumber": 1,
+    "created": 1590082401,
+    "firstName": "Lusa",
+    "lastName": "Pidwell",
+    "contactEmail": "lpidwellgv@intel.not.com",
+    "profileid": "profile_f013d2a1",
+    "lastSignedIn": 1590082401
+  },
+  {
+    "object": "account",
+    "accountid": "account_f1c9a4d9",
+    "sessionKeyNumber": 1,
+    "created": 1590082401,
+    "firstName": "Owen",
+    "lastName": "Julian",
+    "contactEmail": "ojuliangu@opera.not.com",
+    "profileid": "profile_e4436bdb",
+    "lastSignedIn": 1590082401
+  },
+  {
+    "object": "account",
+    "accountid": "account_f81a25b8",
+    "sessionKeyNumber": 1,
+    "created": 1590082401,
+    "firstName": "Gayle",
+    "lastName": "Chaim",
+    "contactEmail": "gchaimgt@naver.not.com",
+    "profileid": "profile_da9bf671",
+    "lastSignedIn": 1590082401
+  }
+]</code></pre>
+          </div><a name="source"></a>
+          <h2>NodeJS source (<a id="github_source" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/administrator/accounts.js">edit on github</a>)</h2>
+          <p>If you see a problem with the source submit a pull request on Github.</p>
+          <pre><code data-language="js" id="source">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  /**
+   * Returns a list of users bound to profile information
+   */
+  get: async (req) => {
+    req.query = req.query || {}
+    let accountids
+    if (req.query.all) {
+      accountids = await dashboard.StorageList.listAll(`${req.appid}/accounts`)
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      accountids = await dashboard.StorageList.list(`${req.appid}/accounts`, offset, limit)
+    }
+    if (!accountids || !accountids.length) {
+      return null
+    }
+    req.cacheData = await dashboard.Storage.readMany(`${req.appid}/account`, accountids)
+    const accounts = []
+    for (const accountid of accountids) {
+      req.query.accountid = accountid
+      const account = await global.api.administrator.Account.get(req)
+      accounts.push(account)
+    }
+    return accounts
+  }
+}
+</code></pre><a name="tests"></a>
+          <h2>Test source (<a id="github_tests" href="https://github.com/userdashboard/dashboard/tree/master/src/www/api/administrator/accounts.test.js">edit on github</a>)</h2>
+          <p>Tests perform real HTTP requests against a running Dashboard server.</p>
+          <pre><code data-language="js" id="tests">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/administrator/accounts', function () {
+  const cachedResponses = {}
+  const cachedAccounts = []
+  before(async () => {
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createUser()
+    cachedAccounts.push(administrator.account.accountid)
+    global.delayDiskWrites = true
+    for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+      const user = await TestHelper.createUser()
+      cachedAccounts.unshift(user.account.accountid)
+    }
+    const req1 = TestHelper.createRequest('/api/administrator/accounts?offset=1')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/accounts?limit=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/accounts?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/accounts')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+  })
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      const accountsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(accountsNow[i].accountid, cachedAccounts[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const accountsNow = cachedResponses.limit
+      assert.strictEqual(accountsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const accountsNow = cachedResponses.all
+      assert.strictEqual(accountsNow.length, cachedAccounts.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const accountsNow = cachedResponses.returns
+      assert.strictEqual(accountsNow.length, global.pageSize)
+    })
+  })
+
+  describe('redacts', () => {
+    it('usernameHash', async () => {
+      const accounts = cachedResponses.returns
+      assert.strictEqual(accounts[0].usernameHash, undefined)
+    })
+
+    it('passwordHash', async () => {
+      const accounts = cachedResponses.returns
+      assert.strictEqual(accounts[0].passwordHash, undefined)
+    })
+
+    it('sessionKey', async () => {
+      const accounts = cachedResponses.returns
+      assert.strictEqual(accounts[0].sessionKey, undefined)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const accountsNow = cachedResponses.pageSize
+      assert.strictEqual(accountsNow.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="redacted-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="receives-row-template" template="receives-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

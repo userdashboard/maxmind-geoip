@@ -1,0 +1,62 @@
+<html navbar="navbar.html">
+
+<head>
+  <title>MaxMind GeoIP module API index</title>
+  <link rel="stylesheet" href="/public/style.css" />
+  <script async="" src="/public/highlight.min.js"></script>
+  <script src="/public/browser.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1>Dashboard</h1>
+      <p>Reusable boilerplate for web apps</p>
+    </header>
+    <div class="section-container">
+      <section id="side-navigation" class="side navigation"></section>
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">MaxMind GeoIP module API index</h1>
+          <div id="user-container">
+            <h2>User API</h2>
+            <table id="user-routes-table" class="api">
+              <tr>
+                <th>User API address</th>
+                <th>URL parameters</th>
+                <th>POST parameters</th>
+              </tr>
+              <tbody>
+                <tr id="route-0">
+                  <td><a href="/api/user/maxmind/country">/api/user/maxmind/country</a><span class="method GET">GET</span><span class="nodejs">await global.api.user.maxmind.Country.get(req)</span></td>
+                  <td>
+                    <ul id="url-parameters-0">
+                      <li>ip</li>
+                    </ul>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div><template id="parameter-item-template" template="parameter-item-template">
+    <li>${parameter.name}</li>
+  </template><template id="route-row-template" template="route-row-template">
+    <tr id="route-${route.id}">
+      <td><a href="${route.url}">${route.url}</a><span class="method ${route.verb}">${route.verb}</span><span class="nodejs">await ${route.nodejs}.${route.verb.toLowerCase()}(req)</span></td>
+      <td>
+        <ul id="url-parameters-${route.id}"></ul>
+      </td>
+      <td>
+        <ul id="post-parameters-${route.id}"></ul>
+      </td>
+    </tr>
+  </template>
+</body>
+
+</html>

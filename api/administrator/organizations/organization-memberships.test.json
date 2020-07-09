@@ -1,0 +1,24 @@
+[
+  {
+    "object": "membership",
+    "membershipid": "membership_8d5cc654",
+    "organizationid": "organization_d4b5c478",
+    "accountid": "account_ac041086",
+    "created": 1588563523,
+    "invitationid": "invitation_afbbc2de",
+    "profileid": "profile_78e9312d",
+    "displayName": "Lita",
+    "displayEmail": "lgrimmch@berkeley.not.edu"
+  },
+  {
+    "object": "membership",
+    "membershipid": "membership_7612db08",
+    "organizationid": "organization_d4b5c478",
+    "accountid": "account_b0dc4467",
+    "created": 1588563523,
+    "invitationid": "invitation_3749d69b",
+    "profileid": "profile_39419be3",
+    "displayName": "Bailie",
+    "displayEmail": "bcovilcg@mediafire.not.com"
+  }
+]

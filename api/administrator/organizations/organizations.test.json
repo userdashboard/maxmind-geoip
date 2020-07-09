@@ -1,0 +1,26 @@
+[
+  {
+    "object": "organization",
+    "ownerid": "account_ef39038f",
+    "organizationid": "organization_de44a4e7",
+    "name": "My organization 1",
+    "email": "askirlingiu@bbc.co.not.uk",
+    "created": 1590082408
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_ef39038f",
+    "organizationid": "organization_c9e18f60",
+    "name": "My organization 1",
+    "email": "askirlingiu@bbc.co.not.uk",
+    "created": 1590082408
+  },
+  {
+    "object": "organization",
+    "ownerid": "account_ef39038f",
+    "organizationid": "organization_31b703b8",
+    "name": "My organization 1",
+    "email": "askirlingiu@bbc.co.not.uk",
+    "created": 1590082408
+  }
+]
