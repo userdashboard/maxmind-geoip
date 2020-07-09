@@ -44,7 +44,7 @@ jobs:
         echo $PACKAGE > package.json
     - name: Generate documentation
       run: |
-        mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/**/{,!(public)}/*.test.js"
+        mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/maxmind-geoip/{,!(public)}/*.test.js"
       working-directory: "/tmp/project"
       env:
         NODE_ENV: testing
