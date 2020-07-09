@@ -23,6 +23,7 @@ jobs:
         git config --global user.email "${{ secrets.EMAIL }}"
         npm install
         npm version patch
+        mkdir -p documentation
         mkdir /tmp/project
         cd /tmp/project
         npm init -y
@@ -50,7 +51,6 @@ jobs:
         GENERATE_SITEMAP_TXT: false
         GENERATE_API_TXT: false   
         GENERATE_RESPONSE: true
-        GENERATE_SCREENSHOTS: true
         RESPONSE_PATH: "/home/runner/work/maxmind-geoip/maxmind-geoip/documentation"
         LOG_LEVEL: "info,error,warn,log"
     - name: Deploy to Github Pages
@@ -58,6 +58,6 @@ jobs:
       with:
         external_repository: 'userdashboard/userdashboard.github.io'
         personal_token: ${{ secrets.DOCUMENTATION_PAT }}
-        publish_dir: "/home/runner/work/maxmind-geoip/maxmind-geoip/documentation"
+        publish_dir: documentation"
         publish_branch: master
         keep_files: true
