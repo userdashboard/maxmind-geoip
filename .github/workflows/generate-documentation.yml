@@ -38,10 +38,7 @@ jobs:
         PACKAGE=${PACKAGE/\"description\"\: \"\"/\"dashboard\": \{ \"modules\"\: \[\"@userdashboard/maxmind-geoip\"\] \}}
         echo $PACKAGE > package.json
     - name: Generate documentation
-      run: |
-        mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/maxmind-geoip/**/*.test.js"
-        find /home/runner/work/maxmind-geoip/maxmind-geoip/documentation
-        find /home/runner/work/maxmind-geoip/maxmind-geoip
+      run: mocha --grep returns --retries 2 --file main.js --bail --exit --full-trace --recursive --timeout 90000000 "./node_modules/@userdashboard/maxmind-geoip/**/*.test.js"
       working-directory: "/tmp/project"
       env:
         NODE_ENV: testing
@@ -60,6 +57,6 @@ jobs:
       with:
         external_repository: 'userdashboard/userdashboard.github.io'
         personal_token: ${{ secrets.DOCUMENTATION_PAT }}
-        publish_dir: documentation"
+        publish_dir: documentation
         publish_branch: master
         keep_files: true
