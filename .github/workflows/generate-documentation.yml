@@ -23,7 +23,7 @@ jobs:
         path: documentation
         persist-credentials: "true"
         token: ${{ secrets.DOCUMENTATION_PAT }}
-        fetc-depth: 1
+        fetch-depth: 1
     - name: Set up as module
       run: |
         git config --global user.name "${{ secrets.NAME }}"
@@ -63,6 +63,7 @@ jobs:
     - name: Deploy to Github Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
+        external_repository: 'userdashboard/userdashboard.github.io'
         github_token: ${{ secrets.DOCUMENTATION_PAT }}
         publish_dir: ./documentation
         keep_files: true
