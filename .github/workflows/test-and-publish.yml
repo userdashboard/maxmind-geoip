@@ -19,6 +19,7 @@ jobs:
         number of databases: 1
     - name: Set up as module
       run: |
+        HERE=`pwd`
         git config --global user.name "${{ secrets.NAME }}"
         git config --global user.email "${{ secrets.EMAIL }}"
         npm install
@@ -37,6 +38,13 @@ jobs:
         PACKAGE=`cat package.json`
         PACKAGE=${PACKAGE/\"description\"\: \"\"/\"dashboard\": \{ \"modules\"\: \[\"@userdashboard/maxmind-geoip\"\] \}}
         echo $PACKAGE > package.json
+        git clone https://github.com/userdashboard/localization.git /tmp/localize
+        cd /tmp/localize
+        npm install
+        for LOCALE in `cat languages`; do
+          node clean-cache.js "$LOCALE" /home/runner/work/localization/localization/project/maxmind-geoip $HERE
+          node localize.js "$LOCALE" $HERE
+        done
     - name: Lint (standard.js)
       run: standard src
     - name: Test (redis)
@@ -56,6 +64,11 @@ jobs:
         REDIS_URL: "redis://localhost:6379"
         GENERATE_SITEMAP_TXT: false
         GENERATE_API_TXT: false
+        GENERATE_RESPONSE: true
+        GENERATE_SCREENSHOTS: true
+        RESPONSE_PATH: "/home/runner/work/organizations/organizations/documentation"
+        SCREENSHOT_PATH: "/home/runner/work/organizations/organizations/documentation/screenshots"
+        SCREENSHOT_LANGUAGES: "en,es"
     - name: Generate supporting texts
       working-directory: '/home/runner/work/maxmind-geoip/maxmind-geoip/'
       run: node main.js
@@ -76,3 +89,11 @@ jobs:
       uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
+    - name: Publish documentation assets
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        external_repository: "userdashboard/userdashboard.github.io"
+        personal_token: ${{ secrets.DOCUMENTATION_PAT }}
+        publish_dir: documentation
+        keep_files: true
+        publish_branch: master
