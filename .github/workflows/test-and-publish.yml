@@ -38,6 +38,9 @@ jobs:
         PACKAGE=`cat package.json`
         PACKAGE=${PACKAGE/\"description\"\: \"\"/\"dashboard\": \{ \"modules\"\: \[\"@userdashboard/maxmind-geoip\"\] \}}
         echo $PACKAGE > package.json
+        wget https://git.io/trans
+        chmod +x ./trans
+        sudo mv trans /usr/local/bin
         git clone https://github.com/userdashboard/localization.git /tmp/localize
         cd /tmp/localize
         npm install
