@@ -30,14 +30,6 @@ Use the API to identify which country a user is from, proxying your Dashboard se
     const country = await proxy(`/api/user/maxmind/country?ip=1.2.3.4`, accountid, sessionid)
 
     const proxy = util.promisify((path, accountid, sessionid, callback) => {
-        let hashText
-        if (accountid) {
-            hashText = `${process.env.APPLICATION_SERVER_TOKEN}/${accountid}/${sessionid}`
-        } else {
-            hashText = process.env.APPLICATION_SERVER_TOKEN
-        }
-        const salt = bcrypt.genSaltSync(4)
-        const token = bcrypt.hashSync(hashText, salt)
         const requestOptions = {
             host: 'dashboard.example.com',
             path: path,
@@ -45,7 +37,7 @@ Use the API to identify which country a user is from, proxying your Dashboard se
             method: 'GET',
             headers: {
                 'x-application-server': 'application.example.com',
-                'x-application-server-token': token
+                'x-application-server-token': process.env.APPLICATION_SERVER_TOKEN
             }
         }
         if (accountid) {
