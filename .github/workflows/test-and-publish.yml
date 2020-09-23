@@ -71,7 +71,7 @@ jobs:
         GENERATE_SCREENSHOTS: true
         RESPONSE_PATH: "/home/runner/work/maxmind-geoip/maxmind-geoip/documentation"
         SCREENSHOT_PATH: "/home/runner/work/maxmind-geoip/maxmind-geoip/documentation/screenshots"
-        SCREENSHOT_LANGUAGES: "en,es"
+        SCREENSHOT_LANGUAGES: "en"
     - name: Generate supporting texts
       working-directory: '/home/runner/work/maxmind-geoip/maxmind-geoip/'
       run: node main.js

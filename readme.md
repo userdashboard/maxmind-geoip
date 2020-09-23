@@ -1,13 +1,33 @@
-# MaxMind GeoIP module for Dashboard
-![Test suite status](https://github.com/userdashboard/maxmind-geoip/workflows/test-and-publish/badge.svg?branch=master)
+# Documentation for Maxmind GeoIP module
+
+#### Index
+
+- [Introduction](#maxmind-geoip-module)
+- [Module contents](#module-contents)
+- [Import this module](#import-this-module)
+- [Access the API](#access-the-api)
+- [Github repository](https://github.com/userdashboard/maxmind-geoip)
+- [NPM package](https://npmjs.org/userdashboard/maxmind-geoip)
+
+# Introduction
 
 Dashboard bundles everything a web app needs, all the "boilerplate" like signing in and changing passwords, into a parallel server so you can write a much smaller web app.
 
-[MaxMind](https://www.maxmind.com/en/home) provide a database that converts IP addresses to countries or other information.  This module for [Dashboard](https://github.com/userdashboard/dashboard) adds API routes for identifying the country by IP and a server handler that will binds a Country object to each HttpRequest.
+[MaxMind](https://www.maxmind.com/en/home) provide a database that converts IP addresses to countries or other information.  This module for [Dashboard](https://github.com/userdashboard/dashboard) adds API routes for identifying the country by IP and a server handler that will binds a Country object to each HttpRequest using their database.  There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it. 
 
-There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it.  
+# Module contents 
 
-Environment configuration variables are documented in `start-dev.sh`.  You can view API documentation in `api.txt`, or in more detail on the [documentation site](https://userdashboard.github.io/).  Join the freenode IRC #userdashboard chatroom for support - [Web IRC client](https://kiwiirc.com/nextclient/).
+Dashboard modules can add pages and API routes.  For more details check the `sitemap.txt` and `api.txt` or the online documentation.
+
+| Content type             |     |
+|--------------------------|-----|
+| Proxy scripts            |     |
+| Server scripts           |     |
+| Content scripts          |     |
+| User pages               |     |
+| User API routes          | Yes | 
+| Administrator pages      |     |
+| Administrator API routes |     | 
 
 ## Import this module
 
@@ -25,7 +45,7 @@ Edit your `package.json` to activate the module:
 
 ## Access the API
 
-Use the API to identify which country a user is from, proxying your Dashboard server API from your application server:
+Dashboard and official modules are completely API-driven and you can access the same APIs on behalf of the user making requests.  You perform `GET`, `POST`, `PATCH`, and `DELETE` HTTP requests against the API endpoints to fetch or modify data.  This example fetches the user's country information using NodeJS, you can do this with any language:
 
     const country = await proxy(`/api/user/maxmind/country?ip=1.2.3.4`, accountid, sessionid)
 
