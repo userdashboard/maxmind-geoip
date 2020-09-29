@@ -13,7 +13,7 @@
 
 Dashboard bundles everything a web app needs, all the "boilerplate" like signing in and changing passwords, into a parallel server so you can write a much smaller web app.
 
-[MaxMind](https://www.maxmind.com/en/home) provide a database that converts IP addresses to countries or other information.  This module for [Dashboard](https://github.com/userdashboard/dashboard) adds API routes for identifying the country by IP and a server handler that will binds a Country object to each HttpRequest using their database.  There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it. 
+[MaxMind](https://www.maxmind.com/en/home) provide a database that converts IP addresses to countries and this module adds API routes for identifying the country by IP and a server handler that will automatically attach a Country object to each HttpRequest using their database.  There is much more data in the MaxMind database than is exposed via the API, pull requests are welcome to add more routes to access it. 
 
 # Module contents 
 
@@ -22,7 +22,7 @@ Dashboard modules can add pages and API routes.  For more details check the `sit
 | Content type             |     |
 |--------------------------|-----|
 | Proxy scripts            |     |
-| Server scripts           |     |
+| Server scripts           | Yes |
 | Content scripts          |     |
 | User pages               |     |
 | User API routes          | Yes | 
