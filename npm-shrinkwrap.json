@@ -5,9 +5,9 @@
   "requires": true,
   "dependencies": {
     "big-integer": {
-      "version": "1.6.45",
-      "resolved": "https://registry.npmjs.org/big-integer/-/big-integer-1.6.45.tgz",
-      "integrity": "sha512-nmb9E7oEtVJ7SmSCH/DeJobXyuRmaofkpoQSimMFu3HKJ5MADtM825SPLhDuWhZ6TElLAQtgJbQmBZuHIRlZoA=="
+      "version": "1.6.48",
+      "resolved": "https://registry.npmjs.org/big-integer/-/big-integer-1.6.48.tgz",
+      "integrity": "sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w=="
     },
     "maxmind": {
       "version": "2.12.0",
