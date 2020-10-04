@@ -17,7 +17,7 @@ Dashboard bundles everything a web app needs, all the "boilerplate" like signing
 
 # Module contents 
 
-Dashboard modules can add pages and API routes.  For more details check the `sitemap.txt` and `api.txt` or the online documentation.
+Dashboard modules can add pages and API routes.  For more details check the `sitemap.txt` and `api.txt` or `env.txt` also contained in the online documentation.
 
 | Content type             |     |
 |--------------------------|-----|
