@@ -15,5 +15,5 @@
       ✓ object
 
 
-  5 passing (413ms)
+  5 passing (434ms)
 
