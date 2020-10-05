@@ -19,6 +19,7 @@
     "maxmind": "^2.12.0"
   },
   "dashboard": {
+    "title": "MaxMind GeoIP module",
     "server": [
       "/src/server/bind-country.js"
     ]
