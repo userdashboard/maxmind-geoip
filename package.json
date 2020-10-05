@@ -1,6 +1,6 @@
 {
   "name": "@userdashboard/maxmind-geoip",
-  "version": "1.0.84",
+  "version": "1.0.85",
   "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
     "node": "12.18.4",
