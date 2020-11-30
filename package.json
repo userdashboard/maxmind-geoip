@@ -1,27 +1,36 @@
 {
-  "name": "@userdashboard/maxmind-geoip",
-  "version": "1.0.87",
-  "description": "MaxMind GeoIP module for Dashboard",
-  "engine": {
-    "node": "12.18.4",
-    "npm": "6.14.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/userdashboard/maxmind-geoip.git"
-  },
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "test": "mocha --exit --inline-diffs --full-trace --bail --async-only --recursive --timeout 600000 --slow 600000 './src{,!(public)/**}/*.test.js'"
-  },
-  "dependencies": {
-    "maxmind": "^2.12.0"
-  },
   "dashboard": {
     "title": "MaxMind GeoIP module",
     "server": [
       "/src/server/bind-country.js"
     ]
-  }
+  },
+  "dependencies": {
+    "maxmind": "^2.12.0"
+  },
+  "description": "MaxMind GeoIP module for Dashboard",
+  "devDependencies": {
+    "@userdashboard/dashboard": ">=1"
+  },
+  "engine": {
+    "node": ">=14",
+    "npm": ">=6"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@userdashboard/maxmind-geoip",
+  "optionalDependencies": {
+    "@userdashboard/dashboard": ">=1"
+  },
+  "peerDependencies": {
+    "@userdashboard/dashboard": ">=1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/userdashboard/maxmind-geoip.git"
+  },
+  "scripts": {
+    "test": "act -j test-fs-storage"
+  },
+  "version": "1.0.87"
 }
