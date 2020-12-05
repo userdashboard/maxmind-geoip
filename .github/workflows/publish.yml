@@ -59,7 +59,7 @@ jobs:
           export alias npm=`find /opt/hostedtoolcache/node/ -maxdepth 4 -name npm`
         fi
         npm init -y
-        npm install "$HERE" @userdashboard/dashboard mocha puppeteer faker
+        npm install "$HERE" @userdashboard/dashboard @userdashboard/storage-redis mocha puppeteer faker
         PACKAGE=`cat package.json`
         PACKAGE=${PACKAGE/\"description\"\: \"\"/\"dashboard\": \{ \"modules\"\: \[\"@userdashboard/maxmind-geoip\"\] \}}
         echo $PACKAGE > package.json
