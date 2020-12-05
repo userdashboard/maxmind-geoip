@@ -8,10 +8,10 @@
   "dependencies": {
     "maxmind": "^2.12.0"
   },
-  "description": "MaxMind GeoIP module for Dashboard",
-  "devDependencies": {
+  "peerDependencies": {
     "@userdashboard/dashboard": ">=1"
   },
+  "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
     "node": ">=14",
     "npm": ">=6"
@@ -19,12 +19,6 @@
   "license": "MIT",
   "main": "index.js",
   "name": "@userdashboard/maxmind-geoip",
-  "optionalDependencies": {
-    "@userdashboard/dashboard": ">=1"
-  },
-  "peerDependencies": {
-    "@userdashboard/dashboard": ">=1"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/userdashboard/maxmind-geoip.git"
