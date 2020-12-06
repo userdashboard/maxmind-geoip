@@ -85,9 +85,11 @@ jobs:
         SCREENSHOT_LANGUAGES: en
         NODE_OPTIONS: --preserve-symlinks
     - name: Generate supporting texts
-      run: node main.js
+      run: |
+        npm install @userdashboard/dashboard --no-save
+        node main.js
       env:
-        NODE_ENV: sitemap
+        NODE_ENV: testing
         EXIT_ON_START: true
     - name: Publish to Github
       uses: stefanzweifel/git-auto-commit-action@v4.1.6
