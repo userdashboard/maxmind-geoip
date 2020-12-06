@@ -9,7 +9,7 @@
     "maxmind": "^4.3.1"
   },
   "peerDependencies": {
-    "@userdashboard/dashboard": ">=1"
+    "@userdashboard/dashboard": "latest"
   },
   "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
