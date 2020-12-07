@@ -2,14 +2,14 @@
   "dashboard": {
     "title": "MaxMind GeoIP module",
     "server": [
-      "/src/server/bind-country.js"
+      "/src/server/maxmind-geoip/bind-country.js"
     ]
   },
   "dependencies": {
     "maxmind": "^4.3.1"
   },
   "peerDependencies": {
-    "@userdashboard/dashboard": "latest"
+    "@userdashboard/dashboard": "1.0.0 - 9999.9999.9999"
   },
   "description": "MaxMind GeoIP module for Dashboard",
   "engine": {
