@@ -1,10 +1,2 @@
-@userdashboard/dashboard 1.0.340
-http://localhost:9000
-
-|------------------------------------------------------------------|
-| /api/user/maxmind/country                                        |
-| RECEIVES-----------------| RETURNS--| EXCEPTIONS-----------------|
-| required querystring ip  | object   | invalid-ip                 |
-| required querystring ip  |          |  * missing querystring ip  |
-|                          |          |  * invalid querystring ip  |
-|--------------------------|----------|----------------------------|
+@userdashboard/dashboard 1.0.360
+http://localhost:8000

@@ -1,5 +1,5 @@
-@userdashboard/dashboard 1.0.340
-http://localhost:9000
+@userdashboard/dashboard 1.0.360
+http://localhost:8000
 
 Administrator menu:
 /administrator "Dashboard administration"
@@ -13,7 +13,7 @@ Special HTML files:
 @userdashboard/dashboard/src/redirect.html
 
 Server handlers:
-/src/server/bind-country.js
+/src/server/maxmind-geoip/bind-country.js
 
 URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS - NODEJS --------------------- HTML -----------------------
 /                                               GUEST  FULLSCREEN GET                                          /src/www                    
