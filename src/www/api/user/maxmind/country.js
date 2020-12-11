@@ -8,7 +8,9 @@ module.exports = {
     if (!req.query || !req.query.ip) {
       throw new Error('invalid-ip')
     }
-    db = db || maxmind.open(path.join(__dirname, '../../../../GeoLite2-Country.mmdb'))
+    if (!db) {
+      db = await maxmind.open(path.join(__dirname, '../../../../GeoLite2-Country.mmdb'))
+    }
     if (process.env.NODE_ENV !== 'production' && req.query.ip === '127.0.0.1') {
       req.query.ip = '8.8.8.8'
     }
