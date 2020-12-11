@@ -1,0 +1,19 @@
+
+
+  server/bind-country
+    before
+      ✓ should bind data to req
+
+  /api/user/maxmind/country
+    exceptions
+      invalid-ip
+        ✓ missing querystring ip
+        ✓ invalid querystring ip
+    receives
+      ✓ required querystring ip
+    returns
+      ✓ object
+
+
+  5 passing (216ms)
+
