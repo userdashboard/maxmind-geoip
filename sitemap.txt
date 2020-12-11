@@ -1,4 +1,4 @@
-@userdashboard/dashboard 1.0.368
+@userdashboard/dashboard 1.0.378
 http://localhost:8000
 
 Administrator menu:
@@ -8,15 +8,14 @@ Account menu:
 /account "My account"
 
 Special HTML files:
-@userdashboard/dashboard/src/template.html
-@userdashboard/dashboard/src/error.html
-@userdashboard/dashboard/src/redirect.html
+@userdashboard/dashboard/template.html
+@userdashboard/dashboard/error.html
+@userdashboard/dashboard/redirect.html
 
 Server handlers:
 /src/server/maxmind-geoip/bind-country.js
 
 URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS - NODEJS --------------------- HTML -----------------------
-/                                               GUEST  FULLSCREEN GET                                          /src/www                    
 /account                                                          GET             @userdashboard/dashboard     @userdashboard/dashboard    
 /account/change-password                                          GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
 /account/change-username                                          GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
@@ -41,9 +40,8 @@ URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS 
 /account/set-default-profile                                      GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
 /account/signin                                 GUEST  FULLSCREEN GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
 /account/signout                                GUEST  FULLSCREEN GET             @userdashboard/dashboard     @userdashboard/dashboard    
-/account/signout-complete                       GUEST  FULLSCREEN GET                                          @userdashboard/dashboard    
+/account/signout-complete                       GUEST  FULLSCREEN                 static-page                  @userdashboard/dashboard    
 /account/verify                                 GUEST  FULLSCREEN GET POST        @userdashboard/dashboard     @userdashboard/dashboard    
-/administrator                                                    GET                                          @userdashboard/dashboard    
 /administrator/account                                            GET             @userdashboard/dashboard     @userdashboard/dashboard    
 /administrator/account-profiles                                   GET             @userdashboard/dashboard     @userdashboard/dashboard    
 /administrator/account-reset-codes                                GET             @userdashboard/dashboard     @userdashboard/dashboard    
@@ -114,4 +112,4 @@ URL ------------------------------------------- AUTH - TEMPLATE - HTTP REQUESTS 
 /api/user/set-session-ended                                       PATCH           @userdashboard/dashboard                                 
 /api/user/set-session-verified                                    PATCH           @userdashboard/dashboard                                 
 /api/user/update-profile                                          PATCH           @userdashboard/dashboard                                 
-/home                                                             GET                                          /src/www                    
+/home                                                                             static-page                  /src/www                    
