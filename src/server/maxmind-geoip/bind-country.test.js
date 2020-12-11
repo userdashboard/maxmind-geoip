@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-require('../../test-helper.js')
+require('../../../test-helper.js')
 const assert = require('assert')
 const Country = require('./bind-country.js')
 
