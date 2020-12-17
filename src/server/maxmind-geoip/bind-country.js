@@ -1,5 +1,8 @@
 module.exports = {
   before: async (req) => {
+    if (req.country) {
+      return
+    }
     const queryWas = req.query
     req.query = {
       ip: req.ip || requestIPAddress(req)
